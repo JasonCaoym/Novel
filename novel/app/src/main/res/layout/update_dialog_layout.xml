@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="51dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/dialog_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="31dp"
+            android:gravity="center_horizontal"
+            android:text="升 级 提 示"
+            android:textColor="@color/standard_black_first_level_color_c3"
+            android:textSize="@dimen/standard_text_size_bigger"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_resume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="14dp"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/standard_black_first_level_color_c3"
+            android:textSize="@dimen/standard_text_size_big"
+            tools:text="sss" />
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30.5dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/book_details_start_read_btn_bg"
+            android:gravity="center"
+            android:text="更新"
+            android:textColor="@color/standard_text_color_white"
+            android:textSize="@dimen/standard_text_size_big"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:id="@+id/img_top_panda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_dialog"
+        android:layout_alignRight="@+id/ll_dialog"
+        android:layout_marginBottom="-40dp"
+        android:src="@mipmap/update_top_panda" />
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:id="@+id/img_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/img_top_panda"
+        android:layout_marginLeft="-18dp"
+        android:layout_toRightOf="@+id/img_top_panda"
+        android:src="@mipmap/btn_m_bean_bill_popup_delete" />
+
+</RelativeLayout>

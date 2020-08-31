@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+    
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/classify_layout"
+            android:background="@drawable/new_category_item_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:x_layout_size="306,154"
+            app:x_layout_margin="20,28,28,28"
+    >
+        <!-- 图片-->
+        <com.duoyue.lib.base.widget.XRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+            
+            <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/classify_img"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       app:x_layout_size="80,109"
+                       app:x_layout_margin="40,23,#,22"
+                       android:background="@drawable/category_hold_bg"/>
+            
+            <TextView android:id="@+id/classify_name"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:singleLine="true"
+                      android:layout_toRightOf="@+id/classify_img"
+                      app:x_layout_margin="24,64,39,#"
+                      app:x_text_size="30"
+                      android:textColor="#1B1B1B"
+                      android:layout_centerInParent="true"/>
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+        <!-- 状态按钮 -->
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+    
+    <CheckBox android:id="@+id/select_status_checkbox"
+              android:layout_width="wrap_content"
+              android:focusable="false"
+              android:focusableInTouchMode="false"
+              android:clickable="false"
+              android:layout_gravity="end|bottom"
+              android:layout_height="wrap_content"
+              android:background="@null"
+              android:button="@drawable/guide_check_state"/>
+
+</com.duoyue.lib.base.widget.XFrameLayout>

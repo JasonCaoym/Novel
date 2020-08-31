@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <include layout="@layout/toolbar_layout"
+             android:id="@+id/toolbar_layout"/>
+
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/layout_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+        <com.duoyue.lib.base.widget.XLinearLayout
+                android:id="@+id/layout_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:x_layout_padding="32,38,32,38"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/tv_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_1b1b1b"
+                    android:text="已选：0章节"
+                    app:x_text_size="30"
+                    app:x_layout_margin="#,#,#,15"/>
+
+            <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_1b1b1b"
+                    android:text="价值：0书豆"
+                    app:x_text_size="30"
+                    app:x_layout_margin="#,#,#,15"/>
+
+            <TextView
+                    android:id="@+id/tv_my_book_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_1b1b1b"
+                    android:text="我的书豆：0书豆"
+                    app:x_text_size="30"/>
+
+        </com.duoyue.lib.base.widget.XLinearLayout>
+
+        <com.duoyue.lib.base.widget.XRelativeLayout
+                android:id="@+id/layout_download_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:x_layout_size="#,106"
+                android:layout_below="@id/layout_price"
+                android:clickable="true"
+                android:background="@color/color_D8D8D8">
+
+            <TextView
+                    android:id="@+id/tv_download_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_select_chapter"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:clickable="false"
+                    app:x_text_size="32"/>
+
+            <ProgressBar
+                    style="?android:progressBarStyle"
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/tv_download_now"
+                    android:layout_centerVertical="true"
+                    android:indeterminateDrawable="@drawable/progress_bar"
+                    android:indeterminateDuration="700"
+                    app:x_layout_margin="#,#,20,#"
+                    app:x_layout_size="35,35"
+                    android:visibility="gone"/>
+
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+    <com.zydm.base.widgets.refreshview.PullToRefreshLayout
+            android:id="@+id/pull_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar_layout"
+            android:layout_above="@id/layout_download">
+
+        <com.zydm.base.widgets.refreshview.PullableExpandableListView
+                android:id="@+id/expandable_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:divider="@color/color_f5f5f5"
+                android:childDivider="@color/color_f5f5f5"
+                android:groupIndicator="@null"
+                android:background="@color/white"
+                android:dividerHeight="1dp"
+                android:paddingLeft="16dp"/>
+
+        <com.duoyue.lib.base.widget.XLinearLayout
+                android:id="@+id/prompt_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:visibility="gone">
+
+            <include
+                    android:id="@+id/load_prompt_layout"
+                    layout="@layout/load_prompt_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+        </com.duoyue.lib.base.widget.XLinearLayout>
+
+
+    </com.zydm.base.widgets.refreshview.PullToRefreshLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/shadow_download"
+            android:layout_above="@id/layout_download"
+            app:x_layout_size="#,16"/>
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

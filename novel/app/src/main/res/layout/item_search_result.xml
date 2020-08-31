@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+                                          android:layout_height="wrap_content">
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout app:x_layout_padding="32,34,0,0" android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" android:id="@+id/xrl_result">
+
+        <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content" android:id="@+id/tv_search"
+                                                  app:x_layout_size="36,36" app:x_layout_margin="0,0,19,0"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_toRightOf="@+id/tv_search"
+                  android:textColor="@color/common_h3"
+                  android:includeFontPadding="false"
+                  app:x_layout_margin="0,0,25,0"
+                  app:x_text_size="24"
+                  android:id="@+id/tv_auth_or_book"
+                  android:layout_centerVertical="true"/>
+
+
+        <TextView android:layout_width="wrap_content"
+                  app:x_text_size="28"
+                  android:id="@+id/tv_key_word"
+                  android:includeFontPadding="false"
+                  android:layout_centerVertical="true"
+                  android:layout_height="wrap_content"
+                  android:layout_toRightOf="@+id/tv_auth_or_book"/>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:x_layout_size="#,2"
+              android:background="#F5F5F5"
+              app:x_layout_margin="0,35,0,0"
+              android:id="@+id/view_line"
+              android:layout_alignLeft="@+id/tv_search"
+              android:layout_below="@+id/tv_search"/>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+</com.duoyue.lib.base.widget.XLinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="all_channel">
+        <item>zydm</item>
+        <item>ALI</item>
+        <item>BAIDU</item>
+        <item>C360</item>
+        <item>HUAWEI</item>
+        <item>MEIZU</item>
+        <item>OPPO</item>
+        <item>VIVO</item>
+        <item>XIAOMI</item>
+        <item>YINGYONGBAO</item>
+        <item>HAOYOUQU</item>
+        <item>IREADER_TEST1</item>
+        <item>LENOVO</item>
+
+    </string-array>
+
+    <declare-styleable name="SDRoundImageView">
+        <attr name="sd_round_img_type" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="round" value="2" />
+        </attr>
+        <attr name="sd_round_img_radius" format="dimension" />
+    </declare-styleable>
+
+</resources>

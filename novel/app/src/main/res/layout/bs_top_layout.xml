@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="top"
+    android:orientation="horizontal"
+    android:paddingLeft="17dp"
+    android:paddingRight="17dp">
+
+    <TextView
+        android:id="@+id/title_text"
+        style="@style/base_text"
+        android:layout_height="@dimen/title_h"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:textColor="@color/standard_text_color_black"
+        android:textSize="@dimen/standard_text_size_biggest"
+        android:textStyle="bold"
+        tools:text="书城" />
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/search_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_bookcase_top_search_b" />
+
+</RelativeLayout>

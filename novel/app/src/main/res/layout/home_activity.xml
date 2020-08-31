@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+    <!-- 主页内容 -->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:splitMotionEvents="false"
+                  android:background="@color/default_page_bg"
+                  android:orientation="vertical">
+
+        <FrameLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"/>
+
+        <com.zydm.base.widgets.MyFragmentTabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.duoyue.lib.base.widget.XRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <com.duoyue.lib.base.widget.XFrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:x_layout_margin="#,#,#,106"
+                />
+                <View
+                        android:alpha="0.1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:x_layout_size="#,15"
+                        android:layout_above="@+id/home_tab"
+                        android:background="@drawable/book_detail_bottom_shadow"
+                />
+
+                <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/home_tab"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            app:x_layout_size="#,106"
+                                                            android:layout_alignParentBottom="true">
+                    <!-- Tab -->
+                    <TabWidget android:id="@android:id/tabs" style="@style/base_tab_widget"
+                               android:layout_width="match_parent" android:background="@color/white"
+                               android:layout_height="match_parent"/>
+                    <!-- 书架删除工具栏 -->
+                    <include layout="@layout/book_shelf_bottom_layout"/>
+                </com.duoyue.lib.base.widget.XRelativeLayout>
+            </com.duoyue.lib.base.widget.XRelativeLayout>
+        </com.zydm.base.widgets.MyFragmentTabHost>
+    </LinearLayout>
+    <!-- 启动页引导设置页 -->
+    <include android:id="@+id/guide_page_id" android:visibility="gone" layout="@layout/start_guide_main_layout"/>
+    <!-- 启动加载页面(登陆失败情况下展示)
+    <include android:id="@+id/loading_page_id" android:visibility="gone" layout="@layout/loading_page"/>-->
+</com.duoyue.lib.base.widget.XRelativeLayout>

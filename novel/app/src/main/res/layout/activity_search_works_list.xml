@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="match_parent"
+                                          android:orientation="vertical">
+
+
+    <include
+            layout="@layout/toolbar_layout"/>
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+        <com.zydm.base.widgets.refreshview.PullToRefreshLayout
+                android:id="@+id/pull_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.zydm.base.widgets.refreshview.PullableRecyclerView
+                    android:id="@+id/rv_list"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+            />
+
+        </com.zydm.base.widgets.refreshview.PullToRefreshLayout>
+        <include
+                android:id="@+id/load_prompt_layout"
+                layout="@layout/load_prompt_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+</com.duoyue.lib.base.widget.XLinearLayout>

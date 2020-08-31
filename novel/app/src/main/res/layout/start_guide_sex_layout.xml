@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent" android:layout_height="match_parent"
+                                            android:orientation="vertical" android:background="@color/default_page_bg">
+    <!-- 内容区域 -->
+    <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                              app:x_layout_padding="50,150,50,#"
+                                              android:orientation="vertical" android:gravity="center">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@string/choose_sex" android:textColor="@color/guide_choose_big" app:x_text_size="52"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@string/recommended_suitable_book" android:textColor="@color/guide_choose_small"
+                  app:x_layout_padding="#,25,#,#" app:x_text_size="28"/>
+
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent"
+                                                  android:layout_height="wrap_content" app:x_layout_padding="#,80,#,#"
+                                                  android:orientation="vertical" android:gravity="center">
+            <!-- 女生频道 -->
+            <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/woman_channel_imgview" android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" app:x_layout_size="240,240"
+                       android:background="@mipmap/taste_woman"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      app:x_layout_padding="#,15,#,15" app:x_text_size="30" android:text="@string/category_girl"
+                      android:textColor="@color/guide_choose_big"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      app:x_layout_size="1, 120"/>
+            <!-- 男生频道 -->
+            <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/man_channel_imgview" android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" app:x_layout_size="240,240"
+                       android:background="@mipmap/taste_man"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      app:x_layout_padding="#,15,#,15" app:x_text_size="30" android:text="@string/category_boy"
+                      android:textColor="@color/guide_choose_big"/>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+    <!-- 返回按钮 -->
+    <com.duoyue.lib.base.widget.XLinearLayout android:id="@+id/sg_back_layout" android:layout_width="match_parent"  android:layout_height="wrap_content" android:visibility="gone" app:x_layout_margin="#,60,#,#"
+                                              app:x_layout_padding="44,35,35,35">
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:background="@mipmap/start_guide_back" app:x_layout_size="20,34" android:clickable="false"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

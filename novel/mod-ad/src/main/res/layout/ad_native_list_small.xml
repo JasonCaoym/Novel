@@ -1,0 +1,81 @@
+<com.qq.e.ads.nativ.widget.NativeAdContainer xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="vertical"
+                                             >
+
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/ad_native_main"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+        <ImageView
+                android:id="@+id/ad_native_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:x_layout_size="113,113"
+                app:x_layout_margin="32,30,0,0"
+                android:scaleType="centerCrop"/>
+        <TextView
+                android:id="@+id/ad_native_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ad_native_icon"
+                app:x_layout_margin="32,30,30,10"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:clickable="false"
+                android:maxLines="1"
+                app:x_text_size="30"
+                android:textColor="#000"/>
+        <TextView
+                android:id="@+id/ad_native_describtion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ad_native_title"
+                android:layout_toRightOf="@id/ad_native_icon"
+                android:maxLines="2"
+                android:clickable="false"
+                android:ellipsize="end"
+                app:x_text_size="30"
+                app:x_layout_margin="32,0,30,0"
+                android:textColor="@color/text_gray_999"/>
+
+        <TextView
+                android:id="@+id/ad_native_text_ad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="广告"
+                android:textSize="10sp"
+                android:background="@color/text_gray_999"
+                android:textColor="@color/white"
+                app:x_layout_margin="0,0,30,10"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ad_native_icon"
+                android:visibility="visible"/>
+
+        <TextView
+                android:id="@+id/ad_native_originName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_below="@+id/ad_native_icon"
+                android:layout_toLeftOf="@+id/ad_native_text_ad"
+                app:x_layout_margin="0,0,10,0" />
+
+        <ImageView
+                android:id="@+id/ad_native_originlogo"
+                android:layout_width="20dp"
+                android:layout_height="13dp"
+                app:x_layout_margin="0,0,10,0"
+                android:layout_below="@+id/ad_native_icon"
+                android:layout_toLeftOf="@+id/ad_native_originName"/>
+
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.qq.e.ads.nativ.widget.NativeAdContainer>

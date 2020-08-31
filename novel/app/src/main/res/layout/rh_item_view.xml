@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:descendantFocusability="blocksDescendants" android:background="@color/white">
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_padding="30,30,30,10">
+        <!-- 书籍封面 -->
+        <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/rh_bookcover_imageview" android:layout_width="wrap_content" android:background="@drawable/book_bg" android:layout_height="wrap_content" app:x_layout_size="130,160" />
+        <!-- 书籍信息 -->
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_toRightOf="@+id/rh_bookcover_imageview" app:x_layout_padding="20,#,#,#" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:orientation="vertical">
+            <!-- 书籍名称 -->
+            <TextView android:id="@+id/rh_bookname_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="28" android:textColor="@color/book_shelf_top_text" />
+            <!-- 阅读章节数 -->
+            <TextView android:lines="1" android:maxEms="12"  android:singleLine="true" android:ellipsize="end" android:id="@+id/rh_read_chapter_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="24" app:x_layout_padding="#,40,#,20" android:textColor="@color/color_898989"/>
+            <!-- 阅读时间 -->
+            <TextView android:id="@+id/rh_read_time_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="24" android:textColor="@color/color_898989" />
+        </com.duoyue.lib.base.widget.XLinearLayout>
+        <!-- 操作区域 -->
+        <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <Button android:id="@+id/rh_add_shelf_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="154,58" app:x_text_size="26" android:text="@string/add_shelf" app:x_shape_radius="30"
+                android:textColor="@color/standard_red_main_color_c1" android:background="@drawable/z_btn_hollow_shape_bg"/>
+            <Button android:id="@+id/rh_read_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="154,58" app:x_text_size="26" android:text="@string/continue_read" app:x_shape_radius="30"
+                    android:textColor="@color/white" android:background="@drawable/z_btn_shape_bg" android:clickable="false"/>
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XLinearLayout>

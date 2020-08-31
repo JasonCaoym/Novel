@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+    <com.duoyue.app.ui.widget.CustomImageView
+            android:id="@+id/book_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book_bg"
+            app:x_layout_margin="0,10,#,20"
+            app:x_layout_size="136,184"
+            android:scaleType="centerCrop"/>
+
+    <TextView
+            android:layout_alignTop="@+id/book_cover"
+            android:includeFontPadding="false"
+            android:id="@+id/book_name"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/book_cover"
+            app:x_layout_margin="25,7,0,0"
+            android:gravity="left"
+            android:maxEms="5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_1b1b1b"
+            app:x_text_size="30"
+            tools:text="书城"/>
+
+    <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/book_author"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/book_cover"
+            app:x_layout_margin="25,16,0,0"
+            android:gravity="left"
+            android:layout_below="@+id/book_name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/color_898989"
+            app:x_text_size="24"
+            tools:text="范老大"/>
+
+    <TextView
+            android:gravity="center"
+            app:x_layout_size="70,#"
+            android:background="@drawable/bg_books_horizontal_layout_item2"
+            android:id="@+id/tv_fen"
+            app:x_layout_margin="0,10,0,0"
+            app:x_text_size="20"
+            android:textColor="@color/color_FC9B32E"
+            android:includeFontPadding="false"
+            android:layout_below="@+id/book_author"
+            android:layout_alignLeft="@+id/book_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="评分"/>
+
+
+    <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/book_popularity"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignLeft="@+id/tv_fen"
+            app:x_layout_margin="0,9,0,0"
+            android:gravity="left"
+            android:maxLines="1"
+            android:layout_below="@+id/tv_fen"
+            android:textColor="@color/common_h3"
+            app:x_text_size="22"
+            tools:text="15万人气"/>
+</com.duoyue.lib.base.widget.XRelativeLayout>

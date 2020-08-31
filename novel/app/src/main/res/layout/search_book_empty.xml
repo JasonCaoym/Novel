@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="46dp"
+        android:src="@mipmap/search_result_empty"/>
+
+    <TextView
+        android:id="@+id/prompt_text"
+        style="@style/base_text"
+        android:layout_marginTop="30dp"
+        android:text="@string/serach_empty"
+        android:textColor="@color/standard_text_color_gray"
+        android:textSize="@dimen/standard_text_size_bigger"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/prompt_opt_text"
+        style="@style/base_text"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/search_empty_rec"
+        android:textColor="@color/standard_text_color_light_gray"
+        android:textSize="@dimen/standard_text_size_big" />
+</LinearLayout>

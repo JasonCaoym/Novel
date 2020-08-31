@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+    <com.andview.refreshview.XRefreshView
+            android:id="@+id/pull_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recommend_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scrollbars="none" />
+
+
+    </com.andview.refreshview.XRefreshView>
+
+
+    <com.duoyue.app.ui.widget.CustomImageView
+            android:id="@+id/recommend_float_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:x_layout_margin="#,#,50,122"
+            app:x_layout_size="130,130" />
+
+    <include
+            android:id="@+id/load_prompt_layout"
+            layout="@layout/load_prompt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+</com.duoyue.lib.base.widget.XRelativeLayout>

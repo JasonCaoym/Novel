@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                         xmlns:app="http://schemas.android.com/apk/res-auto"
+                                         android:id="@+id/parent"
+                                         android:paddingLeft="2px"
+                                         android:paddingBottom="2px"
+                                         android:paddingTop="2px"
+                                         android:paddingRight="2px"
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content">
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:id="@+id/read_bg_view"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        app:x_layout_size="120,#"
+    />
+</com.duoyue.lib.base.widget.XFrameLayout>

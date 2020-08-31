@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:id="@+id/xll_item_two"
+                                            android:layout_height="wrap_content">
+
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textColor="@color/black"
+              app:x_text_size="32"
+              android:textStyle="bold"
+              android:maxLines="2"
+              app:x_layout_margin="32,33,32,#"
+              android:ellipsize="end"
+              android:id="@+id/tv_book_list_name"
+              android:includeFontPadding="false"/>
+
+    <TextView android:layout_width="match_parent"
+              android:id="@+id/tv_desc"
+              android:layout_alignLeft="@+id/tv_book_list_name"
+              app:x_layout_margin="#,26,56,#"
+              android:textColor="@color/color_898989_"
+              app:x_text_size="28"
+              android:layout_below="@+id/tv_book_list_name"
+              android:maxLines="2"
+              android:ellipsize="end"
+              android:layout_toLeftOf="@+id/xll"
+              android:layout_height="wrap_content"/>
+
+
+    <include layout="@layout/item_book_new_list_two"/>
+
+    <com.duoyue.app.ui.widget.RoundImageView android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             app:x_layout_size="50,50"
+                                             android:id="@+id/iv_icon"
+                                             android:layout_alignLeft="@+id/tv_desc"
+                                             android:layout_alignBottom="@+id/xll"/>
+
+    <TextView android:layout_width="wrap_content"
+              app:x_layout_margin="12,#,#,#"
+              app:x_text_size="24"
+              android:id="@+id/tv_author"
+              android:textColor="@color/common_h3"
+              android:gravity="center_vertical"
+                android:layout_alignTop="@+id/iv_icon"
+              android:layout_alignBottom="@+id/iv_icon"
+              android:layout_toRightOf="@+id/iv_icon"
+
+              android:layout_height="wrap_content"/>
+
+    <View
+            app:x_layout_margin="#,24,#,#"
+            android:id="@+id/fix_row_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_size="#,16"
+            android:layout_below="@+id/xll"
+            android:background="@color/standard_div_line_color"/>
+</com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+

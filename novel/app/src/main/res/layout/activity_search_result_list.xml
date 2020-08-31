@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:orientation="vertical"
+                                          android:layout_width="match_parent"
+                                          android:background="@color/white"
+                                          android:layout_height="match_parent">
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:orientation="horizontal"
+            android:id="@+id/toolbar_layout"
+            app:x_layout_margin="0,15,0,0"
+            app:x_layout_padding="22,0,32,11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+        <com.duoyue.app.ui.widget.CustomImageView
+                app:x_layout_padding="10,16,20,16"
+                android:id="@+id/toolbar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_back"/>
+        <com.duoyue.lib.base.widget.XRelativeLayout
+                android:id="@+id/xrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/cancel_btn"
+                android:layout_toRightOf="@+id/toolbar_back">
+
+
+            <EditText
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    app:x_layout_size="#,66"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/search_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/search_text_bg"
+                    android:drawablePadding="7dp"
+                    android:maxLines="1"
+                    android:gravity="center_vertical"
+                    app:x_layout_margin="0,0,15,0"
+                    android:hint="@string/search_book_ctiy"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textColor="@color/standard_text_color_gray"
+                    android:textColorHint="@color/text_color_898989"
+                    app:x_text_size="28"/>
+
+
+            <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/iv_clean"
+                       android:visibility="gone"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@mipmap/bg_clean"
+                       android:layout_alignRight="@+id/search_edit"
+                       app:x_layout_margin="0,0,15,0"
+                       android:layout_centerVertical="true"
+            />
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+        <TextView
+                android:layout_alignTop="@+id/xrl"
+                android:layout_alignBottom="@+id/xrl"
+                android:gravity="center_vertical"
+                android:textColor="@color/book_shelf_top_text"
+                app:x_text_size="30"
+                android:includeFontPadding="false"
+                android:id="@+id/cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hot_search_v2"
+                android:layout_alignParentRight="true"/>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    <com.duoyue.lib.base.widget.XFrameLayout android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+        <com.zydm.base.widgets.refreshview.PullToRefreshLayout
+                android:id="@+id/pull_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.zydm.base.widgets.refreshview.PullableRecyclerView
+                    android:id="@+id/lv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:divider="@null"
+                    android:dividerHeight="0px"
+            />
+
+        </com.zydm.base.widgets.refreshview.PullToRefreshLayout>
+
+        <android.support.v7.widget.RecyclerView
+                android:background="@color/white"
+                android:id="@+id/rv_search_list"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"/>
+
+        <include layout="@layout/item_search_null"
+                 android:id="@+id/view_null"
+                 android:visibility="gone"/>
+
+        <include
+                android:id="@+id/load_prompt_layout"
+                layout="@layout/load_prompt_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </com.duoyue.lib.base.widget.XFrameLayout>
+
+</com.duoyue.lib.base.widget.XLinearLayout>

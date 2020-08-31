@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:background="@color/white"
+                                            android:layout_height="60dp"
+                                            android:paddingLeft="17dp"
+                                            tools:showIn="@layout/fragment_mine">
+    <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="match_parent"
+                                              android:orientation="horizontal"
+                                              android:gravity="center_vertical">
+        <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/module_icon"
+                                                  android:layout_width="wrap_content"
+                                                  android:scaleType="centerCrop"
+                                                  android:layout_height="wrap_content"
+                                                  app:x_layout_size="44,44"/>
+        <TextView android:textColor="@color/standard_black_second_level_color_c4"
+                  app:x_layout_padding="20,#,#,#"
+                  android:layout_width="wrap_content"
+                  android:text="@string/ignor_battery_limit"
+                  android:layout_height="wrap_content"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+    <com.duoyue.app.ui.widget.CustomImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:src="@mipmap/icon_my_list_back_right_w"/>
+
+    <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/next"
+            android:gravity="center_vertical|right"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/text_color_898989"
+            app:x_text_size="24"
+            android:visibility="invisible"
+            tools:text=""
+            tools:visibility="visible"
+    />
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

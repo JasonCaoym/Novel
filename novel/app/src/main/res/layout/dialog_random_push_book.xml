@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="match_parent"
+                                          android:id="@+id/ll"
+                                          android:orientation="vertical"
+                                          android:background="@color/transparent">
+
+    <View
+            android:id="@+id/view_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:x_layout_margin="#,#,#,22"
+            android:background="@drawable/corner_rec_white_5"
+            app:x_layout_size="80,10"/>
+
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_push_top"
+            app:x_layout_size="#,984">
+
+        <com.duoyue.lib.base.widget.XLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_title"
+                android:orientation="horizontal"
+                app:x_layout_padding="32,36,32,30">
+
+
+            <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    app:x_text_size="36"
+                    android:textStyle="bold"
+                    android:text="搜索《"/>
+            <TextView
+                    android:id="@+id/tv_key_word"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    app:x_text_size="36"
+                    android:ellipsize="end"
+                    android:maxWidth="120dp"
+                    android:maxLines="1"
+                    android:text="奥克兰大法水电费阿达克adfasklfaakjf;sd"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:id="@+id/tv_random_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    app:x_text_size="36"
+                    android:textStyle="bold"
+                    android:text="》90%的用户都在看"/>
+
+
+        </com.duoyue.lib.base.widget.XLinearLayout>
+
+
+        <com.duoyue.lib.base.widget.XLinearLayout
+                android:id="@+id/ll_book_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rl_title"
+                android:orientation="vertical">
+
+
+            <com.duoyue.lib.base.widget.XRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_f5f5f5"
+                    app:x_layout_padding="32,25,32,25">
+
+                <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/cv_book_pic"
+                        app:cardUseCompatPadding="true"
+                        android:layout_centerVertical="true"
+                        app:cardCornerRadius="2dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardElevation="2dp"
+                        android:background="@null"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:layout_height="wrap_content"
+                        app:x_layout_size="175,248">
+
+                    <ImageView
+                            android:id="@+id/book_cover"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                        android:id="@+id/tv_book_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_1b1b1b"
+                        app:x_text_size="32"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/cv_book_pic"
+                        app:x_layout_margin="32,#,120,#"
+                        android:text="斗罗大陆"/>
+
+                <TextView
+                        android:id="@+id/tv_introduction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:x_layout_margin="32,18,15,#"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        app:x_text_size="26"
+                        android:lineSpacingExtra="5dp"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/color_666666"
+                        android:layout_toRightOf="@id/cv_book_pic"
+                        android:layout_below="@id/tv_book_name"/>
+
+                <TextView
+                        android:id="@+id/tv_book_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已完结 · 106万字 · 玄幻"
+                        app:x_layout_margin="32,10,#,#"
+                        app:x_text_size="22"
+                        android:includeFontPadding="false"
+                        android:layout_toRightOf="@id/cv_book_pic"
+                        android:layout_below="@id/tv_introduction"/>
+
+                <TextView
+                        android:id="@+id/tv_add_book_shelf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/standard_red_main_color_c1"
+                        android:background="@drawable/bg_fe8b13_13"
+                        android:layout_below="@id/tv_book_type"
+                        android:layout_toRightOf="@id/cv_book_pic"
+                        app:x_layout_margin="32,18,#,#"
+                        app:x_text_size="26"
+                        android:gravity="center"
+                        app:x_layout_size="156,50"
+                        android:text="加入书架"/>
+
+                <TextView
+                        android:id="@+id/tv_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/standard_red_main_color_c1"
+                        android:background="@drawable/bg_fe8b13_13"
+                        android:gravity="center"
+                        android:layout_below="@id/tv_book_type"
+                        android:layout_toRightOf="@id/tv_add_book_shelf"
+                        app:x_layout_margin="32,18,#,#"
+                        app:x_text_size="26"
+                        app:x_layout_size="156,50"
+                        android:text="换一换"/>
+
+                <TextView
+                        android:id="@+id/tv_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/color_FE7915"
+                        app:x_text_size="20"
+                        app:x_layout_margin="#,10,#,#"
+                        android:text="分"/>
+
+                <TextView
+                        android:id="@+id/tv_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_FE7915"
+                        app:x_text_size="30"
+                        android:textStyle="bold"
+                        android:layout_toLeftOf="@id/tv_mark"
+                        android:text="8.4"/>
+
+
+            </com.duoyue.lib.base.widget.XRelativeLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/tv_book_title"
+                    android:includeFontPadding="false"
+                    app:x_text_size="40"
+                    android:textColor="@color/black"
+                    app:x_layout_margin="32,41,32,45"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:x_text_size="34"
+                    android:includeFontPadding="false"
+                    android:id="@+id/tv_first"
+                    app:x_layout_margin="32,0,32,0"
+                    android:lineSpacingExtra="12dp"
+                    android:textColor="@color/book_shelf_top_text"/>
+
+
+        </com.duoyue.lib.base.widget.XLinearLayout>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="立即阅读全文"
+                android:gravity="center"
+                app:x_layout_size="#,90"
+                app:x_text_size="30"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_bottom_bg"
+                android:layout_alignParentBottom="true"/>
+
+        <include
+                android:id="@+id/load_prompt_layout"
+                layout="@layout/load_prompt_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+</com.duoyue.lib.base.widget.XLinearLayout>

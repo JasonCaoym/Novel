@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/transparent">
+
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/rl_book_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_margin="#,#,#,52"
+            app:x_layout_size="600,#"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_white">
+        <TextView
+            android:id="@+id/recom_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_1b1b1b"
+            android:text="@string/launcher_dialog_title"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            app:x_layout_padding="#,50,#,0"
+            app:x_text_size="48"
+        />
+        <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:id="@+id/cv_book_pic"
+                android:layout_below="@id/recom_dialog_title"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="2dp"
+                app:cardMaxElevation="1dp"
+                app:cardElevation="2dp"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content"
+                app:x_layout_margin="#,88,#,#"
+                app:x_layout_size="200,273">
+
+            <ImageView
+                    android:id="@+id/book_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+                android:id="@+id/tv_book_name"
+                android:layout_below="@id/cv_book_pic"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:x_layout_margin="32,35,32,#"
+                android:ellipsize="end"
+                android:textColor="@color/color_1b1b1b"
+                app:x_text_size="36"
+                android:maxLines="1"
+                android:includeFontPadding="false"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tv_book_author"
+                android:layout_below="@id/tv_book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:x_layout_margin="#,15,#,#"
+                app:x_text_size="30"
+                android:textColor="@color/text_color_898989"/>
+
+
+        <TextView
+                android:id="@+id/tv_read_count"
+                android:layout_below="@id/tv_book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:x_layout_margin="#,10,#,#"
+                android:textColor="@color/standard_red_main_color_c1"
+                app:x_text_size="26"/>
+
+
+        <TextView
+                android:id="@+id/tv_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_read_count"
+                android:layout_centerHorizontal="true"
+                app:x_layout_margin="32,30,32,#"
+                app:x_text_size="30"
+                android:textColor="@color/text_color_898989"
+                android:maxLines="3"
+                android:ellipsize="end"/>
+
+        <TextView
+                android:id="@+id/tv_add_book_shelf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:x_layout_size="#,84"
+                android:gravity="center"
+                app:x_layout_margin="#,90,#,#"
+                android:layout_below="@id/tv_recommend"
+                android:background="@drawable/z_btn_shape_bg_bottom"
+                app:x_shape_radius="#,#,20,20"
+                android:textColor="@color/white"
+                app:x_text_size="28"
+                android:text="@string/recommand_add_continue"/>
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+    <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/close_icon"
+            android:layout_centerHorizontal="true"
+            app:x_layout_margin="#,40,#,#"
+            android:scaleType="centerCrop"
+            app:x_layout_size="60,60"
+            android:layout_below="@id/rl_book_info"/>
+
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants">
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                app:x_layout_margin="31,30,32,0"
+                                                android:layout_height="wrap_content">
+
+
+        <TextView
+                android:id="@+id/tv_book_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:x_text_size="40"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:text="@string/book_review"
+                android:textColor="@color/color_1b1b1b"
+        />
+
+        <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:includeFontPadding="false"
+                android:drawableLeft="@mipmap/bg_edit"
+                android:text="@string/catalogue_v2"
+                android:textColor="@color/standard_red_main_color_c1"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    <com.duoyue.lib.base.widget.XFrameLayout android:layout_width="match_parent"
+                                             android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+                android:overScrollMode="never"
+                android:id="@+id/book_comment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+        />
+
+        <include layout="@layout/book_comment_null_item" android:visibility="gone" android:id="@+id/view_null_comment"/>
+
+
+    </com.duoyue.lib.base.widget.XFrameLayout>
+
+
+    <TextView
+            android:id="@+id/book_review_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/book_review_more"
+            android:textColor="@color/standard_red_main_color_c1"
+            app:x_layout_size="#,110"
+            android:gravity="center"
+            app:x_text_size="32"
+    />
+    <include layout="@layout/divider_6px"/>
+
+</com.duoyue.lib.base.widget.XLinearLayout>

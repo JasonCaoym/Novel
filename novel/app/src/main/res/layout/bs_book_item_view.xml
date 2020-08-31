@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="match_parent" android:orientation="vertical"
+                                          android:layout_weight="1" android:gravity="center_horizontal">
+    <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                              app:x_layout_margin="#,#,#,40" app:x_layout_size="186,#"
+                                              android:orientation="vertical">
+        <!-- 书籍封面图 -->
+        <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/bs_book_cover_layout"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content" android:clipToPadding="true"
+                                                    android:paddingTop="1px" android:paddingLeft="1px"
+                                                    android:paddingRight="1px">
+            <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/fl" android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        app:x_layout_size="186,252"
+                                                        android:background="@drawable/book_bg">
+
+                <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/bs_book_cover" android:layout_width="match_parent"
+                           android:scaleType="centerCrop"
+                           android:layout_height="match_parent"/>
+
+
+                <!--<com.duoyue.app.ui.widget.SlantedTextView android:id="@+id/bs_bookmark_textview"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" app:x_layout_size="75,75"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--app:slantedBackgroundColor="@color/color_de6014"-->
+                <!--app:slantedLength="28dp" app:slantedTextSize="11sp"-->
+                <!--app:slantedMode="left"-->
+                <!--app:slantedText="Android"-->
+                <!--app:slantedTextColor="@color/white"/>-->
+
+                <com.duoyue.lib.base.widget.XFrameLayout android:layout_width="wrap_content"
+                                                         app:x_layout_size="70,70"
+                                                         android:layout_height="wrap_content"
+                                                         android:id="@+id/bs_bookmark_textview">
+
+                    <TextView app:x_layout_margin="3,3,#,#"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/bs_bookmark_textview_v2"
+                              android:gravity="center_horizontal"
+                              android:rotation="-45"
+                              app:x_text_size="22"
+                              android:textColor="@color/white"/>
+
+                </com.duoyue.lib.base.widget.XFrameLayout>
+
+                <ImageView
+                        android:id="@+id/iv_topping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@mipmap/icon_topping"
+                        android:visibility="gone"/>
+
+
+            </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+            <!-- 选择 -->
+            <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      app:x_layout_padding="15,15,15,15"
+                                                      android:layout_alignRight="@+id/fl"
+                                                      android:layout_alignBottom="@+id/fl">
+                <CheckBox android:id="@+id/bs_book_checkbox" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:visibility="gone" android:focusable="false"
+                          android:focusableInTouchMode="false" android:clickable="false" app:x_layout_size="46,46"
+                          android:background="@null" android:button="@drawable/bs_check_state"/>
+            </com.duoyue.lib.base.widget.XLinearLayout>
+            <!-- 书签 -->
+
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+        <!-- 名称 -->
+        <TextView android:id="@+id/bs_book_name" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:singleLine="true" app:x_layout_padding="#,18,#,16"
+                  app:x_text_size="28" android:textColor="@color/book_shelf_top_text"/>
+        <!-- 状态 -->
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:gravity="center_vertical">
+            <TextView android:id="@+id/bs_book_status" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" app:x_layout_padding="#,#,10 ,#" app:x_text_size="22"
+                      android:textColor="@color/color_898989"/>
+            <!-- 标记图标 com.duoyue.app.ui.widget.RoundImageView -->
+            <ImageView android:id="@+id/bs_marking_point"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" app:x_layout_size="10,10"
+                       android:background="@drawable/orange_point_shape"/>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+</com.duoyue.lib.base.widget.XLinearLayout>

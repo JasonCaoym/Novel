@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:orientation="vertical"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content">
+
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:id="@+id/tv_title"
+              android:includeFontPadding="false"
+              app:x_text_size="40"
+              android:textColor="@color/black"
+              app:x_layout_margin="32,41,32,45"/>
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                app:x_layout_margin="32,0,32,0"
+                                                android:layout_height="wrap_content">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:x_text_size="34"
+                  android:includeFontPadding="false"
+                  android:id="@+id/tv_first"
+                  android:lineSpacingExtra="12dp"
+                  android:textColor="@color/book_shelf_top_text"/>
+
+        <View android:layout_width="match_parent"
+              android:id="@+id/view_bg_w"
+              android:layout_alignBottom="@+id/tv_first"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_ffffff_shape"
+        />
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent"
+                                              app:x_layout_margin="0,0,0,40"
+                                              android:id="@+id/xrl_go"
+                                              android:gravity="center"
+                                              android:layout_height="wrap_content">
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="抢先阅读第一章"
+                  android:includeFontPadding="false"
+                  android:id="@+id/tv_next"
+                  android:layout_gravity="center_horizontal"
+                  android:drawablePadding="6dp" android:layout_centerHorizontal="true"/>
+
+
+        <ImageView
+                app:x_layout_margin="38,0,0,0"
+                android:layout_alignTop="@+id/tv_next"
+                android:layout_alignBottom="@+id/tv_next"
+                android:layout_toRightOf="@+id/tv_next"
+                android:id="@+id/tv_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/open"/>
+
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+    <include layout="@layout/divider_6px"/>
+</com.duoyue.lib.base.widget.XLinearLayout>

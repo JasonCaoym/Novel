@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_text_size_super_big">26dp</dimen>
+    <dimen name="standard_text_size_biggest">20dp</dimen>
+    <dimen name="standard_text_size_bigger">16dp</dimen>
+    <dimen name="standard_text_size_big">14dp</dimen>
+    <dimen name="standard_text_size_medium">12dp</dimen>
+    <dimen name="standard_text_size_small">11dp</dimen>
+    <dimen name="standard_text_size_smaller">10dp</dimen>
+    <dimen name="standard_text_size_smallest">9dp</dimen>
+
+    <dimen name="default_title_h">48dp</dimen>
+    <dimen name="default_title_padding_lr">15dp</dimen>
+
+    <!--页面头部标题、书城模块标题-->
+    <dimen name="standard_tx_1">15sp</dimen>
+    <!--二级页面标题-->
+    <dimen name="standard_tx_2">18dp</dimen>
+    <!--页面模块标题，内容标题-->
+    <dimen name="standard_tx_3">16dp</dimen>
+    <!--正文-->
+    <dimen name="standard_tx_4">14dp</dimen>
+    <!--辅助说明文字、作者-->
+    <dimen name="standard_tx_5">12dp</dimen>
+
+    <dimen name="title_h">53dp</dimen>
+    <dimen name="default_div_line_h">1px</dimen>
+    <dimen name="toolbar_title_mar_l">50dp</dimen>
+    <dimen name="picker_line_mar">15dp</dimen>
+    <dimen name="wheel_default_padding">8dp</dimen>
+    <dimen name="default_title_text_size">18sp</dimen>
+</resources>

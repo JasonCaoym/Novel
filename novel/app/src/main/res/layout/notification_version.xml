@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              style="@style/NotificationBg"
+              android:layout_gravity="center"
+              android:paddingLeft="17dp"
+>
+
+    <ImageView
+            android:id="@+id/version_notification_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/version_notification_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                style="@style/NotificationBg_Text"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="6dp"
+                android:orientation="horizontal">
+
+            <ProgressBar
+                    android:id="@+id/version_notification_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:progressDrawable="@drawable/progress"
+                    android:layout_marginRight="10dp"
+                    android:max="100"/>
+
+            <TextView
+                    android:id="@+id/version_notification_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="10dip"
+                    style="@style/NotificationBg_Text"
+                    android:textSize="12sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

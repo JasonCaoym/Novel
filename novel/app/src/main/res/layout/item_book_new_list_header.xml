@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+                                          android:layout_height="wrap_content">
+
+    <TextView android:layout_width="match_parent"
+              android:text="附近书友正在读"
+              android:textStyle="bold"
+              app:x_text_size="36"
+              android:id="@+id/tv_near"
+              app:x_layout_margin="32,#,32,28"
+              android:includeFontPadding="false"
+              android:textColor="@color/black"
+              android:layout_height="wrap_content"/>
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                android:background="@color/color_f5f5f5"
+                                                android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                                android:scrollbars="none"
+                                                android:id="@+id/list_book_new"
+                                                android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/view_line"
+                   app:x_layout_size="98,#"
+                   android:scaleType="center"
+                   android:src="@mipmap/bg_find_ffffff"
+                  android:layout_alignBottom="@+id/list_book_new"
+        />
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+
+
+    <TextView android:includeFontPadding="false"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:x_text_size="24"
+              app:x_layout_margin="32,32,#,29"
+              android:id="@+id/tv_user_name"
+              android:textColor="@color/common_h3"/>
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                app:x_layout_margin="32,#,32,#"
+                                                android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:id="@+id/cv"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="3dp"
+                app:cardMaxElevation="1dp"
+                app:cardElevation="2dp"
+                android:background="@null"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content"
+                app:x_layout_size="178,243">
+
+            <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </android.support.v7.widget.CardView>
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/black"
+                  app:x_text_size="34"
+                  app:x_layout_margin="31,2,#,#"
+                  android:layout_alignTop="@+id/cv"
+                  android:layout_toRightOf="@+id/cv"
+                  android:includeFontPadding="false"
+                  android:id="@+id/tv_book_name"
+                  android:textStyle="bold"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_alignLeft="@+id/tv_book_name"
+                  android:id="@+id/tv_desc"
+                  app:x_text_size="26"
+                  android:maxLines="2"
+                  android:ellipsize="end"
+                  android:includeFontPadding="false"
+                  app:x_layout_margin="#,20,#,20"
+                  android:layout_below="@+id/tv_book_name"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/color_898989_"/>
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:id="@+id/tv_state"
+                  app:x_layout_margin="#,#,#,20"
+                  app:x_text_size="24"
+                  android:includeFontPadding="false"
+                  android:layout_alignLeft="@+id/tv_book_name"
+                  android:textColor="@color/common_h3"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/tv_desc"/>
+
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_alignBottom="@+id/cv"
+                                                  android:weightSum="2"
+                                                  app:x_layout_size="#,58"
+                                                  android:layout_alignLeft="@+id/tv_book_name"
+                                                  android:orientation="horizontal">
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:id="@+id/tv_all_read"
+                      android:includeFontPadding="false"
+                      android:gravity="center"
+                      app:x_layout_padding="50,#,50,#"
+                      app:x_text_size="26"
+                      android:drawablePadding="5dp"
+                      android:drawableLeft="@mipmap/bg_book_list_go_read"
+                      android:textColor="@color/white"
+                      android:background="@drawable/btn_sign_in_14"
+                      android:text="一起读"
+                      android:layout_height="match_parent"/>
+
+            <TextView
+                    app:x_layout_margin="30,#,#,#"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    app:x_text_size="26"
+                    android:includeFontPadding="false"
+                    android:drawablePadding="5dp"
+                    app:x_layout_padding="39,#,39,#"
+                    android:text="加入书架"
+                    android:background="@drawable/btn_sign_in_15"
+                    android:id="@+id/tv_join"
+                    android:gravity="center"
+                    android:layout_height="match_parent"/>
+
+        </com.duoyue.lib.base.widget.XLinearLayout>
+
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+    <View
+            app:x_layout_margin="#,40,#,#"
+            android:id="@+id/fix_row_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_size="#,16"
+            android:layout_below="@+id/xll"
+            android:background="@color/standard_div_line_color"/>
+</com.duoyue.lib.base.widget.XLinearLayout>

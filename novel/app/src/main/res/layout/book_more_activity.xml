@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="match_parent"
+                                          android:orientation="vertical">
+
+   <!-- <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+        <com.duoyue.app.ui.widget.CustomImageView
+                android:id="@+id/toolbar_back"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:x_layout_padding="40,35,40,35"
+                android:src="@mipmap/icon_back"/>
+
+        <TextView
+                android:id="@+id/page_title"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:x_layout_padding="30,30,30,30"
+                android:textColor="@color/color_1b1b1b"
+                app:x_text_size="36"
+                style="@style/title_text_style"/>
+    </com.duoyue.lib.base.widget.XRelativeLayout>-->
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <com.zydm.base.widgets.refreshview.PullToRefreshLayout
+            android:id="@+id/pull_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.zydm.base.widgets.refreshview.PullableListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:divider="@null"
+                android:background="@color/standard_div_line_color"
+                android:dividerHeight="0px"
+                />
+
+        <include
+                android:id="@+id/load_prompt_layout"
+                layout="@layout/load_prompt_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+
+    </com.zydm.base.widgets.refreshview.PullToRefreshLayout>
+</com.duoyue.lib.base.widget.XLinearLayout>

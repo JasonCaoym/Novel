@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/toolbar_layout_view"/>
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <!-- 无数据提示 -->
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="match_parent" app:x_layout_padding="#,#,#,104" android:orientation="vertical" android:gravity="center">
+            <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="340,248" android:background="@mipmap/no_data"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_padding="#,40,#,40" app:x_text_size="30" android:textColor="@color/color_898989" android:text="@string/no_reading_record"/>
+            <Button android:id="@+id/rh_go_book_city_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="282,84"  android:background="@drawable/z_btn_shape_bg" app:x_shape_radius="45" app:x_text_size="30" android:textColor="@color/white" android:text="@string/go_book_city" />
+        </com.duoyue.lib.base.widget.XLinearLayout>
+        <!-- 阅读历史记录 -->
+        <com.zydm.base.widgets.refreshview.PullToRefreshLayout android:id="@+id/rh_pull_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/white">
+            <com.zydm.base.widgets.refreshview.PullableListView android:id="@+id/rh_list_view" android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_gravity="center" android:layout_weight="1" android:divider="@null" android:dividerHeight="0px" />
+        </com.zydm.base.widgets.refreshview.PullToRefreshLayout>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XLinearLayout>

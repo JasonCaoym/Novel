@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/chapter"
+        style="@style/base_text"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/standard_text_color_black"
+        android:textSize="@dimen/standard_text_size_big"
+        android:textStyle="bold"
+        android:text="@string/search_history" />
+
+    <TextView
+        android:id="@+id/history_delete_all"
+        style="@style/title_text_btn_style"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        tools:visibility="visible"
+        android:text="@string/delete_all_history"
+        android:textSize="@dimen/standard_text_size_big"
+        android:textColor="@color/standard_text_color_red"/>
+
+</RelativeLayout>

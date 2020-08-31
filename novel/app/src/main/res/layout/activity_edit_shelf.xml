@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/select_all"
+            style="@style/base_text"
+            android:layout_height="@dimen/title_h"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:text="@string/select_all"
+            android:textColor="@color/standard_black_third_level_color_c5"
+            android:textSize="@dimen/standard_tx_4"
+            tools:text="全选" />
+
+        <TextView
+            android:id="@+id/select_count"
+            style="@style/base_text"
+            android:layout_height="@dimen/title_h"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/standard_black_second_level_color_c4"
+            android:textSize="@dimen/standard_tx_2"
+            tools:text="已选择45本书籍" />
+
+        <TextView
+            android:id="@+id/finish"
+            style="@style/base_text"
+            android:layout_height="@dimen/title_h"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:text="@string/finish"
+            android:textColor="@color/standard_black_third_level_color_c5"
+            android:textSize="@dimen/standard_tx_4"
+            tools:text="全选" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_below="@id/toolbar_layout"
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0px" />
+
+    <TextView
+        android:id="@+id/delete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/standard_black_fourth_level_color_c6"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:textColor="@color/standard_black_second_level_color_c4" />
+</RelativeLayout>

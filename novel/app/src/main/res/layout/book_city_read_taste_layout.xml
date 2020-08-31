@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/rl_read_taste"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+    <com.duoyue.app.ui.widget.RoundImageView
+            android:id="@+id/iv_love_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/loving_heart"
+            android:scaleType="centerCrop"
+            app:x_layout_size="104,104"
+            app:x_layout_margin="32,33,23,33"/>
+
+    <TextView
+            android:id="@+id/tv_love_title"
+            android:text="调整阅读口味"
+            app:x_layout_margin="#,48,#,#"
+            app:x_text_size="34"
+            style="@style/base_text"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_toRightOf="@id/iv_love_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tv_love_content"
+            android:text="首页会为您推荐更精准的好书"
+            android:layout_below="@id/tv_love_title"
+            android:layout_toRightOf="@id/iv_love_icon"
+            android:layout_width="wrap_content"
+            style="@style/base_text"
+            app:x_layout_margin="#,20,#,#"
+            app:x_text_size="24"
+            android:layout_height="wrap_content"/>
+
+    <com.duoyue.app.ui.widget.CustomImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            app:x_layout_margin="#,#,40,#"
+            app:x_layout_size="14,24"
+            android:src="@mipmap/icon_class_back_right_w"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/iv_love_icon"
+            app:x_layout_margin="32,33,32,#"
+            android:background="@color/color_f2f2f2"/>
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

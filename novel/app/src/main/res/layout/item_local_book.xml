@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:orientation="vertical">
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                app:x_layout_margin="32,30,32,0"
+                                                android:layout_height="wrap_content">
+        <TextView
+                android:includeFontPadding="false"
+                android:id="@+id/tv_local"
+                android:textColor="@color/book_shelf_top_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:x_text_size="36"
+        />
+
+        <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/iv_delete"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@mipmap/bg_delete"
+                   android:layout_alignParentRight="true"
+                   app:x_layout_padding="5,5,5,5"
+                   android:layout_centerVertical="true"/>
+
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_local"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_padding="#,#,#,50"/>
+
+
+</com.duoyue.lib.base.widget.XLinearLayout>

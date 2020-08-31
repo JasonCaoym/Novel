@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:orientation="vertical">
+
+    <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="wrap_content"
+                                              android:id="@+id/xll_new_people"
+                                              app:x_layout_size="#,110"
+                                              app:x_layout_margin="32,0,32,0"
+                                              android:layout_height="wrap_content" android:orientation="horizontal">
+
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                   android:src="@mipmap/bg_rad_gift"
+                   android:layout_gravity="center_vertical"/>
+        <TextView
+                android:includeFontPadding="false"
+                android:id="@+id/module_title"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:x_layout_margin="19,0,0,0"
+                android:textStyle="bold"
+                android:text="新人7日大礼包"
+                android:textColor="@color/color_1b1b1b"
+                app:x_text_size="40"
+        />
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:scrollbars="none"
+                                            android:overScrollMode="never"
+                                            android:id="@+id/rv_people_new"
+                                            android:layout_height="wrap_content"/>
+
+    <View
+            app:x_layout_margin="#,35,#,#"
+            android:id="@+id/fix_row_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_size="#,16"
+            android:background="@color/standard_div_line_color"/>
+
+
+</com.duoyue.lib.base.widget.XLinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- theme -->
+    <style name="NormalDialog">
+        <item name="android:windowAnimationStyle">@style/Animation.Amigo.Dialog</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="Dialog" parent="NormalDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="ProgressDialog" parent="NormalDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Animation.Amigo.Dialog" parent="@android:style/Animation.Dialog">
+        <item name="android:backgroundDimAmount">0.8</item>
+        <!--item name="android:windowEnterAnimation">@anim/amigo_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/amigo_dialog_exit</item-->
+    </style>
+
+    <!-- color -->
+    <color name="dialog_title_color">#FF222222</color>
+    <color name="dialog_message_color">@color/standard_text_color_gray</color>
+    <color name="preference_button_text_color">@color/standard_red_main_color_c1</color>
+    <color name="dialog_button_line_color">@color/standard_div_line_color</color>
+
+    <!-- dimens -->
+    <dimen name="dialog_default_width">302dp</dimen>
+    <dimen name="dialog_title_size">16dp</dimen>
+    <dimen name="dialog_divider_height">1dp</dimen>
+    <dimen name="dialog_message_size">14dp</dimen>
+    <dimen name="dialog_message_max_height">300dp</dimen>
+    <dimen name="dialog_button_bar_height">55dp</dimen>
+    <dimen name="dialog_button_divider_padding">3dp</dimen>
+    <dimen name="dialog_button_size">@dimen/standard_text_size_big</dimen>
+    <dimen name="dialog_content_margin_left_right">26dp</dimen>
+    <dimen name="dialog_content_margin_top">18dp</dimen>
+    <dimen name="dialog_content_padding_bottom">18dp</dimen>
+    <dimen name="single_choice_padding_left">17dp</dimen>
+    <dimen name="single_choice_padding_right">10dp</dimen>
+    <dimen name="single_choice_padding_top_bottom">16dp</dimen>
+    <dimen name="line_h">1px</dimen>
+
+</resources>

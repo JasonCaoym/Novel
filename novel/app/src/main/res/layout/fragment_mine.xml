@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                         xmlns:app="http://schemas.android.com/apk/res-auto"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+        <!-- 头部区域 -->
+        <android.support.design.widget.AppBarLayout
+                android:id="@+id/mine_appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@drawable/appbarlayout_shadow">
+            <!-- 头部可划出去的内容 -->
+            <android.support.design.widget.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:titleEnabled="false">
+
+                <com.duoyue.lib.base.widget.XLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <com.duoyue.lib.base.widget.XRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:x_layout_size="#,240"
+                            app:x_layout_padding="24,#,#,#"
+                            android:background="@color/white">
+
+                        <com.duoyue.lib.base.widget.XRelativeLayout
+                                android:id="@+id/rl_user_icon"
+                                android:layout_width="wrap_content"
+                                app:x_layout_size="180,180"
+                                android:layout_centerVertical="true"
+                                android:background="@mipmap/bg_head"
+                                android:layout_height="wrap_content">
+
+                            <com.duoyue.app.ui.widget.RoundImageView
+                                    android:id="@+id/user_head_imgview"
+                                    android:layout_centerInParent="true"
+                                    app:x_layout_size="142,142"
+                                    android:scaleType="centerInside"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@mipmap/mine_head_icon"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"/>
+                        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+                        <!-- 未登录(游客)状态 -->
+                        <com.duoyue.lib.base.widget.XLinearLayout
+                                android:id="@+id/login_entrance_layout"
+                                android:visibility="gone"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/rl_user_icon"
+                                android:layout_toLeftOf="@id/tv_sign_in"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:x_layout_padding="16,#,#,#">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:x_text_size="38"
+                                    android:textColor="@color/guide_choose_big"
+                                    android:text="@string/please_login"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:x_text_size="24"
+                                    app:x_layout_padding="#,34,#,#"
+                                    android:textColor="@color/color_666666"
+                                    android:text="@string/login_enjoy_service"/>
+                        </com.duoyue.lib.base.widget.XLinearLayout>
+                        <!-- 登录状态 -->
+                        <com.duoyue.lib.base.widget.XLinearLayout
+                                android:id="@+id/user_info_layout"
+                                android:visibility="visible"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/rl_user_icon"
+                                android:layout_toLeftOf="@id/tv_sign_in"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:x_layout_padding="16,#,#,#">
+                            <!-- 用户名称 -->
+                            <TextView
+                                    android:includeFontPadding="false"
+                                    android:id="@+id/user_name_textview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:x_text_size="38"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/guide_choose_big"
+                                    android:text="@string/please_login"/>
+
+                            <TextView
+                                    android:id="@+id/reading_time_textview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:x_text_size="24"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="今天还没签到哦"
+                                    app:x_layout_margin="#,23,#,#"
+                                    android:textColor="@color/color_666666"
+                                    />
+
+
+                        </com.duoyue.lib.base.widget.XLinearLayout>
+
+                        <com.duoyue.lib.base.widget.XRelativeLayout
+                                android:id="@+id/rl_sign"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                app:x_layout_size="170,56"
+                                android:gravity="center"
+                                android:background="@drawable/btn_sign_in_14"
+                                app:x_layout_margin="5,#,41,#">
+
+                            <TextView
+                                    android:id="@+id/tv_sign_in"
+                                    android:layout_centerVertical="true"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    app:x_text_size="28"
+                                    android:drawablePadding="5dp"
+                                    android:drawableLeft="@mipmap/unsign_icon"
+                                    android:layout_height="wrap_content"
+                                    android:text="签到"/>
+                        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+                    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+                    <!--<include layout="@layout/my_read_time_layout"/>-->
+                </com.duoyue.lib.base.widget.XLinearLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <com.duoyue.app.ui.view.BookDetailNestedScrollView
+                android:id="@+id/mine_scrollview"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/mine_toolbar_layout"
+                android:background="@color/white"
+                android:scrollbars="none"
+                android:fadeScrollbars="false"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:focusableInTouchMode="true"
+                android:focusable="true">
+
+            <com.duoyue.lib.base.widget.XLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/standard_black_fourth_level_color_c6"
+                    android:orientation="vertical">
+
+                <include layout="@layout/my_read_time_layout"/>
+                <!-- 阅读口味 -->
+                <include
+                        android:id="@+id/daily_welfare"
+                        layout="@layout/mine_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"/>
+                <!-- 阅读口味 -->
+                <include
+                        android:id="@+id/read_taste"
+                        layout="@layout/mine_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="1px"/>
+                <!-- 阅读记录 -->
+                <include
+                        android:id="@+id/read_history"
+                        layout="@layout/mine_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="1px"/>
+                <!-- 推荐给好友 -->
+                <include
+                        android:id="@+id/recommend_friends"
+                        layout="@layout/mine_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="12px"/>
+                <!-- 问题反馈 -->
+                <include
+                        android:id="@+id/problem_feedback"
+                        layout="@layout/mine_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="1px"/>
+                <!-- 加入QQ群 -->
+                <include
+                        android:id="@+id/join_qq_group"
+                        layout="@layout/mine_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="1px"/>
+
+                <!-- 设置-->
+                <include
+                        android:id="@+id/mine_setting"
+                        layout="@layout/mine_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="1px"/>
+                <!-- 关于我们 -->
+                <include
+                        android:id="@+id/about_us"
+                        layout="@layout/mine_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="1px"/>
+                <!-- 开发者 -->
+                <include
+                        android:id="@+id/developer"
+                        layout="@layout/mine_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="1px"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:x_layout_size="#,120"/>
+            </com.duoyue.lib.base.widget.XLinearLayout>
+        </com.duoyue.app.ui.view.BookDetailNestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+    <!-- 头部不可划出去的标题区域 -->
+    <com.duoyue.lib.base.widget.XLinearLayout
+            android:id="@+id/mine_title_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/title_text_style"
+                app:x_layout_size="#,90"
+                android:text="@string/tab_mine"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+
+    <com.duoyue.app.ui.widget.CustomImageView
+            android:id="@+id/recommend_float_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:x_layout_margin="#,#,50,50"
+            app:x_layout_size="130,130"/>
+</com.duoyue.lib.base.widget.XFrameLayout>

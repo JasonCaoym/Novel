@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'org.greenrobot.greendao'
+
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+
+android {
+    compileSdkVersion compile_sdk_version
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs '../mod-ad/libs', '../mod-stats/libs'
+        }
+    }
+
+    greendao {
+        schemaVersion 2
+        daoPackage 'com.duoyue.mod.ad.dao.gen'
+        targetGenDir 'src/main/java'
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib-base')
+    kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
+    api(name: 'open_ad_sdk', ext: 'aar')
+    api(name: 'android-gif-drawable-1.2.6', ext: 'aar')
+    implementation(name: 'Baidu_MobAds_SDK-release', ext: 'aar')
+    implementation project(':mod-stats')
+    api files('libs/GDTSDK.union.4.70.940.jar')
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/head_layout"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/head_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:gravity="center_vertical"
+                android:drawableLeft="@mipmap/bg_yellow_book"
+                android:id="@+id/book_detail_recomword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/book_details_intro_bg"
+                android:layout_below="@+id/book_cover"
+                app:x_layout_padding="30,26,30,25"
+                app:x_layout_margin="32,8,32,30"
+                android:textColor="@color/standard_red_main_color_c1"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="2"
+                app:x_text_size="26"
+                android:ellipsize="end"
+        />
+
+
+        <com.duoyue.lib.base.widget.XFrameLayout
+                app:x_layout_padding="3,#,3,#"
+                android:background="@color/white"
+                android:layout_below="@+id/book_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:x_layout_margin="66,0,0,0">
+
+            <ImageView
+                    android:id="@+id/book_detail_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_quote"
+            />
+        </com.duoyue.lib.base.widget.XFrameLayout>
+
+
+            <com.duoyue.lib.base.widget.XRelativeLayout
+                    android:id="@+id/booke_detail_resume_layout"
+                    android:layout_below="@+id/book_detail_recomword"
+                    app:x_layout_margin="32,0,32,0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:includeFontPadding="false"
+                        android:id="@+id/book_discription"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:ellipsize="end"
+                        android:textColor="@color/text_gray_666"
+                        android:lineSpacingMultiplier="1.2"
+                        app:x_text_size="28"
+                />
+                <ImageView
+                        android:layout_alignBottom="@+id/book_discription"
+                        android:layout_alignRight="@+id/book_discription"
+                        android:id="@+id/book_detail_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/open"
+                        app:x_layout_margin="0,0,10,10"
+                />
+            </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    <com.duoyue.lib.base.FlowXLayout android:layout_below="@+id/head_info_layout"
+                                     android:layout_width="match_parent"
+                                     android:id="@+id/fl_list"
+                                     app:x_layout_margin="25,20,25,10"
+                                     android:layout_height="wrap_content"
+                                     app:maxLines="1"/>
+
+
+    <View android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="#,2"
+          android:layout_below="@+id/fl_list" android:background="#f5f5f5" app:x_layout_margin="32,20,32,#"/>
+</com.duoyue.lib.base.widget.XRelativeLayout>

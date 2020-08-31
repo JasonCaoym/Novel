@@ -1,0 +1,378 @@
+<resources>
+    <string name="app_name">多阅免费小说</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="tab_book_city">书城</string>
+    <string name="tab_book_list">书单</string>
+    <string name="tab_category">分类</string>
+    <string name="tab_bookshelf">书架</string>
+    <string name="tab_mine">我的</string>
+    <string name="help">帮助反馈</string>
+    <string name="daily_welfare">每日福利任务</string>
+    <string name="read_taste">我的阅读口味</string>
+    <string name="read_record">阅读记录</string>
+    <string name="recommend_friends">推荐给好友</string>
+    <string name="problem_feedback">问题反馈</string>
+    <string name="join_qq_group">加入QQ群</string>
+    <string name="join_qq_group_notice">提意见，赢礼品</string>
+    <string name="check_update">检查更新</string>
+    <string name="about_us">关于我们</string>
+
+    <string name="question_problem">问题：</string>
+    <string name="question_problem_feedback">你有新的回复消息</string>
+    <string name="question_problem_feedback_empty">查看反馈回复</string>
+    <string name="question_choice_problem">请选择您遇到的问题</string>
+    <string name="question_contace">联系方式：</string>
+    <string name="leave_qq">请留下您的联系方式(QQ、手机号、邮箱)</string>
+    <string name="question_details">详情：</string>
+    <string name="question_write_problem">写下您遇到的问题</string>
+    <string name="commit">提交</string>
+    <string name="rule_contact">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.</string>
+    <string name="question_must_input">(带*项为必输项)</string>
+    <string name="question_feedback_subtitle">您的反馈已经收到！！</string>
+    <string name="question_feedback_qq">如果肥肠急的话，请务必加入官方</string>
+    <string name="qq_group">Q群:</string>
+    <string name="know">知道啦</string>
+    <string name="title_question_commit">用户反馈</string>
+    <string name="check_feedback_type">选择反馈类型（必选）</string>
+    <string name="describe_problem">简要描述您需要反馈的问题或建议（必选）</string>
+    <string name="leave_contact">请留下微信号/QQ/手机号，方便我们联系您</string>
+    <string name="feedback">反馈结果</string>
+    <string name="feedback_history">反馈历史</string>
+    <string name="private_msg_title">官方回复了您</string>
+    <string name="current_version_name">当前版本%1$s</string>
+    <string name="start_check">正在检查</string>
+    <string name="downloading">下载中</string>
+    <string name="mine_was_last_update">已经是最新版本!</string>
+    <string name="upgrade_title">发现新版本\nV%1$s</string>
+    <string name="force_upgrade_msg">您需要升级后，才能继续使用多阅免费小说</string>
+    <string name="update_cancel">稍后升级</string>
+    <string name="update_now">立即升级</string>
+    <string name="offline_network_note">您没有连接wifi，确定在流量状态下升级吗？</string>
+    <string name="not_user_mobile_network">好吧，不使用</string>
+    <string name="continue_user">继续使用</string>
+    <string name="down_load">嘿咻~嘿咻~就要好了!</string>
+    <string name="toast_no_net">网络异常~</string>
+    <string name="upgrade_award">升级大礼包</string>
+    <string name="download_new_version">开始下载新版本</string>
+    <string name="start_download">开始下载</string>
+    <string name="silet_down_succeed">( •̀ ω •́ )y， 新版本已成功下载，立即安装？</string>
+    <string name="back_quit">再按一次返回键就退出了哟(⊙o⊙)!</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="test_subscription_load">请求订阅通知接口</string>
+    <string name="clean_first_pay_sign">清除首充标记</string>
+    <string name="signature_text">是否正式签名：%1$s</string>
+    <string name="submit_st">提交统计</string>
+    <string name="developer">开发者</string>
+
+    <string name="book_city">书城</string>
+    <string name="search_book_ctiy">书名、作者</string>
+    <string name="to_more">更多</string>
+    <string name="entrances_rank">榜单</string>
+    <string name="entrances_select">精品</string>
+    <string name="entrances_category">分类</string>
+    <string name="entrances_complete">完结</string>
+    <string name="entrances_new">新书</string>
+    <string name="category_girl">女生频道</string>
+    <string name="category_boy">男生频道</string>
+    <string name="category">分类</string>
+
+    <string name="cancel">取消</string>
+    <!-- <string name="rec_book">推荐作品</string> -->
+    <string name="rec_book">搜索风云榜</string>
+
+    <string name="hot_search">热门搜索</string>
+    <string name="hot_search_v2">搜索</string>
+    <string name="search_history">历史搜索</string>
+    <string name="selected_girl">女生精选</string>
+    <string name="selected_boy">男生精选</string>
+    <string name="rank_hot">人气榜</string>
+    <string name="rank_finish">完本榜</string>
+    <string name="rank_up">飙升榜</string>
+    <string name="category_hot">热门</string>
+    <string name="category_finish">完结</string>
+    <string name="category_new">新书</string>
+    <string name="confirm">确定</string>
+    <string name="search_note">请输入关键字</string>
+    <string name="delete_all_history">清空</string>
+    <string name="serach_empty">少侠！没有找到相关书籍</string>
+    <string name="search_empty_rec">为您推荐以下作品</string>
+
+    <string name="night">夜间</string>
+    <string name="morning">日间</string>
+    <string name="progress">%1$d/%2$d</string>
+    <string name="setting">设置</string>
+    <string name="directory">目录</string>
+    <string name="loading">正在加载中...</string>
+    <string name="load_failed">加载失败!</string>
+    <string name="no_content">没有内容</string>
+    <string name="parsing">正在解析章节内容...</string>
+    <string name="parsing_failed">章节内容解析失败！</string>
+    <string name="no_pre_chapter">没有上一章了...</string>
+    <string name="no_next_chapter">没有下一章了...</string>
+    <string name="please_wait">正在加载中，请稍等...</string>
+    <string name="font_size">字号</string>
+    <string name="brightness">亮度</string>
+    <string name="flip">翻页</string>
+    <string name="off_screen">息屏</string>
+    <string name="line_space">行距</string>
+    <string name="background">背景</string>
+    <string name="add_shelf">加入书架</string>
+    <string name="add_shelf_msg">喜欢本书就加入书架吧</string>
+    <string name="add">加入</string>
+    <string name="no_book">作品不存在或已下线，试试其他作品吧</string>
+    <string name="not_end">作者正在努力码字中...</string>
+    <string name="please_wait_update">去书城，发现更多值得追更的小说＞</string>
+    <string name="recommend_finish_tip">去书城，发现更多热门完结小说＞</string>
+    <string name="read_recoomend_title">强烈推荐值得一看的同类好书</string>
+    <string name="book_end">全文完</string>
+    <string name="finished">已完结</string>
+    <string name="updating">连载中</string>
+    <string name="most_popular">最受关注</string>
+    <string name="last_chapter">已是最后章节！</string>
+    <string name="free_read">免费阅读</string>
+    <string name="free_download">下载</string>
+    <string name="download">下载</string>
+    <string name="selected_chapter">已选：%1$d章节</string>
+    <string name="selected_money">价值：%1$d书豆</string>
+    <string name="my_money">我的书豆：%1$d书豆</string>
+    <string name="download_now">%1$d书豆 立即下载</string>
+    <string name="please_select_chapter">请选择下载章节</string>
+    <string name="continue_read_chapter">继续阅读第%1$d章</string>
+    <string name="change_once">换一换</string>
+    <string name="continue_read">继续阅读</string>
+    <string name="btn_add_shelf">加入书架</string>
+    <string name="next_chapter">下一章</string>
+    <string name="already_in_shelf">已加入书架</string>
+    <string name="already_in_shelf_x">已在书架</string>
+    <string name="wan">万</string>
+    <string name="font_count">共%1$s字</string>
+    <string name="catalogue">目录</string>
+    <string name="catalogue_v2">写书评</string>
+    <string name="find">发现</string>
+    <string name="latest_chapter">更新至%1$d章</string>
+    <string name="chapter_count">共%1$d章</string>
+    <string name="update_time">%1$d天前</string>
+    <string name="today">今天</string>
+    <string name="add_shelf_success">添加成功！</string>
+    <string name="book_shelf">书架</string>
+    <string name="no_shelf_book_rec">书架内容为空，为您推荐以下作品</string>
+    <string name="no_shelf_book">您的书架空空如也</string>
+    <string name="delete">删除</string>
+    <string name="select_all">全选</string>
+    <string name="cancel_select_all">取消全选</string>
+    <string name="topping">置顶</string>
+    <string name="share">分享</string>
+    <string name="now_read">立即阅读</string>
+    <string name="select_count">已选择%1$d本书籍</string>
+    <string name="finish">完成</string>
+    <string name="none_book_selected">您未选中任何书籍!</string>
+    <string name="read_history">阅读历史</string>
+    <string name="chapter_range">%1$d-%2$d</string>
+    <string name="chapter_group">%1$d-%2$d&#160;章</string>
+    <string name="go_book_city">去书城逛逛</string>
+    <string name="already_last_chapter">已经是最后1章了</string>
+    <string name="already_last_chapter_wait_update">已经是最后1章了，请耐心等待作者更新</string>
+    <string name="order_normal">正序</string>
+    <string name="order_reverse">倒序</string>
+    <string name="is_loading">还在加载中...</string>
+    <string name="already_first_chapter">已经是第1章了</string>
+    <string name="not_support_format">您需要升级到新版本才能正常使用，快去升级吧</string>
+    <string name="last_page">上一页</string>
+    <string name="menu">菜单</string>
+    <string name="next_page">下一页</string>
+    <string name="i_know">我知道啦</string>
+
+    <string name="more">更多</string>
+    <string name="intro">简介</string>
+    <string name="ad_free_time">看视频免%s分钟广告</string>
+    <string name="ad_free_time_tip">完成观看视频，可享受%s分钟无广告品质阅读</string>
+    <string name="skip">跳过</string>
+    <string name="choose_sex">选择您的性别</string>
+    <string name="recommended_suitable_book">根据性别为你推荐最合适的书籍</string>
+    <string name="choose_classify">请选择喜欢的类型</string>
+    <string name="open_customization">最多5个, 开启你的私人订制</string>
+    <string name="choose_classify_limit">最多只能选择5个</string>
+    <string name="classify_dushi">都市</string>
+    <string name="classify_xuanhuan">玄幻</string>
+    <string name="classify_xianxia">仙侠</string>
+    <string name="classify_lishi">历史</string>
+    <string name="classify_kehuan">科幻</string>
+    <string name="classify_youxi">游戏</string>
+    <string name="classify_xiaoyuan">校园</string>
+    <string name="classify_wuxia">武侠</string>
+    <string name="classify_qihuan">奇幻</string>
+    <string name="classify_jingji">竞技</string>
+    <string name="classify_junshi">军事</string>
+    <string name="classify_xiandaiyanqing">现代言情</string>
+    <string name="classify_gudaiyanqing">古代言情</string>
+    <string name="classify_huanxiangyanqing">幻想言情</string>
+    <string name="classify_qingchunxiaoyuan">青春校园</string>
+    <string name="classify_selected_limit">最多只能选中&#160;%1$d个</string>
+    <string name="guide_open_reading">开启阅读之旅</string>
+
+    <string name="login_phone">手机登录</string>
+    <string name="input_mobile_number">请输入您的手机号</string>
+    <string name="input_valid_mobile_number">请输入有效的手机号</string>
+    <string name="input_verification_code">请输入您的验证码</string>
+    <string name="input_valid_verification_code">请输入有效的验证码</string>
+    <string name="obtain">获取</string>
+    <string name="login">登录</string>
+    <string name="cancel_login">取消登录</string>
+    <string name="login_consent">登录表示您已同意</string>
+    <string name="login_user_agreement">《用户协议》</string>
+    <string name="login_third_party">第三方登录</string>
+    <string name="login_free_reading">登录后免费畅读</string>
+    <string name="login_wechat">微信登录</string>
+    <string name="no_install_wechat">请先安装微信</string>
+    <string name="no_install_qq">请先安装QQ</string>
+    <string name="no_install_weibo">请先安装新浪微博</string>
+    <string name="please_login">点击登录</string>
+    <string name="signing_in">登录中...</string>
+    <string name="login_enjoy_service">登录后开启免广告畅读</string>
+    <string name="user_collect">收藏&#160;%1$d</string>
+    <string name="user_reading_time">总阅读时长&#160;%1$d</string>
+    <string name="login_fail">登录失败, 请稍后重试</string>
+    <string name="confirm_sign_out">确认退出账号吗?</string>
+    <string name="sign_out">退出登录</string>
+    <string name="sign_out_ing">退出登录中...</string>
+    <string name="sign_out_fail">退出登录失败, 请稍后重试</string>
+    <string name="data_loading">数据加载中</string>
+    <string name="click_refresh">点击刷新</string>
+    <string name="reading_time">本周已读</string>
+    <string name="minute">分钟</string>
+    <string name="edit_bookshelf">编辑书架</string>
+    <string name="remove_bookshelf">移除</string>
+    <string name="no_reading_record">还没有阅读记录</string>
+    <string name="remove_all_reading_record">确认删除全部阅读历史?</string>
+    <string name="remove_reading_record">确认删除?</string>
+
+    <string name="all">全部</string>
+    <string name="male_frequency">男频</string>
+    <string name="female_frequency">女频</string>
+
+
+
+    <string name="featured">精选</string>
+    <string name="female">女生</string>
+    <string name="male">男生</string>
+    <string name="book">图片</string>
+
+    <string name="recommend">推荐</string>
+    <string name="update">更新</string>
+    <string name="update_chapter">更新至&#160;%1$d章</string>
+    <string name="unread">未阅读</string>
+    <string name="chapter_unread">&#160;%1$d章未读</string>
+    <string name="to_be_continued">未完待续</string>
+    <string name="have_finished_reading">已看完</string>
+
+    <string name="book_review">书评</string>
+    <string name="book_comment">点评</string>
+    <string name="book_review_more">更多书评</string>
+    <string name="stop_update">断更</string>
+    <string name="comment_wan_label">%d万人评</string>
+    <string name="comment_label">%d人评</string>
+    <string name="join_qq_group_fail">申请加入QQ群失败, 请稍后再试</string>
+
+    <string name="default_notification_channel_id" translatable="false">版本更新通知</string>
+    <string name="ad_video_load_error">视频加载失败，请稍后重试</string>
+    <string name="default_notification_channel_update_name" translatable="true">update</string>
+    <string name="default_notification_channel_name" translatable="true">default</string>
+    <string name="default_notification_update_channel_id" translatable="false">update_default_channel</string>
+
+    <string name="auth_tips_title">为了您更好的使用免费小说，需要您允许以下权限：\n</string>
+    <string name="auth_tips_desc">将会获得更加安全极致的阅读体验。</string>
+    <string name="to_set">去设置</string>
+    <string name="abort">退出</string>
+    <string name="text_comment">
+        撰写高质量书评建议：\n
+        — 喜欢和不喜欢本书的原因\n
+        — 与同类书籍的比较；故事风格，人物形象，环境描写\n
+        — 可以从不同角度描述\n
+        高质量的书评有机会被小编发掘收录，将获得丰厚奖励哦
+    </string>
+
+    <string name="write_again">再去写写</string>
+
+    <string name="read_ad_tip">广告是为了更优质的免费内容</string>
+
+    <string name="tag_all">不限标签</string>
+    <string name="sub_category_all">不限分类</string>
+    <string name="filter">筛选</string>
+    <string name="comment_the_book">评论本书</string>
+    <string name="send_comment">发送</string>
+
+
+    <string name="recommend_everyday">每日推荐</string>
+    <string name="recommand_add_continue">加入书架，继续读</string>
+    <string name="recommand_add_start">加入书架，开始读</string>
+    <string name="recommand_last_read">上次读到</string>
+
+    <string name="delete_books_bookshelf">从书架删除书籍?</string>
+
+
+    <string name="colon">:</string>
+    <string name="make_book_bean">赚书豆</string>
+
+
+    <!--书籍分类页面的自定义Behavior-->
+    <string name="behavior_category_book">com.duoyue.app.ui.behavior.CategoryBookBehavior</string>
+
+    <string name="launcher_dialog_title">为您推荐</string>
+    <string name="notification_hold_title">今日推荐</string>
+    <string name="notification_default_title">默认通知栏</string>
+    <string name="notification_continue_reading_title">继续阅读</string>
+    <string name="notification_more_reminder_title">追更提醒</string>
+    <string name="notification_hold_new_title">今日必读小说</string>
+    <string name="notification_hold_sub_title">近期火爆的热门小说，点击免费阅读 >></string>
+    <string name="bookshelf_recommend_limit">书架书籍推荐功能</string>
+    <string name="bookshelf_recommend_tip">开启后，每天会在书架为您智能推荐感兴趣的小说。</string>
+    <string name="ignor_battery_limit">忽略电池优化</string>
+    <string name="ignor_battery_tip">请开启“忽略电池优化”开关，以确保多阅小说在后台运行，并为您智能推送更多好书。
+    </string>
+    <string name="add_whitelist">添加白名单</string>
+    <string name="notification_tip">收不到推送通知？试试将多阅小说添加到系统白名单。</string>
+    <!-- -->
+
+    <string name="notification_hold_channel_id" translatable="false">@string/notification_hold_title</string>
+    <string name="notification_default_channel_id" translatable="false">@string/notification_default_title</string>
+    <string name="notification_continue_reading_id" translatable="false">@string/notification_continue_reading_title</string>
+    <string name="notification_more_reminder_id" translatable="false">@string/notification_more_reminder_title</string>
+    <string name="opend">已开启</string>
+
+    <string name="finish_read_task">完成阅读任务</string>
+    <string name="finish_share_task">完成分享任务</string>
+    <string name="finish_Login_task">完成登录任务</string>
+    <string name="finish_mark_task">完成评分任务</string>
+    <string name="finish_battery_task">完成追书推送优化任务</string>
+    <string name="finish_reward_video_task">完成激励视频任务</string>
+    <string name="book_detail">书籍详情</string>
+    <string name="share_book">分享本书</string>
+    <string name="chapter_error">章节报错</string>
+
+
+    <string name="has_add_shelf">已加书架</string>
+    <string name="on_progress">连载</string>
+
+    <string name="back">返回</string>
+    <string name="retry">重试</string>
+
+    <string name="sort_daoxu">倒序</string>
+    <string name="sort_zhengxu">正序</string>
+
+    <string name="notify_dialog_describe">开启通知权限,将收到小说更新提醒,不错过每一个精彩章节</string>
+    <string name="open_now">立即开启</string>
+    <string name="net_connect_Fail">网络连接断开</string>
+
+    <string name="read_video_enter_tip">完成观看视频， \n可享受%d分钟无广告</string>
+    <string name="read_video_rule_tip">规则说明</string>
+    <string name="text_sure_exit">确定退出多阅免费小说吗？</string>
+    <string name="text_read_sleep">看了这么久 休息一下吧~</string>
+    <string name="text_read_sleep_x">观看视频免广告%d分钟</string>
+    <string name="exit_dialog_tip">您还有奖励未领取哟~</string>
+    <string name="get_shudou">立即领取</string>
+    <string name="exit_ignore">残忍退出</string>
+    <string name="text_go_read">继续阅读</string>
+
+</resources>

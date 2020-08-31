@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white"
+                                            android:orientation="vertical">
+
+   <include layout="@layout/toolbar_layout"/>
+
+    <com.zydm.base.widgets.refreshview.PullToRefreshLayout
+            android:id="@+id/pull_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:layout_below="@id/toolbar_layout"
+            android:focusableInTouchMode="true"
+            >
+
+        <com.zydm.base.widgets.refreshview.PullableListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:divider="@null"
+                android:background="@color/white"
+                android:dividerHeight="0px"
+                />
+
+    </com.zydm.base.widgets.refreshview.PullToRefreshLayout>
+
+    <ImageView
+            android:id="@+id/iv_write_comments_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            app:x_layout_size="142,142"
+            app:x_layout_margin="#,#,24,29"
+            android:background="@mipmap/write_comments_icon"/>
+</com.duoyue.lib.base.widget.XRelativeLayout>

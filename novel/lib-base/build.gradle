@@ -1,0 +1,82 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'org.greenrobot.greendao'
+
+
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+
+android {
+    compileSdkVersion compile_sdk_version
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    greendao {
+        schemaVersion 3
+        daoPackage 'com.zydm.base.data.dao.gen'
+        targetGenDir 'src/main/java'
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    api project(':lib-public')
+    api project(':mod-share')
+//    api files('libs/open_sdk_r6019_lite.jar')
+    //api files('libs/umeng-common-2.0.2.jar')
+    compile  'com.umeng.umsdk:analytics:8.0.0'
+    compile  'com.umeng.umsdk:common:2.0.0'
+
+
+    api files('libs/BaiduLBS_Android_7.6.0.jar')
+    api files('libs/pushsdk_v2.3.4.jar')
+    api files('libs/com.coloros.mcssdk.jar')
+    api files('libs/MiPush_SDK_Client_3_6_19.jar')
+//    api files('libs/umeng-share-core-6.9.4.jar')
+    //api files('libs/umeng-share-QQ-simplify-6.9.4.jar')
+//    api files('libs/umeng-share-sina-simplify-6.9.4.jar')
+//    api files('libs/umeng-share-wechat-simplify-6.9.4.jar')
+//    api files('libs/umeng-shareboard-widget-6.9.4.jar')
+//    api files('libs/umeng-sharetool-6.9.4.jar')
+    api 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.huxq17.xrefreshview:xrefreshview:3.6.9'
+}

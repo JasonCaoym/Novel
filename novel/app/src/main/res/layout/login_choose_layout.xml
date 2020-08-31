@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent" android:layout_height="match_parent"
+                                          android:background="@color/color_black_88" android:gravity="center">
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" app:x_layout_size="630,#" app:x_shape_radius="30"
+                                                android:background="@drawable/radius_bg_shape">
+        <!-- 关闭按钮区域 -->
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_alignParentRight="true"
+                                                  app:x_layout_padding="20,20,20,20">
+            <ImageButton android:id="@+id/close_btn" android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" android:background="@mipmap/user_close_icon"
+                         app:x_layout_size="35,35"/>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+        <!-- 内容区域 -->
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent"
+                                                  android:layout_height="wrap_content" android:orientation="vertical"
+                                                  app:x_layout_padding="70,70,70,70" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      app:x_layout_padding="#,#,#,73"
+                      android:text="@string/login_free_reading" app:x_text_size="48"
+                      android:textColor="@color/guide_choose_big"/>
+            <TextView android:id="@+id/login_wechat_btn" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,100"
+                      app:x_text_drawable_bounds="145,0,195,36" app:x_shape_radius="80" app:x_text_drawable_padding="#"
+                      app:x_text_size="30" android:gravity="center" android:text="@string/login_wechat"
+                      android:background="@drawable/z_btn_shape_bg" android:textColor="@color/white"
+                      android:drawableLeft="@mipmap/login_wechat_logo"/>
+            <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent"
+                                                      android:layout_height="wrap_content"
+                                                      app:x_layout_padding="#,60,#,#" android:orientation="horizontal"
+                                                      android:gravity="center">
+                <!-- 手机 -->
+                <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/login_phone_btn" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                           app:x_layout_size="80,80" android:background="@mipmap/login_phone_icon"/>
+                <!-- 间距 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="1dp" app:x_layout_size="90,#"/>
+                <!-- QQ -->
+                <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/login_qq_btn" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                           app:x_layout_size="80,80" android:background="@mipmap/login_qq_icon"/>
+                <!-- 间距 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="1dp" app:x_layout_size="90,#"/>
+                <!-- 微博 -->
+                <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/login_weibo_btn" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                           app:x_layout_size="80,80" android:background="@mipmap/login_weibo_icon"/>
+            </com.duoyue.lib.base.widget.XLinearLayout>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XLinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+                                          android:gravity="center_horizontal"
+                                          android:layout_height="match_parent">
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@mipmap/bg_comment_null"
+               app:x_layout_margin="0,64,0,40"/>
+
+
+    <TextView
+            android:textColor="@color/color_898989_"
+            app:x_text_size="28" app:x_layout_margin="0,0,0,60"
+            android:id="@+id/tv_go_comment"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="快来抢沙发，成为第一个写书评的人 >"/>
+
+</com.duoyue.lib.base.widget.XLinearLayout>

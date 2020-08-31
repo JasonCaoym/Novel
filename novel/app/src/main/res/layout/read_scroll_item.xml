@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    >
+    <TextView
+            android:id="@+id/read_scroll_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_1b1b1b"
+            android:text="斗破苍穹"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:textSize="18sp"
+    />
+
+    <TextView
+            android:id="@+id/read_scroll_item_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_1b1b1b"
+            android:text="斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹"
+            android:paddingTop="10dp"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.2"
+    />
+
+    <FrameLayout
+            android:id="@+id/read_scroll_item_adcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/read_scroll_item_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/color_1b1b1b"
+            android:text="斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹斗破苍穹"
+            android:paddingTop="10dp"
+            android:layout_weight="1.0"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.2"
+    />
+
+</com.duoyue.lib.base.widget.XLinearLayout>

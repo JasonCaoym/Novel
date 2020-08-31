@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_height="wrap_content">
+
+
+    <com.duoyue.lib.base.widget.XLinearLayout
+            android:id="@+id/xll"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+
+        <ImageView android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:id="@+id/iv_one"
+                   android:cropToPadding="false"
+                   android:rotation="-8"
+                   app:x_layout_margin="#,16,#,#"
+                   android:background="@color/colorOrangePrimaryDark"
+                   android:layout_height="wrap_content"
+                   app:x_layout_size="#,98"/>
+
+        <ImageView android:layout_width="0dp"
+                   android:cropToPadding="false"
+                   android:rotation="-4"
+                   android:id="@+id/iv_two"
+                   android:layout_weight="1"
+                   app:x_layout_margin="#,20,#,#"
+                   android:background="@color/colorDeepPurpleAccent"
+                   android:layout_height="wrap_content"
+                   app:x_layout_size="#,98"/>
+
+        <ImageView android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:cropToPadding="false"
+                   app:x_layout_size="#,98"/>
+
+        <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="0dp"
+                                                    android:layout_weight="2"
+                                                    android:layout_height="wrap_content">
+
+
+
+
+            <ImageView android:layout_width="wrap_content"
+                       android:rotation="8"
+                       android:layout_toRightOf="@+id/iv_four"
+                       app:x_layout_size="83,98"
+                       android:id="@+id/iv_five"
+                       app:x_layout_margin="#,16,#,#"
+                       android:cropToPadding="false"
+                       android:background="@color/colorOrangePrimaryDark"
+                       android:layout_height="wrap_content"/>
+
+            <ImageView android:layout_width="wrap_content"
+                       android:rotation="4"
+                       app:x_layout_size="83,98"
+                       android:id="@+id/iv_four"
+                       android:cropToPadding="false"
+                       app:x_layout_margin="#,20,#,#"
+                       android:background="@color/colorDeepPurpleAccent"
+                       android:layout_height="match_parent"/>
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignBottom="@+id/xll"
+               android:layout_centerHorizontal="true"
+               android:background="@color/black"
+               android:cropToPadding="false"
+               android:id="@+id/iv_center"
+               app:x_layout_margin="#,16,#,#"
+               app:x_layout_size="78,98"/>
+
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

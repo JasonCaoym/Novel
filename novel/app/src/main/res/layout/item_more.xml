@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+            android:id="@+id/tv_column"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            app:x_text_size="36"
+            android:layout_height="wrap_content"/>
+</com.duoyue.lib.base.widget.XRelativeLayout>

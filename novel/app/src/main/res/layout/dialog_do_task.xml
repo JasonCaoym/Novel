@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/transparent"
+>
+
+    <ImageView
+            android:id="@+id/dialog_task_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_read_close"
+            android:layout_gravity="right"
+            android:layout_marginBottom="35dp"
+    />
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+        <com.duoyue.lib.base.widget.XRelativeLayout
+                android:id="@+id/dialog_task_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.duoyue.lib.base.widget.XRelativeLayout
+                    android:id="@+id/dialog_task_tip"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    app:x_layout_margin="#,77,#,#"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="+"
+                        android:includeFontPadding="false"
+                        app:x_text_size="40"
+                        app:x_layout_margin="0,0,10,0"
+                        android:id="@+id/tv_add"
+                        android:textColor="@color/standard_red_main_color_c1"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_sum"
+                        android:layout_alignBaseline="@+id/tv_sum"/>
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_toRightOf="@+id/tv_add"
+                        android:id="@+id/tv_sum"
+                        android:text="20"
+                        app:x_layout_margin="0,0,26,0"
+                        app:x_text_size="80"
+                        android:textColor="@color/standard_red_main_color_c1"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+
+                <ImageView
+                        android:id="@+id/dialog_task_dou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_sum"
+                        app:x_layout_margin="0,10,0,0"
+                        android:src="@mipmap/icon_doudou"/>
+
+
+            </com.duoyue.lib.base.widget.XRelativeLayout>
+
+            <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dialog_task_tip"
+                    app:x_text_size="36"
+                    app:x_layout_margin="0,52,0,59"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/title_btn_text"
+                    android:text="已完成阅读任务"/>
+
+            <com.duoyue.lib.base.widget.XLinearLayout
+                    android:id="@+id/dialog_task_double_layout"
+                    android:layout_below="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+            >
+                <TextView
+                        android:id="@+id/dialog_task_reward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:x_layout_size="420,76"
+                        android:background="@drawable/ad_round_main_bg"
+                        android:gravity="center"
+                        app:x_layout_margin="#,#,#,30"
+                        android:includeFontPadding="false"
+                        android:layout_gravity="center_horizontal"
+                        android:text="看个小视频奖励翻倍"
+                        android:textColor="@color/white"
+                        app:x_text_size="32"/>
+
+                <TextView
+                        android:id="@+id/dialog_task_reward_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:x_text_size="22"
+                        android:gravity="center"
+                        app:x_layout_margin="0,0,0,45"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/color_898989"
+                        android:text="视频结束后右上角可关闭"/>
+
+            </com.duoyue.lib.base.widget.XLinearLayout>
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+    </android.support.v7.widget.CardView>
+</com.duoyue.lib.base.widget.XLinearLayout>

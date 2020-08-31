@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp"
+>
+
+    <TextView
+            android:id="@+id/notification_hold_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_1b1b1b"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:paddingTop="4dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:text="@string/notification_hold_title"
+    />
+
+    <TextView
+            android:id="@+id/notification_hold_empty_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/notification_hold_title"
+            android:text="@string/notification_hold_sub_title"
+            android:textColor="@color/color_898989"
+            android:visibility="gone"
+            android:paddingLeft="17dp"
+            android:paddingTop="4dp"
+            android:paddingRight="17dp"
+            android:textSize="14sp"
+    />
+
+    <LinearLayout
+            android:id="@+id/notification_hold_books"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            android:visibility="visible"
+    >
+        <LinearLayout
+                android:id="@+id/notification_hold_first_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="25dp"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:background="@drawable/notification_hold_first_icon"
+                    android:text="1"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+            />
+
+            <TextView
+                    android:id="@+id/notification_hold_first"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="9dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="盗墓笔记本"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_1b1b1b"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/notification_hold_second_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="25dp"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:background="@drawable/notification_hold_second_icon"
+                    android:text="2"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+            />
+
+            <TextView
+                    android:id="@+id/notification_hold_second"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="9dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="盗墓盗墓盗墓盗墓盗墓盗墓盗墓盗墓"
+                    android:textColor="@color/color_1b1b1b"
+                    android:textSize="14sp"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/notification_hold_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_notification_search"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_marginRight="16dp"
+    />
+
+</RelativeLayout>

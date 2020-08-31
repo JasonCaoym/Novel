@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/share_bg"
+        android:orientation="vertical">
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical">
+        
+        <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+            <TextView
+                    android:id="@+id/wx_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="微信"
+                    android:drawableTop="@mipmap/wx_icon"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/clr_666666"
+                    android:textSize="16sp"/>
+            
+            <TextView
+                    android:id="@+id/wechat_moments_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="微信朋友圈"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/mechat_icon"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/clr_666666"
+                    android:textSize="16sp"/>
+            
+            
+            <TextView
+                    android:id="@+id/wb_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="新浪"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/weibo_icon"
+                    android:textColor="@color/clr_666666"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+        
+        </LinearLayout>
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+            
+            <TextView
+                    android:id="@+id/qq_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="QQ"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/qq_icon"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/clr_666666"
+                    android:textSize="16sp"/>
+            <TextView
+                    android:id="@+id/zone_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="空间"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/qq_zone_icon"
+                    android:textColor="@color/clr_666666"
+                    android:textSize="16sp"/>
+            <TextView
+                    android:id="@+id/copy_link_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="复制链接"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/copy_link_icon"
+                    android:textColor="@color/clr_666666"
+                    android:textSize="16sp"/>
+        </LinearLayout>
+    
+    </LinearLayout>
+    
+    <TextView
+            android:id="@+id/cancel_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/share_cancle_bg"
+            android:textColor="@color/title_btn_text"
+            android:text="取消"/>
+
+</LinearLayout>

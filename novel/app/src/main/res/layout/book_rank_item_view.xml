@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:x_layout_size="#,342"
+        android:background="@color/white"
+        android:clipToPadding="false">
+
+
+    <com.duoyue.app.ui.widget.CustomImageView
+            android:id="@+id/rank_cover"
+            android:background="@drawable/book_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:x_layout_size="113,150"
+            app:x_layout_margin="32,50,27,27"/>
+
+
+    <TextView
+            android:id="@+id/rank_rank_pos"
+            style="@style/base_text"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_alignBaseline="@+id/rank_cover"
+            app:x_layout_margin="27,40,#,#"
+            android:background="@mipmap/icon_rank_first"
+            app:x_layout_size="34,34"
+            android:gravity="center"
+            android:visibility="visible"
+            tools:visibility="visible"
+            tools:text="1"/>
+
+    <com.duoyue.lib.base.widget.XLinearLayout
+            android:id="@+id/layout_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:x_layout_margin="#,40,32,#">
+
+        <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_fc7312"
+                android:text="8.0"
+                android:textStyle="bold"
+                app:x_text_size="30"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_fc7312"
+                android:text="分"
+                app:x_text_size="22"/>
+
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+    <TextView
+            android:textStyle="bold"
+            android:id="@+id/rank_name"
+            style="@style/base_text"
+            android:layout_toRightOf="@id/rank_cover"
+            android:layout_toLeftOf="@id/layout_score"
+            android:maxLines="1"
+            android:textColor="@color/color_1b1b1b"
+            app:x_layout_margin="0,48,32,13"
+            app:x_text_size="30"
+            tools:text="书城"/>
+
+    <TextView
+            android:id="@+id/rank_resume"
+            style="@style/base_text"
+            android:layout_toRightOf="@+id/rank_cover"
+            android:layout_below="@+id/rank_name"
+            android:maxLines="2"
+            android:lineSpacingMultiplier="1.1"
+            android:textColor="@color/color_666666"
+            app:x_layout_margin="0,0,32,0"
+            app:x_text_size="26"
+            tools:text=""/>
+
+    <com.duoyue.app.ui.widget.CustomImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/author"
+            android:layout_alignLeft="@id/rank_name"
+            android:layout_alignBottom="@id/rank_cover"/>
+
+    <TextView
+            android:id="@+id/rank_author"
+            style="@style/base_text"
+            android:layout_alignBottom="@+id/rank_cover"
+            android:textColor="@color/color_898989"
+            android:maxWidth="200dp"
+            android:layout_toRightOf="@id/iv_icon"
+            app:x_layout_margin="11,0,32,0"
+            app:x_text_size="22"
+            tools:text=""/>
+
+    <TextView
+            android:id="@+id/tv_rank_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_b2b2b2"
+            android:layout_alignBaseline="@id/rank_author"
+            android:layout_alignParentRight="true"
+            app:x_text_size="22"
+            app:x_layout_margin="#,#,32,#"/>
+
+    <TextView
+            android:id="@+id/tv_rank_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_b2b2b2"
+            android:layout_alignBaseline="@id/rank_author"
+            android:layout_toLeftOf="@id/tv_rank_type"
+            app:x_text_size="22"
+            />
+
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="14dp"/>
+    <!--<solid android:color="@color/z_btn_selector"/>-->
+    <!--实现应用背景颜色渐变-->
+    <gradient
+            android:startColor="@color/standard_red_main_color_bright"
+            android:endColor="@color/standard_red_main_color_c1"
+            android:angle="315"/>
+</shape>

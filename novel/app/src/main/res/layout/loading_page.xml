@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center" android:background="@color/white">
+    <!-- 加载进度 -->
+    <com.duoyue.lib.base.widget.XLinearLayout android:id="@+id/loading_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:orientation="vertical">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="100,100"  android:indeterminateDrawable="@drawable/loading_bar"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_padding="#,20,#,#" app:x_text_size="30" android:textColor="@color/color_736E68" android:text="@string/data_loading"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+    <!-- 重试操作 -->
+    <com.duoyue.lib.base.widget.XLinearLayout android:id="@+id/load_failed_layout"  android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:orientation="vertical">
+        <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content" android:layout_height="match_parent" app:x_layout_size="347,310" android:background="@mipmap/load_failed"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_padding="#,20,#,50" app:x_text_size="30" android:textColor="@color/color_736E68" android:text="@string/load_failed"/>
+        <Button android:id="@+id/refresh_btn" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="282,84" app:x_text_size="30"
+            android:background="@drawable/z_btn_shape_bg" android:textColor="@color/white" app:x_shape_radius="45" android:text="@string/click_refresh"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+</com.duoyue.lib.base.widget.XRelativeLayout>

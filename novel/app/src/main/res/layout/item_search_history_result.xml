@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+                                          android:layout_height="wrap_content">
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout app:x_layout_margin="32,34,0,2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/xrl_result">
+
+        <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/tv_search"
+                   android:layout_centerVertical="true"
+                   android:src="@mipmap/bg_search_result"
+                   app:x_layout_size="34,32"
+                   app:x_layout_margin="0,0,25,0"/>
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:maxEms="15"
+                  android:ellipsize="end"
+                  android:singleLine="true"
+                  app:x_text_size="28"
+                  android:id="@+id/tv_key_word"
+                  android:gravity="center_vertical"
+                  android:includeFontPadding="false"
+                  android:layout_alignBaseline="@+id/tv_search"
+                  android:layout_centerVertical="true"
+                  android:layout_height="wrap_content"
+                  android:layout_toRightOf="@+id/tv_search"/>
+
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+</com.duoyue.lib.base.widget.XLinearLayout>

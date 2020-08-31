@@ -1,0 +1,86 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+          package="com.zzdm.ad">
+
+    <!-- SDK 相关声明 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />    <!-- 如果需要精确定位的话请加上此权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- targetSdkVersion >= 26 时需要配置此权限，否则无法进行安装app的动作 -->
+
+    <!-- targetSdkVersion >= 26 时需要配置此权限，否则无法进行安装app的动作 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- 如果有视频相关的广告且使用textureView播放，请务必添加，否则黑屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <application
+            android:usesCleartextTraffic="true"
+    >
+
+        <!-- 广点通 声明SDK所需要的组件
+        <meta-data
+                android:name="com.tencent.rdm.uuid"
+                android:value="b8266cc3-e3e0-4d76-9f11-d2a4ca50c84a" />
+        -->
+        <uses-library
+                android:name="org.apache.http.legacy"
+                android:required="false" />
+
+        <!-- 声明SDK所需要的组件 -->
+        <service
+                android:name="com.qq.e.comm.DownloadService"
+                android:exported="false" />
+        <service android:name="com.duoyue.mod.ad.api.ToutiaoAdReport"/>
+        <!-- 请开发者注意字母的大小写，ADActivity，而不是AdActivity -->
+        <activity
+                android:name="com.qq.e.ads.ADActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity
+                android:name="com.qq.e.ads.PortraitADActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.qq.e.ads.LandscapeADActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                android:screenOrientation="landscape" />
+
+        <!--百度广告-->
+        <activity
+                android:name="com.baidu.mobads.AppActivity"
+                android:configChanges="screenSize|keyboard|keyboardHidden|orientation"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.duoyue.mod.ad.MainActivity"/>
+
+        <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="${applicationId}.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/gdt_file_path" />
+        </provider>
+
+        <provider
+                android:authorities="${applicationId}.TTFileProvider"
+                android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true" >
+                <meta-data
+                        android:name="android.support.FILE_PROVIDER_PATHS"
+                        android:resource="@xml/ad_file_paths"
+                        />
+        </provider>
+        <provider
+                android:authorities="${applicationId}.TTMultiProvider"
+                android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+                android:exported="false"
+                  />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.duoyue.mianfei.xiaoshuo">
+    <!-- 允许程序访问网络连接 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 允许程序获取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序获取当前WiFi接入的状态以及WLAN热点的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 程序可以读取设备外部存储空间 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许程序写入外部存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 允许程序通过WiFi或移动基站的方式获取用户错略的经纬度信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 允许程序通过GPS芯片接收卫星的定位信息 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 改变WiFi状态(开启/关闭) -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 获取手机信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 忽略电池优化需要的权限 -->
+    <!--华为推送权限-->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" /> <!-- Android O版本调用安装需要使用该权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 com.duoyue.mianfei.xiaoshuo 要替换上您应用的包名 -->
+    <permission
+            android:name="com.duoyue.mianfei.xiaoshuo.permission.PROCESS_PUSH_MSG"
+            android:protectionLevel="signatureOrSystem" /> <!-- 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 com.duoyue.mianfei.xiaoshuo 要替换上您应用的包名 -->
+    <uses-permission android:name="com.duoyue.mianfei.xiaoshuo.permission.PROCESS_PUSH_MSG" />
+
+    <!--Oppo推送权限-->
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
+
+    <!--小米推送权限-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <permission
+            android:name="com.duoyue.mianfei.xiaoshuo.permission.MIPUSH_RECEIVE"
+            android:protectionLevel="signature" /> <!--这里com.xiaomi.mipushdemo改成app的包名-->
+    <uses-permission android:name="com.duoyue.mianfei.xiaoshuo.permission.MIPUSH_RECEIVE" /><!--这里com.xiaomi.mipushdemo改成app的包名-->
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+            android:name=".common.SampleApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:supportsRtl="true"
+            android:theme="@style/BaseNoActionBarAppTheme"
+            tools:ignore="GoogleAppIndexingWarning"
+            tools:replace="label,allowBackup,icon,theme">
+
+        <!--
+         接入HMSSDK 需要注册的appid参数。value的值中“100713653”用实际申请的appid替换，来源于开发者联盟网站应用的权益详情。
+                   格式 android:value="appid=xxxxxx"
+                   Access HMSSDK need to register AppID parameters. Value "100713653" is replaced with the actual application APPID, derived from the Developer affiliate website application.
+                   Format android:value= "appid=xxxxxx"
+        -->
+        <meta-data
+                android:name="com.huawei.hms.client.appid"
+                android:value="appid=100713653" />
+        <meta-data
+                android:name="android.max_aspect"
+                android:value="2.1" />
+
+        <activity
+                android:name="com.duoyue.app.splash.SplashActivity"
+                android:exported="true"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppWelcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:host="h5"
+                        android:pathPrefix="/client/splash"
+                        android:scheme="com.duoyue.mianfei.xiaoshuo" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".ui.HomeActivity"
+                android:exported="true"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".mine.ui.QuestionActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden" /> <!-- 登录 -->
+        <activity
+                android:name="com.duoyue.app.ui.activity.LoginActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" /> <!-- android:theme="@style/TranslucentTheme" -->
+        <!-- 阅读历史记录 -->
+        <activity
+                android:name="com.duoyue.app.ui.activity.ReadHistoryActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" /> <!-- 关于我们 -->
+        <activity
+                android:name="com.duoyue.app.ui.activity.AboutUsActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" /> <!-- 开发者 -->
+        <activity
+                android:name=".mine.ui.DeveloperActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" /> <!-- 百度定位SDK -->
+        <meta-data
+                android:name="com.baidu.lbsapi.API_KEY"
+                android:value="7MB519YsnnEC5eS1TdICsrI6spClD8kf" />
+
+        <service
+                android:name="com.baidu.location.f"
+                android:enabled="true"
+                android:process=":remote" /> <!-- 友盟SDK -->
+        <meta-data
+                android:name="UMENG_CHANNEL"
+                android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <activity
+                android:name="com.duoyue.app.ui.activity.SearchV2Activity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.SearchResultWorksListActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.SearchResultListActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden" />
+        <activity
+                android:name=".book.ui.list.SelectedActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".read.ui.read.ReadActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".read.ui.read.ReadFromH5Activity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:host="h5"
+                        android:pathPrefix="/client/ebkRead"
+                        android:scheme="com.duoyue.mianfei.xiaoshuo" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".read.ui.catalogue.CatalogueActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.BookRankActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.BookMoreActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.BookDetailCategoryActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.BookDetailActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                android:theme="@style/TranslucentTheme">
+            <intent-filter>
+                <data
+                        android:host="duoyue.xiaoshuo"
+                        android:pathPrefix="/detail"
+                        android:scheme="app" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.duoyue.app.ui.activity.BookCommentActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.GoActivity"
+                android:exported="true"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.WriteBookCommentActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.fragment.NewCategoryActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.BookListActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.CategoryBookListActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.ReadRecommendActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.SettingActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.TaskWebViewActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.RandomPushBookActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.duoyue.app.ui.activity.BookDownloadActivity"
+                android:screenOrientation="portrait" /> <!-- &lt;!&ndash; 友盟分享 start &ndash;&gt; -->
+        <!-- &lt;!&ndash; QQ &ndash;&gt; -->
+        <!-- <activity android:name="com.tencent.tauth.AuthActivity" android:launchMode="singleTask" -->
+        <!-- android:noHistory="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.VIEW"/> -->
+        <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+        <!-- <category android:name="android.intent.category.BROWSABLE"/> -->
+        <!--  -->
+        <!-- <data android:scheme="tencent101558665"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.tencent.connect.common.AssistActivity" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" tools:replace="android:configChanges"/> -->
+        <!-- &lt;!&ndash; 微信 &ndash;&gt; -->
+        <!-- <activity -->
+        <!-- android:name=".wxapi.WXEntryActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:exported="true" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"/> -->
+        <!-- &lt;!&ndash; 新浪微博 &ndash;&gt; -->
+        <!-- <activity -->
+        <!-- android:name="com.umeng.socialize.media.WBShareCallBackActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="portrait"> -->
+        <!-- </activity> -->
+        <!-- <activity android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation" -->
+        <!-- android:exported="false" -->
+        <!-- android:windowSoftInputMode="adjustResize" -->
+        <!-- &gt; -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:name="com.sina.weibo.sdk.share.WbShareTransActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/> -->
+        <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+        <!-- </intent-filter> -->
+        <!--  -->
+        <!-- </activity> -->
+        <!-- <activity android:name="com.duoyue.app.ui.activity.BookRankActivity"/> -->
+        <!-- <activity android:name="com.duoyue.app.ui.activity.BookMoreActivity"/> -->
+        <!-- <activity android:name="com.duoyue.app.ui.activity.BookDetailActivity" android:theme="@style/TranslucentTheme"/> -->
+        <!-- <activity android:name="com.duoyue.app.ui.activity.BookCommentActivity"/> -->
+        <!-- &lt;!&ndash; 友盟分享 end &ndash;&gt; -->
+
+
+        <!-- *********************华为推送*************************************** -->
+        <!-- 使用 HMSAgent 代码接入HMSSDK 需要注册的activity | Use hmsagent code to access HMSSDK activity that requires registration -->
+        <activity
+                android:name="com.huawei.android.hms.agent.common.HMSAgentActivity"
+                android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+                android:excludeFromRecents="true"
+                android:exported="false"
+                android:hardwareAccelerated="true"
+                android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                    android:name="hwc-theme"
+                    android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity> <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
+        <activity
+                android:name="com.huawei.hms.activity.BridgeActivity"
+                android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+                android:excludeFromRecents="true"
+                android:exported="false"
+                android:hardwareAccelerated="true"
+                android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                    android:name="hwc-theme"
+                    android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity> <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered  -->
+        <activity
+                android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"
+                android:configChanges="orientation|screenSize"
+                android:exported="false"
+                android:theme="@style/upsdkDlDialog">
+            <meta-data
+                    android:name="hwc-theme"
+                    android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />
+        </activity> <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
+        <activity
+                android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:exported="false"
+                android:theme="@style/upsdkDlDialog">
+            <meta-data
+                    android:name="hwc-theme"
+                    android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+        <activity
+                android:name="com.huawei.android.hms.agent.HWPushTranslateActivity"
+                android:launchMode="singleTask"
+                android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                        android:host="com.duoyue.mianfei.xiaoshuo"
+                        android:path="/notification"
+                        android:scheme="huaweipush" />
+
+            </intent-filter>
+        </activity>
+        <!--  接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.duoyue.mianfei.xiaoshuo 要替换上您应用的包名
+              Access HMSSDK need to register provider,authorities must not be the same as other applications, so this side ${package_name} to replace the package name you applied
+        -->
+        <provider
+                android:name="com.huawei.hms.update.provider.UpdateProvider"
+                android:authorities="com.duoyue.mianfei.xiaoshuo.hms.update.provider"
+                android:exported="false"
+                android:grantUriPermissions="true" />
+        <!--接入HMSSDK PUSH模块需要注册，第三方相关 :接收Push消息（注册、透传消息、通知栏点击事件）广播，
+                此receiver类需要开发者自己创建并继承com.huawei.hms.support.api.push.PushReceiver类，
+                参考示例代码中的类：com.huawei.hmsagent.HuaweiPushRevicer
+		com.duoyue.mianfei.xiaoshuo 要替换上您应用的包名
+        -->
+        <receiver
+                android:name="com.huawei.android.hms.agent.HuaweiPushRevicer"
+                android:permission="com.duoyue.mianfei.xiaoshuo.permission.PROCESS_PUSH_MSG">
+            <intent-filter>
+
+                <!-- 必须,用于接收token -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <!-- 必须, 用于接收透传消息 -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+                <!-- 必须, 用于接收通知栏消息点击事件 此事件不需要开发者处理，只需注册就可以 -->
+                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY" />
+            </intent-filter>
+        </receiver> <!-- 应用下载服务 -->
+        <service
+                android:name="com.huawei.updatesdk.service.deamon.download.DownloadService"
+                android:exported="false" />
+        <!-- *********************华为推送*************************************** -->
+
+
+        <!-- *********************Vivo推送*************************************** -->
+        <!--推送服务需要配置的service、activity-->
+        <service
+                android:name="com.vivo.push.sdk.service.CommandClientService"
+                android:exported="true" />
+        <activity
+                android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+                android:exported="false"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- *********************Vivo推送*************************************** -->
+        <!--推送配置项-->
+        <meta-data
+                android:name="com.vivo.push.api_key"
+                android:value="9d2ca750-858c-40b9-a4cf-0ba2c4c35666" />
+        <meta-data
+                android:name="com.vivo.push.app_id"
+                android:value="15942" />
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name="com.duoyue.app.receiver.PushMessageReceiverImpl">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.vivo.pushclient.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <!-- *********************OPPO推送*************************************** -->
+        <!--oppoPush跳转-->
+        <activity
+                android:name="com.duoyue.app.ui.activity.OppoPushTranslateActivity"
+                android:launchMode="singleTask"
+                android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                        android:host="com.duoyue.mianfei.xiaoshuo"
+                        android:path="/notification"
+                        android:scheme="oppopush" />
+            </intent-filter>
+        </activity>
+
+        <service
+                android:name="com.coloros.mcssdk.PushService"
+                android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE">
+            <intent-filter>
+                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE" />
+            </intent-filter>
+        </service>
+        <!-- *********************OPPO推送*************************************** -->
+        <!-- *********************小米推送*************************************** -->
+        <service
+                android:name="com.xiaomi.push.service.XMPushService"
+                android:enabled="true"
+                android:process=":pushservice" />
+
+        <service
+                android:name="com.xiaomi.push.service.XMJobService"
+                android:enabled="true"
+                android:exported="false"
+                android:permission="android.permission.BIND_JOB_SERVICE"
+                android:process=":pushservice" /> <!--注：此service必须在3.0.1版本以后（包括3.0.1版本）加入-->
+
+        <service
+                android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+                android:enabled="true"
+                android:exported="true" />
+
+        <service
+                android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+                android:enabled="true" /> <!--注：此service必须在2.2.5版本以后（包括2.2.5版本）加入-->
+        <receiver
+                android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+                android:exported="true">
+
+            <intent-filter>
+
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+
+        </receiver>
+
+        <receiver
+                android:name="com.xiaomi.push.service.receivers.PingReceiver"
+                android:exported="false"
+                android:process=":pushservice">
+
+            <intent-filter>
+
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+
+            </intent-filter>
+
+        </receiver>
+
+        <receiver
+                android:name="com.duoyue.app.receiver.XiaoMiMessageReceiver"
+                android:exported="true">
+            <!--这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名-->
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+        <!-- *********************小米推送*************************************** -->
+
+        <service
+                android:name="com.duoyue.app.service.ScheduleService"
+                android:exported="true" />
+        <service android:name="com.duoyue.app.upgrade.DownloadIntentService" />
+
+        <receiver android:name="com.duoyue.app.upgrade.DownLoadCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver> <!-- Since JCore2.0.0 Required SDK核心功能 -->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <service
+                android:name="com.duoyue.app.service.PushService"
+                android:enabled="true"
+                android:exported="false"
+                android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+        <service
+                android:name="com.duoyue.app.notification.NotificationHolderService"
+                android:exported="true" /> <!-- Required since 3.0.7 -->
+        <service
+                android:name="com.duoyue.app.notification.NotificationHolderV2Service"
+                android:exported="true" /> <!-- Required since 3.0.7 -->
+
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+                android:name="com.duoyue.app.receiver.PushMessageReceiver"
+                android:enabled="true"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.duoyue.mianfei.xiaoshuo" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

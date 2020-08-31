@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/toolbar_layout" style="@style/title_layout_style">
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                app:x_layout_size="#,90"
+                                                android:gravity="center_vertical">
+        <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/left_container"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content">
+            <com.duoyue.app.ui.widget.CustomImageView style="@style/title_img_btn_style"
+                                                      android:id="@+id/toolbar_back"
+                                                      android:src="@mipmap/icon_back"
+                                                      tools:ignore="ContentDescription"/>
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+        <com.duoyue.lib.base.widget.XLinearLayout
+                android:id="@+id/layout_toolbar_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+            <com.duoyue.app.ui.widget.CustomImageView
+                    android:id="@+id/toolbar_right_img_2"
+                    style="@style/title_text_btn_style"
+                    tools:src="@mipmap/question"
+                    android:paddingRight="12dp"
+                    android:layout_toLeftOf="@id/toolbar_right_img"
+                    android:layout_marginRight="1dp"/>
+
+            <!-- 右边操作按钮(图片) -->
+            <com.duoyue.app.ui.widget.CustomImageView
+                    android:id="@+id/toolbar_right_img"
+                    style="@style/title_text_btn_style"
+                    tools:src="@mipmap/question"
+                    android:paddingLeft="12dp"
+                    android:layout_marginRight="1dp"/>
+
+        </com.duoyue.lib.base.widget.XLinearLayout>
+
+        <TextView android:id="@+id/toolbar_title"
+                  style="@style/title_text_style"
+                  android:layout_width="match_parent"
+                  app:x_layout_margin="100,#,20,#"
+                  android:gravity="center_vertical"
+                  android:layout_toLeftOf="@id/layout_toolbar_right"/>
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XRelativeLayout>
