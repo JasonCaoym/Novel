@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                         android:layout_width="match_parent"
+                                         xmlns:app="http://schemas.android.com/apk/res-auto"
+                                         android:background="@color/white"
+                                         android:layout_height="wrap_content">
+
+    <com.duoyue.lib.base.widget.XFrameLayout
+            android:id="@+id/ad_layout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/ad_bg"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            app:x_layout_size="#,120"
+            android:layout_height="wrap_content">
+
+    </com.duoyue.lib.base.widget.XFrameLayout>
+
+
+</com.duoyue.lib.base.widget.XFrameLayout>

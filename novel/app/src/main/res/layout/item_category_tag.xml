@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按人气"
+            app:x_text_size="28"
+            app:x_layout_padding="10,5,10,5"
+            app:x_layout_margin="20,#,#,#"
+            android:textColor="@color/color_666666"
+            android:background="@color/white"/>
+
+</com.duoyue.lib.base.widget.XFrameLayout>

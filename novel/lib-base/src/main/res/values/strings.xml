@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">多阅免费小说</string>
+    <string name="please_choose_browser">请选择浏览器</string>
+    <string name="post_time_now">刚刚</string>
+    <string name="post_time_minute">%1$d分钟前</string>
+    <string name="post_time_hour">%1$d小时前</string>
+    <string name="expand">展开</string>
+    <string name="shrink">收起</string>
+    <string name="offical_name">官方</string>
+    <string name="feedback_epilogue">在此感谢你对多阅免费小说的关爱，多阅免费小说将一直陪伴着你，给你最好看的作品！</string>
+    <string name="chapter_num">第%1$d章</string>
+    <string name="not_supported">您的应用版本过低，请升级到最新版本</string>
+    <string name="prompt_no_net">网络不好，请检查网络设置</string>
+    <string name="prompt_no_net_refresh">点击重试</string>
+    <string name="prompt_no_data">哎呀！没有找到内容</string>
+    <string name="prompt_no_permission">打开定位权限才能使用此功能哟！</string>
+    <string name="progress">正在下载中</string>
+    <string name="downloading">正在下载中</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="add">添加</string>
+    <string name="upgrade_now">立即更新</string>
+    <string name="no_install_qq">请先安装QQ</string>
+    <string name="no_install_wechat">请先安装微信</string>
+    <string name="no_install_weibo">请先安装新浪微博</string>
+    
+    <string name="share_suc">分享成功</string>
+    <string name="share_loading">分享中</string>
+    <string name="share_fail">分享失败</string>
+    <string name="cancel_share">取消分享</string>
+    <string name="login_failure">登录失败</string>
+    <string name="cancel_login">取消登录</string>
+
+    <!-- MarqueeView -->
+    <declare-styleable name="CMarqueeViewStyle">
+        <attr format="integer|reference" name="mvInterval"/>
+        <attr format="integer|reference" name="mvAnimDuration"/>
+        <attr format="dimension|reference" name="mvTextSize"/>
+        <attr format="color|reference" name="mvTextColor"/>
+        <attr format="boolean" name="mvSingleLine"/>
+        <attr name="mvGravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="mvDirection">
+            <enum name="bottom_to_top" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="left_to_right" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <string name="auth_tips_title">为了您更好的使用免费小说，需要您允许以下权限：\n</string>
+    <string name="auth_tips_desc">将会获得更加安全极致的阅读体验。</string>
+    <string name="to_set">去设置</string>
+    <string name="abort">退出</string>
+    <string name="text_comment">
+        撰写高质量书评建议：\n
+        — 喜欢和不喜欢本书的原因\n
+        — 与同类书籍的比较；故事风格，人物形象，环境描写\n
+        — 可以从不同角度描述\n
+        高质量的书评有机会被小编发掘收录，将获得丰厚奖励哦
+    </string>
+
+    <string name="read_continue">继续阅读</string>
+    <integer name="block_canary_max_stored_count">1000</integer>
+    <string name="congratulations">恭喜你</string>
+</resources>

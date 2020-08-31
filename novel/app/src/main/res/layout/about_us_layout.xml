@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,60" />
+    <!-- 内容区域 -->
+    <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,470" android:gravity="center" android:orientation="vertical" android:background="@color/white">
+        <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="199,199" android:background="@mipmap/ic_launcher"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="36" app:x_layout_padding="#,20,#,50" android:textColor="@color/standard_red_main_color_c1" android:text="@string/app_name"/>
+        <TextView android:id="@+id/au_version_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="V1.0" android:textColor="@color/color_898989" app:x_text_size="30" />
+    </com.duoyue.lib.base.widget.XLinearLayout>
+    <!-- 用户协议-->
+    <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/au_user_agreement_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,115" app:x_layout_margin="#,21,#,#" app:x_layout_padding="40,#,40,#" android:background="@color/white">
+        <!-- 用户协议 -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="30" android:textColor="@color/book_shelf_top_text" android:layout_centerVertical="true" android:text="@string/user_agreement"/>
+        <!-- 箭头 -->
+        <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true"
+            android:src="@mipmap/icon_my_list_back_right_w" />
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+    <!-- 隐私政策-->
+    <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/au_privacy_policy_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,115" app:x_layout_margin="#,21,#,#" app:x_layout_padding="40,#,40,#" android:background="@color/white">
+        <!-- 隐私政策 -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="30" android:textColor="@color/book_shelf_top_text" android:layout_centerVertical="true" android:text="@string/privacy_policy"/>
+        <!-- 箭头 -->
+        <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true"
+                android:src="@mipmap/icon_my_list_back_right_w" />
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+    <!-- 退出登录-->
+    <com.duoyue.lib.base.widget.XLinearLayout android:id="@+id/au_sign_out_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,115" app:x_layout_margin="#,21,#,#" android:gravity="center" android:background="@color/white">
+        <TextView android:id="@+id/au_sign_out_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="30" android:textColor="@color/book_shelf_top_text" android:text="@string/sign_out"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+</com.duoyue.lib.base.widget.XLinearLayout>

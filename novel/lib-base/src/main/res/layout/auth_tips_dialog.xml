@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center">
+    <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_margin="60,138,60,#" android:background="@drawable/dialog_bg"
+        android:gravity="center" android:orientation="vertical">
+        <!-- 内容区域 -->
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_padding="50,138,50,20" android:orientation="vertical">
+            <!-- 授权提示标题 -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" app:x_text_size="36" android:textColor="@color/book_shelf_top_text" android:textStyle="bold" android:text="@string/auth_tips_title"/>
+            <!-- 授权内容 -->
+            <TextView android:id="@+id/permission_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="30" android:textColor="@color/book_shelf_top_text" />
+            <!-- 授权说明 -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="36" android:textColor="@color/book_shelf_top_text" android:text="@string/auth_tips_desc"/>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+        <!-- 点击按钮 -->
+        <Button android:id="@+id/to_set_btn" android:layout_width="match_parent" android:layout_height="match_parent" app:x_layout_size="#,115" android:ellipsize="end"
+            android:gravity="center" android:background="@color/transparent" android:maxLines="1" app:x_text_size="36" android:text="@string/to_set" android:textColor="@color/standard_red_main_color_c1"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+    <!-- 图标 -->
+    <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+         app:x_layout_size="265,277" android:gravity="center">
+        <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/auth_tips_icon"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+</com.duoyue.lib.base.widget.XRelativeLayout>

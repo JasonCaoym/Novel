@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:paddingLeft="17dp"
+    android:paddingTop="5dp"
+    android:paddingRight="17dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/book_shelf_ad_text_bg"
+        android:orientation="horizontal">
+
+        <com.duoyue.app.ui.widget.CustomImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icon_bookcase_top_radio_bao" />
+
+        <com.duoyue.lib.base.widget.marqueeview.MarqueeView
+            android:id="@+id/marquee_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            app:mvAnimDuration="1000"
+            app:mvDirection="bottom_to_top"
+            app:mvInterval="3000"
+            app:mvSingleLine="true"
+            app:mvTextColor="@color/standard_black_second_level_color_c4"
+            app:mvTextSize="@dimen/standard_tx_5" />
+    </LinearLayout>
+</FrameLayout>

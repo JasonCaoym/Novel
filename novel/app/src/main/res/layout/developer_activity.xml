@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_page_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/domain_switch_btn"
+                style="@style/developer_text"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:text="环境快捷切换："
+                android:textColor="@color/standard_text_color_gray" />
+
+            <TextView
+                style="@style/developer_text"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:text="api:"
+                android:textColor="@color/standard_text_color_gray" />
+
+            <EditText
+                android:id="@+id/api_edit"
+                style="@style/developer_text"
+                android:background="@color/white"
+                android:textColor="@color/standard_text_color_black"
+                tools:text="http://" />
+
+            <TextView
+                style="@style/developer_text"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:text="search:"
+                android:textColor="@color/standard_text_color_gray" />
+
+            <EditText
+                android:id="@+id/search_edit"
+                style="@style/developer_text"
+                android:background="@color/white"
+                android:textColor="@color/standard_text_color_black"
+                tools:text="http://" />
+
+            <TextView
+                style="@style/developer_text"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:text="statistics:"
+                android:textColor="@color/standard_text_color_gray" />
+
+            <EditText
+                android:id="@+id/statistics_edit"
+                style="@style/developer_text"
+                android:background="@color/white"
+                android:textColor="@color/standard_text_color_black"
+                tools:text="http://" />
+
+            <TextView
+                style="@style/developer_text"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:text="h5:"
+                android:textColor="@color/standard_text_color_gray" />
+
+            <EditText
+                android:id="@+id/h5_edit"
+                style="@style/developer_text"
+                android:background="@color/white"
+                android:textColor="@color/standard_text_color_black"
+                tools:text="http://" />
+
+            <EditText
+                android:id="@+id/view_uri"
+                style="@style/developer_text"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:hint="要跳转的 uri"
+                android:singleLine="true"
+                android:textColor="@color/standard_text_color_black" />
+
+            <Button
+                android:id="@+id/submit_visit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/submit_st"
+                android:textColor="@color/standard_text_color_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/developer_text"
+                    android:layout_width="120dp"
+                    android:background="@color/white"
+                    android:text="channel:"
+                    android:textColor="@color/standard_text_color_gray" />
+
+                <EditText
+                    android:id="@+id/channel_tv"
+                    style="@style/developer_text"
+                    android:drawableRight="@mipmap/icon_personal_center_news_arrow_down"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:textColor="@color/standard_text_color_black"
+                    tools:text="motong" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/developer_text"
+                    android:layout_width="120dp"
+                    android:background="@color/white"
+                    android:text="packageName:"
+                    android:textColor="@color/standard_text_color_gray" />
+
+                <EditText
+                    android:id="@+id/pkg_tv"
+                    style="@style/developer_text"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="1"
+                    android:textColor="@color/standard_text_color_black" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/developer_text"
+                    android:layout_width="120dp"
+                    android:background="@color/white"
+                    android:text="imei:"
+                    android:textColor="@color/standard_text_color_gray" />
+
+                <EditText
+                    android:id="@+id/imei_tv"
+                    style="@style/developer_text"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="1"
+                    android:textColor="@color/standard_text_color_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/developer_text"
+                    android:layout_width="120dp"
+                    android:background="@color/white"
+                    android:text="client:"
+                    android:textColor="@color/standard_text_color_gray" />
+
+                <EditText
+                    android:id="@+id/client_tv"
+                    style="@style/developer_text"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="android"
+                    android:textColor="@color/standard_text_color_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/developer_text"
+                    android:layout_width="120dp"
+                    android:background="@color/white"
+                    android:text="versionName:"
+                    android:textColor="@color/standard_text_color_gray" />
+
+                <EditText
+                    android:id="@+id/version_name_tv"
+                    style="@style/developer_text"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="3.3.0"
+                    android:textColor="@color/standard_text_color_black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/signature_text"
+                style="@style/developer_text"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:text="@string/signature_text"
+                android:textColor="@color/standard_text_color_gray" />
+
+            <Button
+                android:id="@+id/clean_first_pay_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:text="@string/clean_first_pay_sign"
+                android:textColor="@color/standard_text_color_gray" />
+
+            <Button
+                android:id="@+id/subscription_load"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/test_subscription_load"
+                android:textColor="@color/standard_text_color_gray" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.duoyue.lib.base.widget.XLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bs_remove_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:x_layout_size="#,106"
+        android:background="@color/white"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:clickable="true">
+    <!-- 全选 -->
+    <com.duoyue.app.ui.widget.DrawableTextView
+            android:id="@+id/bs_select_all"
+            style="@style/BookShelfBottomText"
+            android:text="@string/select_all"
+            android:textColor="@color/read_page_tip_05"
+            android:drawableTop="@mipmap/icon_selete_all"/>
+
+    <!-- 置顶 -->
+    <com.duoyue.app.ui.widget.DrawableTextView
+            android:id="@+id/bs_topping"
+            style="@style/BookShelfBottomText"
+            android:text="@string/topping"
+            android:textColor="@color/read_page_tip_05"
+            android:drawableTop="@mipmap/icon_topping_a"/>
+
+    <!-- 移除 -->
+    <com.duoyue.app.ui.widget.DrawableTextView
+            android:id="@+id/bs_remove"
+            style="@style/BookShelfBottomText"
+            android:text="@string/remove_bookshelf"
+            android:textColor="@color/read_page_tip_05"
+            android:drawableTop="@mipmap/icon_remove_a"/>
+
+    <!-- 分享 -->
+    <com.duoyue.app.ui.widget.DrawableTextView
+            android:id="@+id/bs_share"
+            style="@style/BookShelfBottomText"
+            android:text="@string/share"
+            android:visibility="visible"
+            android:textColor="@color/read_page_tip_05"
+            android:drawableTop="@mipmap/icon_share_a"/>
+</com.duoyue.lib.base.widget.XLinearLayout>

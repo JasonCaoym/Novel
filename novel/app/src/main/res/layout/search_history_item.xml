@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="37dp">
+
+    <TextView
+        android:id="@+id/history_keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/default_title_padding_lr"
+        android:gravity="center_vertical"
+        android:textColor="@color/standard_text_color_gray"
+        android:textSize="@dimen/standard_text_size_big"
+        tools:text="2s12d12f" />
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:id="@+id/history_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/default_title_padding_lr"
+        android:paddingRight="@dimen/default_title_padding_lr"
+        android:src="@mipmap/search_delete"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

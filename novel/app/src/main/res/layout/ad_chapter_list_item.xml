@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        android:id="@+id/ad_chapter_item_root"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/ad_chapter_item_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+    >
+        <FrameLayout
+                android:id="@+id/ad_chapter_item_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:x_layout_margin="0,50,0,0"
+                android:visibility="gone"
+        />
+
+        <TextView
+                android:id="@+id/ad_chapter_item_play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ad_chapter_item_container"
+                app:x_layout_margin="75,65,75,0"
+                android:drawableLeft="@mipmap/ad_play"
+                app:x_text_drawable_bounds="120,0,150,30"
+                app:x_layout_size="#,90"
+                app:x_text_size="30"
+                android:textColor="@color/white"
+                android:text="@string/ad_free_time"
+                android:background="@drawable/dialog_btn_bg_positive"
+                android:gravity="center"
+        />
+
+        <TextView
+                android:id="@+id/ad_chapter_item_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray_999"
+                android:layout_below="@+id/ad_chapter_item_play"
+                android:gravity="center"
+                app:x_layout_padding="75,0,75,0"
+                app:x_layout_size="#,70"
+                android:text="规则说明"
+                app:x_text_size="22"
+        />
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</FrameLayout>

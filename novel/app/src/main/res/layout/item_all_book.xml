@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:orientation="vertical">
+
+    <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/tv_all"
+            android:textColor="@color/book_shelf_top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:x_text_size="36"
+            app:x_layout_margin="32,30,0,0"
+    />
+
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_all"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <View app:x_layout_margin="0,36,0,0" android:background="#F5F5F5" android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:x_layout_size="#,16"
+          android:id="@+id/view_x"
+    />
+</com.duoyue.lib.base.widget.XLinearLayout>

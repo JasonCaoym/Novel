@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_msg"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:gravity="center_horizontal|bottom"
+    android:paddingBottom="10dp"
+    android:enabled="false"
+    android:clickable="false"
+    android:textColor="@color/standard_black_third_level_color_c5"
+    android:textSize="@dimen/standard_tx_2" />

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_page_bg">
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/top_liner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_margin="#,50,#,#"
+            app:x_layout_padding="32,#,32,2">
+
+        <com.duoyue.app.ui.widget.CustomImageView
+                app:x_layout_padding="#,#,25,#"
+                android:id="@+id/toolbar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_back" />
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/category_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:x_layout_size="#,70" />
+
+        <TextView
+                android:id="@+id/search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/icon_bookcase_top_search_b" />
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+    <com.duoyue.lib.base.widget.XLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_liner"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/book_rank_category"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar_layout"
+                android:background="@color/color_F7F7F7"
+                app:x_layout_size="160,#" />
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/category_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:x_layout_padding="10,#,10,#" />
+
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+<!--    <com.duoyue.app.ui.widget.CustomImageView-->
+<!--            android:id="@+id/recommend_float_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_gravity="right|bottom"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:visibility="gone"-->
+<!--            app:x_layout_margin="#,#,50,50"-->
+<!--            app:x_layout_size="130,130" />-->
+
+    <include
+            android:id="@+id/load_prompt_layout"
+            layout="@layout/load_prompt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_liner"
+            android:visibility="visible" />
+
+</com.duoyue.lib.base.widget.XRelativeLayout>
+
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+        <!--<requestFocus/>-->
+
+        <com.duoyue.app.ui.widget.CustomImageView
+                android:id="@+id/toolbar_back"
+                style="@style/title_img_btn_style"
+                android:src="@mipmap/icon_back"/>
+
+        <EditText
+                android:layout_gravity="center_vertical"
+                android:id="@+id/search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/search_text_bg"
+                android:drawableLeft="@mipmap/icon_top_search_s"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical|left"
+                android:maxLength="10"
+                android:layout_marginRight="@dimen/default_title_padding_lr"
+                android:hint="@string/search_book_ctiy"
+                android:textCursorDrawable="@drawable/edit_cursor"
+                android:textColor="@color/standard_text_color_gray"
+                android:textColorHint="@color/standard_text_color_lighter_gray"
+                android:textSize="@dimen/standard_text_size_medium"/>
+
+        <TextView
+                android:id="@+id/cancel_btn"
+                style="@style/title_text_btn_style"
+                android:paddingLeft="5dp"
+                android:visibility="gone"
+                android:text="@string/cancel"
+                android:layout_alignParentRight="true"/>
+    </LinearLayout>
+
+    <com.zydm.base.widgets.refreshview.PullToRefreshLayout
+            android:id="@+id/pull_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.zydm.base.widgets.refreshview.PullableListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:divider="@null"
+                android:dividerHeight="0px"
+        />
+
+    </com.zydm.base.widgets.refreshview.PullToRefreshLayout>
+</LinearLayout>

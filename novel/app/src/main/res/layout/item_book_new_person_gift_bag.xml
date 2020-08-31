@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="wrap_content"
+                                                android:id="@+id/xx"
+                                                app:x_layout_size="258,166"
+                                                android:layout_height="wrap_content">
+
+
+        <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="wrap_content"
+                                                    android:id="@+id/xll_line"
+                                                    app:x_layout_size="258,166"
+                                                    app:x_layout_margin="14,#,14,#"
+                                                    android:layout_height="wrap_content">
+
+
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       app:x_layout_max="230,166"
+                       android:id="@+id/image_bg"/>
+
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      app:x_layout_size="230,38"
+                      android:id="@+id/text_bg"
+                      android:gravity="center"
+                      app:x_text_size="20"
+                      android:includeFontPadding="false"
+                      android:visibility="gone"
+                      android:textColor="@color/white"
+                      android:layout_above="@+id/image"
+                      android:background="@drawable/bg_fe8b13"/>
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:x_layout_size="30,12"
+                       android:visibility="gone"
+                       android:id="@+id/image"
+                       app:x_layout_margin="#,#,#,10"
+                       android:layout_centerHorizontal="true"
+                       android:background="@mipmap/bg_red_triangle"
+                       android:layout_alignParentBottom="true"/>
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+        <TextView android:layout_width="wrap_content"
+                  android:id="@+id/tv_title"
+                  android:textColor="@color/white"
+                  android:includeFontPadding="false"
+                  app:x_layout_margin="31,33,#,#"
+                  app:x_text_size="28"
+                  android:textStyle="bold"
+                  android:layout_height="wrap_content"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:includeFontPadding="false"
+                  android:layout_below="@+id/tv_title"
+                  android:id="@+id/tv_state"
+                  app:x_text_size="20"
+                  android:layout_alignLeft="@+id/tv_title"
+                  android:textColor="@color/white"
+                  app:x_layout_margin="#,17,#,#"
+        />
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="wrap_content"
+                                                android:layout_below="@+id/xx"
+                                                android:id="@+id/xllll"
+                                                app:x_layout_size="258,#"
+                                                android:layout_alignRight="@+id/image_bg"
+                                                android:layout_alignLeft="@+id/image_bg"
+                                                android:layout_height="wrap_content">
+
+        <View android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#FFF1E2"
+              app:x_layout_size="#,4"
+              android:layout_centerVertical="true"
+              android:id="@+id/view_line"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   app:x_layout_size="14,20"
+                   android:layout_centerHorizontal="true"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/iv_red_ellipse"
+                   android:src="@mipmap/bg_ellipse"/>
+
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:includeFontPadding="false"
+              android:textColor="@color/standard_red_main_color_c1"
+              android:id="@+id/tv_time"
+              app:x_text_size="22"
+              app:x_layout_margin="#,17,#,#"
+              android:layout_below="@+id/xllll"
+              android:layout_centerHorizontal="true"/>
+
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

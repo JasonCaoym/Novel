@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@color/default_page_bg">
+    <!-- 分割线 -->
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,1" android:background="#F0F0F0"/>
+    <!-- 全部 -->
+    <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/all_frequency_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,90" android:paddingLeft="10dp" android:paddingRight="10dp" android:gravity="center">
+        <!-- 频道名称 -->
+        <TextView android:id="@+id/all_frequency_name_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="28" android:textColor="@color/standard_red_main_color_c1"
+            android:text="@string/all" android:layout_alignParentLeft="true"/>
+        <!-- 选中状态 -->
+        <ImageView android:id="@+id/all_frequency_status_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:src="@mipmap/tick"/>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+    <!-- 分割线 -->
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,1" android:background="#F0F0F0"/>
+    <!-- 男频 -->
+    <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/male_frequency_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,90" android:paddingLeft="10dp" android:paddingRight="10dp" android:gravity="center">
+        <!-- 频道名称 -->
+        <TextView android:id="@+id/male_frequency_name_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="28" android:textColor="@color/color_898989"
+            android:text="@string/male_frequency" android:layout_alignParentLeft="true"/>
+        <!-- 选中状态 -->
+        <ImageView android:id="@+id/male_frequency_status_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:visibility="invisible" android:src="@mipmap/tick"/>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+    <!-- 分割线 -->
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,1" android:background="#F0F0F0"/>
+    <!-- 女频 -->
+    <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/female_frequency_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,90" android:paddingLeft="10dp" android:paddingRight="10dp" android:gravity="center">
+        <!-- 频道名称 -->
+        <TextView android:id="@+id/female_frequency_name_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="28" android:textColor="@color/color_898989"
+            android:text="@string/female_frequency" android:layout_alignParentLeft="true"/>
+        <!-- 选中状态 -->
+        <ImageView android:id="@+id/female_frequency_status_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:visibility="invisible" android:src="@mipmap/tick"/>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XLinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+                                          android:descendantFocusability="blocksDescendants"
+                                          android:layout_height="wrap_content">
+
+    <include
+            android:id="@+id/fixed_module_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/book_city_module_item_view_v3"/>
+
+    <!--<include-->
+    <!--android:id="@+id/fixed_module_1"-->
+    <!--layout="@layout/book_item_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/fixed_module_title"-->
+    <!--/>-->
+
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:id="@+id/rv_all_list"
+                                            app:x_layout_margin="14,0,32,0"
+                                            android:overScrollMode="never"
+                                            android:layout_below="@+id/fixed_module_1"
+                                            android:layout_height="wrap_content"
+                                            android:scrollbars="none"/>
+
+    <!--<com.duoyue.lib.base.widget.XLinearLayout-->
+    <!--android:id="@+id/fixed_horizontal"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/white"-->
+    <!--app:x_layout_padding="32,#,32,0"-->
+    <!--android:layout_below="@+id/fixed_module_1"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<include-->
+    <!--android:id="@+id/fixed_module_2"-->
+    <!--layout="@layout/books_horizontal_layout_item"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"/>-->
+
+    <!--<include-->
+    <!--android:id="@+id/fixed_module_3"-->
+    <!--layout="@layout/books_horizontal_layout_item"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"/>-->
+
+    <!--<include-->
+    <!--android:id="@+id/fixed_module_4"-->
+    <!--layout="@layout/books_horizontal_layout_item"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"/>-->
+
+    <!--<include-->
+    <!--android:id="@+id/fixed_module_5"-->
+    <!--layout="@layout/books_horizontal_layout_item"/>-->
+    <!--</com.duoyue.lib.base.widget.XLinearLayout>-->
+
+    <View
+            android:id="@+id/fix_row_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:x_layout_size="#,16"
+            android:layout_below="@+id/rv_all_list"
+            android:background="@color/standard_div_line_color"/>
+
+</com.duoyue.lib.base.widget.XLinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+                                          android:layout_height="wrap_content">
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                android:id="@+id/xrl_bg"
+                                                app:x_layout_size="#,196"
+                                                android:layout_height="wrap_content">
+
+        <TextView android:layout_width="wrap_content"
+                  android:maxEms="7"
+                  android:singleLine="true"
+                  android:ellipsize="end"
+                  android:id="@+id/tv_one"
+                  app:x_text_size="30"
+                  app:x_layout_margin="#,29,#,21"
+                  android:includeFontPadding="false"
+                  android:layout_centerHorizontal="true"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/white"
+                  android:textStyle="bold"
+                  android:gravity="center"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:x_layout_size="80,88"
+                   android:id="@+id/iv_one"
+                   android:layout_alignBottom="@+id/iv_center"
+                   android:layout_toLeftOf="@+id/iv_center"
+                   android:layout_marginRight="-5dp"/>
+
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:x_layout_size="80,88"
+                   android:id="@+id/iv_two"
+                   android:layout_marginLeft="-5dp"
+                   android:layout_alignBottom="@+id/iv_center"
+                   android:layout_toRightOf="@+id/iv_center"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:x_layout_size="90,123"
+                   android:id="@+id/iv_center"
+                   android:layout_centerHorizontal="true"
+                   android:layout_alignParentBottom="true"/>
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+    <View
+            app:x_layout_margin="#,40,#,#"
+            android:id="@+id/fix_row_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_size="#,16"
+            android:background="@color/standard_div_line_color"/>
+</com.duoyue.lib.base.widget.XLinearLayout>

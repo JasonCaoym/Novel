@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+                                          android:background="@color/white"
+                                          android:layout_height="match_parent">
+
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              app:x_layout_margin="0,83,0,83"
+              android:drawableLeft="@mipmap/bg_tips"
+              android:drawablePadding="8dp"
+              android:text="未搜索到相关结果"
+              android:gravity="center"
+              app:x_text_size="30"
+              android:layout_gravity="center_horizontal"/>
+
+
+    <View android:background="#F5F5F5" android:layout_width="match_parent" android:layout_height="wrap_content"
+          app:x_layout_size="#,16" app:x_layout_margin="0,36,0,0"
+          android:id="@+id/view"
+    />
+
+    <TextView
+            android:text="大家都在看"
+            android:includeFontPadding="false"
+            android:id="@+id/tv_hot"
+            android:textColor="@color/book_shelf_top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:x_text_size="36"
+            app:x_layout_margin="32,53,0,44"
+    />
+
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:id="@+id/rv_null_list"
+                                            app:x_layout_margin="6,0,6,0"
+                                            android:layout_height="wrap_content"
+                                            android:scrollbars="none"/>
+
+
+</com.duoyue.lib.base.widget.XLinearLayout>

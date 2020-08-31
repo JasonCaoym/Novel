@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+                                          android:layout_height="match_parent" android:gravity="center">
+
+
+    <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@mipmap/no_data"
+               android:layout_gravity="center_horizontal"/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="空空如也"
+              app:x_text_size="36"
+              android:textColor="@color/book_shelf_top_text"
+              app:x_layout_margin="0,59,0,0"
+              android:gravity="center"/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="赶快用好书塞满书架吧"
+              app:x_text_size="30"
+              android:textColor="#898989"
+              app:x_layout_margin="0,40,0,0"
+              android:gravity="center"/>
+
+
+    <TextView
+            android:id="@+id/bs_go_book_city_btn"
+            android:background="@drawable/bg_ff5215"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="找好书，去书城逛逛"
+            app:x_text_size="36"
+            android:textColor="#FFFFFF"
+            app:x_layout_size="#,100"
+            app:x_layout_margin="40,36,40,0"
+            android:gravity="center"/>
+</com.duoyue.lib.base.widget.XLinearLayout>

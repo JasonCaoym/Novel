@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="12dp"
+    android:paddingTop="12dp">
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:scaleType="centerCrop"
+        android:background="@drawable/book_bg"
+        android:id="@+id/book_cover"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="14dp" />
+
+    <TextView
+        android:id="@+id/book_name"
+        style="@style/base_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_toRightOf="@id/book_cover"
+        android:gravity="center"
+        android:textColor="@color/standard_text_color_black"
+        android:textSize="@dimen/standard_text_size_bigger"
+        tools:text="书城" />
+
+    <TextView
+        android:id="@+id/book_author"
+        style="@style/base_text"
+        android:layout_below="@+id/book_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/book_cover"
+        android:drawablePadding="5dp"
+        android:gravity="left"
+        android:maxLines="2"
+        android:textColor="@color/standard_text_color_lighter_gray"
+        android:textSize="@dimen/standard_text_size_medium"
+        tools:text="爱爱" />
+
+    <TextView
+        android:id="@+id/last_read"
+        style="@style/base_text"
+        android:layout_alignBottom="@+id/book_cover"
+        android:layout_alignLeft="@+id/book_name"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="17dp"
+        android:drawablePadding="5dp"
+        android:gravity="left"
+        android:maxLines="2"
+        android:textColor="@color/standard_text_color_lighter_gray"
+        android:textSize="@dimen/standard_tx_4"
+        tools:text="爱爱" />
+
+</RelativeLayout>

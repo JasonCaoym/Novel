@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="8.5dp"
+    android:paddingRight="8.5dp">
+
+    <include
+        android:id="@+id/book_1"
+        layout="@layout/shelf_rec_book_item" />
+
+    <include
+        android:id="@+id/book_2"
+        layout="@layout/shelf_rec_book_item" />
+
+    <include
+        android:id="@+id/book_3"
+        layout="@layout/shelf_rec_book_item" />
+
+    <include
+        android:id="@+id/book_4"
+        layout="@layout/shelf_rec_book_item" />
+
+</LinearLayout>

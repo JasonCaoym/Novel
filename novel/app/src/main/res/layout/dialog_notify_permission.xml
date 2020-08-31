@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/corner_rec_white">
+
+
+    <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:x_layout_margin="#,18,20,#"
+            android:src="@mipmap/dialog_close"/>
+
+    <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/dialog_pic"
+            android:layout_below="@id/iv_close"
+            android:layout_centerHorizontal="true"/>
+
+    <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv_icon"
+            app:x_text_size="30"
+            android:textColor="@color/color_666666"
+            android:lineSpacingExtra="5dp"
+            app:x_layout_margin="70,57,70,55"
+            android:text="@string/notify_dialog_describe"/>
+
+    <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:x_layout_size="432,74"
+            android:gravity="center"
+            android:background="@drawable/z_btn_shape_bg"
+            app:x_shape_radius="45"
+            android:textColor="@color/white"
+            app:x_text_size="30"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_content"
+            app:x_layout_margin="#,#,#,56"
+            android:text="@string/open_now"/>
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+                                          android:gravity="center"
+                                          android:background="@drawable/bg_white"
+                                          android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_1b1b1b"
+            app:x_text_size="36"
+            android:textStyle="bold"
+            android:text="签到附加奖励"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_sum"
+            app:x_layout_margin="0,54,0,0"
+            app:x_text_size="36"
+            android:src="@mipmap/bg_dou"/>
+
+    <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:x_layout_margin="#,27,#,#"
+            android:textColor="@color/color_1b1b1b"
+            android:text="额外加20书豆"/>
+
+    <Button
+            android:id="@+id/bt_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:x_text_size="28"
+            app:x_layout_size="400,76"
+            app:x_layout_margin="0,58,0,0"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_sign_in_19"
+            android:text="知道了"/>
+
+</com.duoyue.lib.base.widget.XLinearLayout>

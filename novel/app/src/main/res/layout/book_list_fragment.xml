@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zydm.base.widgets.refreshview.PullToRefreshLayout
+        android:id="@+id/pull_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zydm.base.widgets.refreshview.PullableListView
+            android:id="@+id/list_view"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:divider="@null"
+            android:background="@color/white"
+            android:dividerHeight="0px"
+            />
+        <include
+                android:id="@+id/load_prompt_layout"
+                layout="@layout/load_prompt_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+        />
+    </com.zydm.base.widgets.refreshview.PullToRefreshLayout>
+</LinearLayout>

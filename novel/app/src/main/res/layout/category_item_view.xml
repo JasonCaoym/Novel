@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:background="@color/default_page_bg"
+                                          android:orientation="horizontal">
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:x_layout_size="268,140"
+            app:x_layout_margin="10,10,10,10">
+        <!-- 分类图片 -->
+        <com.duoyue.app.ui.widget.CustomImageView
+                android:id="@+id/category_image_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/category_hold_bg"
+        />
+        <!-- 分类名称 -->
+        <TextView
+                android:includeFontPadding="false"
+                android:id="@+id/category_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                app:x_text_size="28"
+                app:x_layout_padding="22,#,#,#"
+        />
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XLinearLayout>

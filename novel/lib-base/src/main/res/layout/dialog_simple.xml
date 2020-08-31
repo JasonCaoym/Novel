@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/dialog_parent_layout"
+            android:layout_width="match_parent"
+            app:x_layout_margin="60,#,60,#"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:x_layout_padding="0,53,0,0"
+            android:background="@drawable/dialog_bg">
+
+        <TextView
+                android:gravity="center"
+                android:id="@+id/dialog_simple_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="true"
+                android:text="SDFASDFA "
+                app:x_layout_margin="76,#,43,40"
+                android:maxLines="2"
+                android:textColor="@color/color_FF1B1B1B"
+                app:x_text_size="36"/>
+
+        <TextView
+                android:id="@+id/dialog_simple_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.265"
+                android:scrollbars="none"
+                app:x_layout_margin="43,#,43,70"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/dialog_simple_title"
+                android:textColor="@color/text_color_666666"
+                app:x_text_size="30"
+                android:visibility="visible"/>
+        <View
+                android:id="@+id/dialog_simple_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:x_layout_size="#,2"
+                android:layout_below="@+id/dialog_simple_message"
+                android:background="@color/divider_line"
+        />
+
+        <com.duoyue.lib.base.widget.XLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dialog_simple_line"
+                android:orientation="horizontal"
+                app:x_layout_size="#,110">
+
+            <TextView
+                    android:id="@+id/dialog_simple_negative"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    app:x_text_size="36"
+                    android:text="@string/cancel"
+                    android:textColor="@color/title_btn_text"
+                    android:visibility="visible"/>
+            <View
+                    android:id="@+id/dialog_simple_line_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:x_layout_size="2,#"
+                    android:layout_below="@+id/dialog_simple_message"
+                    android:background="@color/divider_line"
+            />
+            <TextView
+                    android:id="@+id/dialog_simple_positive"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/add"
+                    app:x_text_size="36"
+                    android:textColor="@color/standard_red_main_color_c1"
+                    android:visibility="visible"/>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XRelativeLayout>

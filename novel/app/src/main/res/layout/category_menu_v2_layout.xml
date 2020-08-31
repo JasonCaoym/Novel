@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:clickable="true">
+
+    <com.duoyue.lib.base.widget.XLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:x_layout_padding="32,18,32,18"
+    >
+        <TextView
+                android:id="@+id/category_populary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="按人气"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                android:textColor="@color/standard_red_main_color_c1"
+                android:background="@drawable/category_btn_bg"
+        />
+        <TextView
+                android:id="@+id/category_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="按更新"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                app:x_layout_margin="30,#,#,#"
+                android:textColor="@color/color_666666"
+        />
+        <TextView
+                android:id="@+id/category_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="按评分"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                app:x_layout_margin="30,#,#,#"
+                android:textColor="@color/color_666666"
+        />
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:id="@+id/tv_filter_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter"
+                android:visibility="gone"
+                android:textColor="@color/standard_red_main_color_c1"
+                android:drawableRight="@mipmap/arrow_up"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,0,5"
+                app:x_layout_margin="30,#,#,#"
+                android:drawablePadding="5dp"/>
+
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+    <com.duoyue.lib.base.widget.XLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:x_layout_padding="32,18,32,18"
+    >
+        <TextView
+                android:id="@+id/category_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不限状态"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                android:textColor="@color/standard_red_main_color_c1"
+                android:background="@drawable/category_btn_bg"
+        />
+        <TextView
+                android:id="@+id/category_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连载中"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                app:x_layout_margin="30,#,#,#"
+                android:textColor="@color/color_666666"
+        />
+        <TextView
+                android:id="@+id/category_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已完结"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                app:x_layout_margin="30,#,#,#"
+                android:textColor="@color/color_666666"
+        />
+
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+
+    <com.duoyue.lib.base.widget.XLinearLayout
+            android:id="@+id/layout_word_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:x_layout_padding="32,18,10,18">
+        <TextView
+                android:id="@+id/category_unlimite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不限字数"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                android:textColor="@color/standard_red_main_color_c1"
+                android:background="@drawable/category_btn_bg"
+        />
+        <TextView
+                android:id="@+id/category_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30万以下"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                app:x_layout_margin="20,#,#,#"
+                android:textColor="@color/color_666666"
+        />
+        <TextView
+                android:id="@+id/category_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30-80万"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                app:x_layout_margin="20,#,#,#"
+                android:textColor="@color/color_666666"
+        />
+        <TextView
+                android:id="@+id/category_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80万以上"
+                app:x_text_size="28"
+                app:x_layout_padding="10,5,10,5"
+                app:x_layout_margin="20,#,#,#"
+                android:textColor="@color/color_666666"
+        />
+
+    </com.duoyue.lib.base.widget.XLinearLayout>
+
+</com.duoyue.lib.base.widget.XLinearLayout>

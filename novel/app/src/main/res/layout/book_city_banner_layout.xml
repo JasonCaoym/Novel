@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+>
+    <com.duoyue.app.ui.view.XCustomBanner
+            android:scrollbars="none"
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_size="#,250"
+            app:x_layout_margin="32,0,32,0"
+            app:AutoPlayTime="5000"
+            app:pointNormal="@drawable/indicator_normal_bg"
+            app:pointSelect="@drawable/indicator_selected_bg"
+            app:pointsPosition="LEFT"
+            app:tipTextSize="12sp"
+            android:visibility="visible"
+            app:isShowNumberIndicator="false"
+            app:isShowIndicatorOnlyOne="true"
+            app:pageChangeDuration="600"/>
+
+</com.duoyue.lib.base.widget.XFrameLayout>

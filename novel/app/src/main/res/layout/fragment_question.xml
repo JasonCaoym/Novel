@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <com.duoyue.lib.base.widget.XScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+        <com.duoyue.lib.base.widget.XRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <com.duoyue.lib.base.widget.XLinearLayout
+                    android:id="@+id/question_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:background="@color/color_f5f5f5">
+
+                <com.duoyue.lib.base.widget.XLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:descendantFocusability="blocksDescendants"
+                        app:x_layout_padding="32,32,32,32"
+                        android:background="@color/white">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/check_feedback_type"
+                            android:textColor="@color/color_1b1b1b"
+                            app:x_text_size="28"/>
+
+                    <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view_quesion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none"
+                            app:x_layout_margin="#,30,#,#">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </com.duoyue.lib.base.widget.XLinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:x_layout_size="#,12"/>
+
+                <com.duoyue.lib.base.widget.XRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:x_layout_size="#,260"
+                        app:x_layout_padding="32,32,32,20"
+                        android:background="@color/white">
+
+                    <TextView
+                            android:id="@+id/tv_quesion_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:x_text_size="24"/>
+
+                    <EditText
+                            android:id="@+id/et_quesion_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/tv_quesion_count"
+                            android:gravity="top"
+                            android:hint="@string/describe_problem"
+                            android:background="@null"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:overScrollMode="always"
+                            app:x_text_size="28"/>
+
+                </com.duoyue.lib.base.widget.XRelativeLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:x_layout_size="#,12"/>
+
+                <com.duoyue.lib.base.widget.XLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:x_layout_padding="32,32,32,32">
+
+                    <EditText
+                            android:id="@+id/et_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/leave_contact"
+                            android:background="@null"
+                            android:maxLength="50"
+                            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            app:x_text_size="28"/>
+
+                </com.duoyue.lib.base.widget.XLinearLayout>
+
+                <com.duoyue.lib.base.widget.XRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:id="@+id/tv_commit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/btn_question_commit"
+                            android:text="@string/commit"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            app:x_text_size="30"
+                            app:x_layout_margin="126,100,126,150"
+                            app:x_layout_size="500,80"/>
+
+                </com.duoyue.lib.base.widget.XRelativeLayout>
+
+            </com.duoyue.lib.base.widget.XLinearLayout>
+
+            <!--- 无数据提醒 -->
+            <com.duoyue.lib.base.widget.XLinearLayout
+                    android:id="@+id/prompt_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    app:x_layout_margin="#,300,#,#">
+
+                <include
+                        android:id="@+id/load_prompt_layout"
+                        layout="@layout/load_prompt_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+            </com.duoyue.lib.base.widget.XLinearLayout>
+
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+    </com.duoyue.lib.base.widget.XScrollView>
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

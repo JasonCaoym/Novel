@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                                          android:orientation="vertical"
+                                          android:layout_width="match_parent"
+                                          android:descendantFocusability="blocksDescendants"
+                                          android:layout_height="wrap_content">
+
+    <!--<include-->
+    <!--android:id="@+id/fixed_module_title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--layout="@layout/book_city_module_item_view"/>-->
+
+
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/xrl_all_read"
+                                                app:x_layout_margin="32,40,32,36">
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:includeFontPadding="false"
+                  android:text="这本书的读者都在看"
+                  android:textColor="@color/black"
+                  app:x_text_size="40"
+                  android:textStyle="bold"/>
+
+        <TextView
+                android:textColor="@color/color_898989_"
+                app:x_text_size="24"
+                android:id="@+id/tv_switch_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="换一换"
+                android:gravity="center_vertical"
+                android:drawablePadding="6dp"
+                android:drawableRight="@mipmap/icon_switch"
+                android:layout_alignParentRight="true"/>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+            app:x_layout_margin="10,0,10,0"
+            android:id="@+id/rv_other"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fixed_module_title"
+            android:scrollbars="none"/>
+
+    <View
+            android:id="@+id/view_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:x_layout_size="#,12"
+            android:layout_below="@+id/rv_hot"
+            android:background="@color/standard_div_line_color"/>
+
+</com.duoyue.lib.base.widget.XLinearLayout>

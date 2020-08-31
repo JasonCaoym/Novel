@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          android:layout_width="match_parent"
+                                          android:orientation="vertical"
+
+                                          android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.RecyclerView android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:scrollbars="none"
+                                            android:id="@+id/rv_column"/>
+
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:scrollbars="none"
+                                            android:id="@+id/rv_book_city"
+                                            android:layout_height="wrap_content"/>
+</com.duoyue.lib.base.widget.XLinearLayout>

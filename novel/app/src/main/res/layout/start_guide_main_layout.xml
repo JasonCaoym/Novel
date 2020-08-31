@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent" android:layout_height="match_parent"
+                                            android:orientation="vertical" android:background="@color/default_page_bg">
+    <ViewFlipper android:id="@+id/guide_flipper" android:layout_width="match_parent" android:layout_height="match_parent"
+                 android:inAnimation="@anim/guide_left_in" android:outAnimation="@anim/guide_left_out" android:flipInterval="200"  android:fillViewport="true">
+            <include android:id="@+id/guide_sex_layout" layout="@layout/start_guide_sex_layout" />
+            <include android:id="@+id/guide_classify_layout" layout="@layout/start_guide_classify_layout" />
+    </ViewFlipper>
+</com.duoyue.lib.base.widget.XRelativeLayout>

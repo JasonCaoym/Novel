@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/color_black_50">
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" app:x_layout_margin="#,#,#,#" android:layout_alignParentBottom="true" android:background="@color/default_page_bg">
+      <include layout="@layout/toolbar_layout"/>
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:weightSum="4" android:layout_below="@id/toolbar_layout" android:layout_height="match_parent" app:x_layout_padding="78,#,78,#"  android:orientation="vertical">
+            <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="vertical" android:layout_weight="2">
+               <!-- &lt;!&ndash; 手机登录 &ndash;&gt;
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="48" app:x_layout_padding="#,#,#,80" android:text="@string/login_phone" android:textColor="@color/guide_choose_big"/>-->
+                <!-- 手机号码输入框 -->
+                <EditText android:id="@+id/phone_number_edittext" android:layout_width="match_parent" app:x_layout_margin="#,80,#,#" android:layout_height="wrap_content"  app:x_layout_size="#,58" android:background="@null" android:textColorHint="@color/user_login_edit" app:x_text_size="30"
+                          android:inputType="phone|number" android:maxLength="11" android:digits="1234567890" android:singleLine="true" android:hint="@string/input_mobile_number" android:textColor="@color/book_shelf_top_text"/>
+                <!-- 下划线 -->
+                <TextView android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/login_dividing_line"/>
+                <!-- 验证码区域 -->
+                <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_padding="#,70,#,10" android:gravity="center_vertical">
+                    <!-- 验证码输入框 -->
+                    <EditText android:id="@+id/verification_code_edittext" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,58" android:maxLength="6" android:digits="1234567890"
+                        android:singleLine="true" android:background="@null" android:hint="@string/input_verification_code" android:textColorHint="@color/user_login_edit"  app:x_text_size="30" android:textColor="@color/book_shelf_top_text"/>
+                    <!-- 获取按钮-->
+                    <TextView android:id="@+id/send_verifi_code_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="140,58" app:x_text_size="28" android:layout_alignParentRight="true"
+                        android:gravity="center" android:background="@drawable/z_btn_shape_bg" android:textColor="@color/white" app:x_shape_radius="30" android:text="@string/obtain"/>
+                    <!-- 倒计时按钮 -->
+                    <TextView android:id="@+id/send_countdown_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone" app:x_layout_size="140,58" app:x_text_size="28" android:enabled="false"
+                        android:layout_alignParentRight="true" android:gravity="center" android:textColor="@color/white" android:background="@drawable/z_btn_unavailable_shape_bg" app:x_shape_radius="30"/>
+                </com.duoyue.lib.base.widget.XRelativeLayout>
+                <!-- 下划线 -->
+                <TextView android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/login_dividing_line"/>
+            </com.duoyue.lib.base.widget.XLinearLayout>
+            <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+                <Button android:id="@+id/send_login_phone_btn" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,90" app:x_text_size="36"
+                    android:background="@drawable/z_btn_shape_bg" app:x_shape_radius="45" android:textColor="@color/white" android:text="@string/login"/>
+                <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_padding="#,40,#,#" android:orientation="horizontal" android:gravity="center">
+                    <CheckBox android:id="@+id/protocol_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleX="0.7" android:scaleY="0.7" android:buttonTint="@color/colorOrangePrimary" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="25" android:text="我已阅读并同意" android:textColor="@color/guide_choose_small"/>
+                    <TextView android:id="@+id/user_agreement_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/login_user_agreement" app:x_text_size="25" android:textColor="@color/colorOrangePrimary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="及" app:x_text_size="25"/>
+                    <TextView android:id="@+id/privacy_policy_btn" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="《隐私政策》" android:textColor="@color/colorOrangePrimary" app:x_text_size="25"/>
+                </com.duoyue.lib.base.widget.XLinearLayout>
+            </com.duoyue.lib.base.widget.XLinearLayout>
+            <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:gravity="center" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+                <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,50">
+                    <!-- 线 -->
+                    <TextView android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/login_dividing_line" android:layout_centerInParent="true"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:x_text_size="30" app:x_layout_padding="10,#,10,#"
+                        android:textColor="@color/color_b2b2b2" android:background="@color/default_page_bg" android:text="@string/login_third_party"/>
+                </com.duoyue.lib.base.widget.XRelativeLayout>
+                <!-- 第三方登录入口-->
+                <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" app:x_layout_size="#,190">
+                    <!-- 微信入口 -->
+                    <ImageButton android:id="@+id/login_wechat_imgbtn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="80,80" android:background="@mipmap/login_wechat_icon"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="1dp" app:x_layout_size="92,#"/>
+                    <!-- 微博入口 -->
+                    <ImageButton android:id="@+id/login_weibo_imgbtn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="80,80" android:background="@mipmap/login_weibo_icon"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="1dp" app:x_layout_size="92,#"/>
+                    <!-- QQ入口 -->
+                    <ImageButton android:id="@+id/login_qq_imgbtn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="80,80" android:background="@mipmap/login_qq_icon"/>
+                </com.duoyue.lib.base.widget.XLinearLayout>
+            </com.duoyue.lib.base.widget.XLinearLayout>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+       <!-- &lt;!&ndash; 关闭按钮区域 &ndash;&gt;
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="right" app:x_layout_margin="50,50,50,50">
+            <ImageButton android:id="@+id/close_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@mipmap/user_close_icon" app:x_layout_size="35,35"/>
+        </com.duoyue.lib.base.widget.XLinearLayout>-->
+        <!-- 登录等待中 -->
+        <com.duoyue.lib.base.widget.XLinearLayout android:id="@+id/login_loading_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:clickable="true" android:focusable="true" android:orientation="vertical" android:gravity="center">
+            <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="500,136" android:gravity="center" android:background="@color/color_black_88">
+                <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="50,50"  android:indeterminateDrawable="@drawable/loading_bar"/>
+                <TextView android:id="@+id/login_msg_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_padding="20,#,#,#" app:x_text_size="30" android:textColor="@color/user_login_edit" android:text="@string/signing_in"/>
+            </com.duoyue.lib.base.widget.XLinearLayout>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XRelativeLayout>

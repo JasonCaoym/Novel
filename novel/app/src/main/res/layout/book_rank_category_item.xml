@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content"
+                                         xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/book_rank_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:x_layout_size="#,118"
+        app:x_text_size="28"
+        android:textColor="@color/color_898989"
+        android:text="人气榜"
+        android:gravity="center"
+        app:x_layout_padding="10,#,10,#"
+    />
+
+</com.duoyue.lib.base.widget.XFrameLayout>

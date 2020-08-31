@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/white">
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/new_category_item_bg"
+            app:x_layout_margin="15,15,15,15">
+
+        <!-- 分类图片 -->
+        <com.duoyue.app.ui.widget.CustomImageView
+                android:id="@+id/category_image_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:x_layout_size="70,96"
+                android:scaleType="fitXY"
+                app:x_layout_margin="26,20,#,42"/>
+
+        <TextView
+                android:id="@+id/category_name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#1B1B1B"
+                android:layout_toRightOf="@id/category_image_imageview"
+                android:layout_alignTop="@id/category_image_imageview"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:x_text_size="28"
+                app:x_layout_margin="26,24,24,#"/>
+
+        <TextView
+                android:id="@+id/category_tag_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/tag_bg"
+                android:textColor="@color/color_666666"
+                android:layout_alignParentBottom="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:x_layout_size="#,50"
+                app:x_text_size="20"
+                android:gravity="center_vertical"
+                app:x_layout_padding="20,#,#,#"/>
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

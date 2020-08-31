@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_detail_resume_layout"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    tools:showIn="@layout/activity_book_detail">
+
+    <com.zydm.base.widgets.AutoSplitTextView
+        android:id="@+id/book_resume_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:textColor="@color/standard_black_second_level_color_c4"
+        android:textSize="@dimen/standard_tx_4" />
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:id="@+id/book_resume_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="7dp"
+        android:scaleType="center"
+        android:src="@mipmap/icon_arrow_down_red"
+        android:visibility="gone" />
+
+    <include layout="@layout/divider_1px" />
+</LinearLayout>

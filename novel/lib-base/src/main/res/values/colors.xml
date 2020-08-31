@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="half_black_translucent">#44000000</color>
+    
+    <color name="default_page_bg">@color/white</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#ff000000</color>
+    
+    <color name="standard_text_color_black">@color/standard_black_first_level_color_c3</color>
+    <color name="standard_text_color_light_black">@color/standard_black_first_level_color_c3</color>
+    <color name="standard_text_color_gray">@color/standard_black_second_level_color_c4</color>
+    <color name="standard_text_color_light_gray">@color/standard_black_third_level_color_c5</color>
+    <color name="standard_text_color_lighter_gray">@color/standard_black_third_level_color_c5</color>
+    <color name="standard_text_color_white">#ffffff</color>
+    <color name="standard_text_color_red">@color/standard_red_main_color_c1</color>
+    <color name="standard_text_color_gold">@color/standard_yellow_support_color_c2</color>
+    
+    <color name="standard_div_line_color">@color/standard_black_fourth_level_color_c6</color>
+    
+    <!--标题重要文字-->
+    <color name="standard_black_first_level_color_c3">#161616</color>
+    <!--正文内容-->
+    <color name="standard_black_second_level_color_c4">#5B5E6A</color>
+    <!-- 章节内容 -->
+    <color name="read_chapter_content">#322917</color>
+    <!--标签辅助说明文字-->
+    <color name="standard_black_third_level_color_c5">#BFBFBF</color>
+    <!--分割线、页面背景-->
+    <color name="standard_black_fourth_level_color_c6">#F2F2F2</color>
+    <!--主色
+    <color name="standard_red_main_color_c1">#F6274F</color>-->
+    <color name="standard_red_main_color_bright">#FB964A</color>
+    <color name="standard_red_main_color_c1">#FE8B13</color>
+    <color name="standard_red_main_light">#8A5219</color>
+    <!--辅色，标签及提示-->
+    <color name="standard_yellow_support_color_c2">#FFBE0B</color>
+    
+    <color name="transparent">#00000000</color>
+    
+    <color name="progress_bg_color">#faf4f4</color>
+    
+    <color name="text_gray_999">#ff999999</color>
+    <color name="text_b2b2b2">#B2B2B2</color>
+    <color name="text_black_333">#ff333333</color>
+    <color name="divider_line">#FFF7F7F7</color>
+    
+    <color name="title_btn_text">#1B1B1B</color>
+    <color name="text_color_505050">#505050</color>
+    <color name="text_color_898989">#898989</color>
+    <color name="text_color_666666">#666666</color>
+    <color name="clr_666666">#666666</color>
+    <color name="clr_d3d3d3">#D3D3D3</color>
+    <color name="color_black_88">#88000000</color>
+
+    <color name="upgrade_bg">#FFFFF3E7</color>
+
+    <color name="color_A4A3A8">#FFA4A3A8</color>
+
+    <color name="book_shelf_top_text">#1B1B1B</color>
+
+    <color name="color_51FFFFFF">#51FFFFFF</color>
+
+    <color name="color_4D4D4D">#FF4D4D4D</color>
+
+    <color name="color_797C81">#797C81</color>
+    <color name="color_56585C">#56585C</color>
+    <color name="color_EECFBA">#EECFBA</color>
+    <color name="color_353538">#353538</color>
+
+    <color name="color_FF1B1B1B">#FF1B1B1B</color>
+
+</resources>

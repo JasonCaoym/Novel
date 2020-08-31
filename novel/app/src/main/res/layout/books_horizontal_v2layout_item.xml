@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/xll_item_two"
+                                            android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:id="@+id/cv"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="3dp"
+            app:cardMaxElevation="1dp"
+            app:cardElevation="2dp"
+            android:background="@null"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_height="wrap_content"
+            app:x_layout_margin="18,10,0,15"
+            app:x_layout_size="152,206">
+        <ImageView
+                android:id="@+id/book_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+            android:layout_below="@+id/cv"
+            android:layout_alignLeft="@+id/cv"
+            android:id="@+id/book_name"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:x_layout_margin="0,0,0,45"
+            android:gravity="left"
+            app:x_layout_max="152,#"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1"
+            android:maxLines="2"
+            android:textColor="@color/color_1b1b1b"
+            app:x_text_size="28"/>
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

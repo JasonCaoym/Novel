@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+
+    <TextView android:layout_width="match_parent"
+              android:id="@+id/chapter"
+              android:text="@string/find"
+              android:textColor="@color/black"
+              android:gravity="center"
+              app:x_layout_size="#,96"
+              app:x_text_size="36"
+              android:textStyle="bold"
+              android:layout_height="wrap_content" android:visibility="gone"/>
+    <com.zydm.base.widgets.refreshview.PullToRefreshLayout
+            android:layout_below="@+id/chapter"
+            android:id="@+id/pull_layout"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.zydm.base.widgets.refreshview.PullableRecyclerView
+                android:scrollbars="none"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:id="@+id/recommend_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        />
+
+    </com.zydm.base.widgets.refreshview.PullToRefreshLayout>
+
+    <com.duoyue.app.ui.widget.CustomImageView
+            android:id="@+id/recommend_float_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            app:x_layout_margin="#,#,50,50"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            app:x_layout_size="130,130"/>
+    <include
+            android:layout_below="@+id/chapter"
+            android:id="@+id/load_prompt_layout"
+            layout="@layout/load_prompt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</com.duoyue.lib.base.widget.XRelativeLayout>

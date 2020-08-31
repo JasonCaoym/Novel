@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/load_prompt_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:visibility="visible"
+             tools:visibility="visible">
+
+    <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true">
+
+        <LinearLayout
+
+                android:id="@+id/prompt_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <com.duoyue.app.ui.widget.CustomImageView
+
+                    android:id="@+id/prompt_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/prompt_no_net"/>
+
+            <TextView
+                    android:layout_marginTop="29dp"
+                    android:id="@+id/prompt_text"
+                    style="@style/base_text"
+                    android:text="@string/prompt_no_net"
+                    android:textColor="@color/text_color_898989"
+                    app:x_text_size="30"/>
+
+            <TextView
+                    app:x_text_size="32"
+                    android:id="@+id/prompt_opt_text"
+                    style="@style/base_text"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/prompt_no_net_refresh"
+                    android:textColor="@color/standard_red_main_color_c1"/>
+        </LinearLayout>
+
+        <RelativeLayout
+                android:id="@+id/prompt_progress_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                tools:visibility="visible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/prompt_progress_bar"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="loading.json"
+                    app:lottie_loop="true"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+</FrameLayout>

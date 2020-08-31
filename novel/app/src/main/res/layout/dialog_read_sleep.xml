@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/transparent"
+    >
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+        <RelativeLayout
+                android:id="@+id/read_sleep_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.duoyue.lib.base.widget.XLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/read_sleep_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:includeFontPadding="false"
+                        android:text="@string/text_read_sleep"
+                        android:textColor="@color/color_1b1b1b"
+                        app:x_layout_margin="#,83,#,64"
+                        app:x_text_size="40"/>
+
+                <TextView
+                        android:id="@+id/tv_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:x_layout_size="#,82"
+                        app:x_layout_padding="56,#,56,#"
+                        android:background="@drawable/ad_round_main_bg"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:layout_gravity="center_horizontal"
+                        android:text="看个小视频再继续阅读"
+                        android:textColor="@color/white"
+                        app:x_text_size="32"/>
+
+                <TextView
+                        android:id="@+id/reward_video_entry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:includeFontPadding="false"
+                        android:text="视频结束后右上角可关闭"
+                        android:textColor="@color/color_898989_"
+                        app:x_layout_margin="0,37,0,50"
+                        app:x_text_size="22"/>
+
+            </com.duoyue.lib.base.widget.XLinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</com.duoyue.lib.base.widget.XLinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/question_dialog_padding_b"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/question_dialog_margin"
+        android:layout_marginTop="@dimen/feedback_margin_t"
+        android:layout_marginRight="@dimen/question_dialog_margin"
+        android:text="@string/question_feedback_subtitle"
+        android:textColor="@color/standard_text_color_gray"
+        android:textSize="@dimen/standard_text_size_big"
+        />
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingLeft="8.5dp"
+    android:paddingRight="8.5dp"
+    android:orientation="vertical"
+    android:paddingBottom="23dp"
+    android:paddingTop="15dp">
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:id="@+id/book_cover"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        />
+
+    <TextView
+        android:id="@+id/book_name"
+        style="@style/base_text"
+        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:gravity="left"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/standard_black_first_level_color_c3"
+        android:textSize="@dimen/standard_text_size_big"
+        tools:text="书城" />
+
+</LinearLayout>

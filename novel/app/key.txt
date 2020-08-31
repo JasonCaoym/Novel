@@ -1,0 +1,33 @@
+signingConfigs {
+config {
+keyAlias 'duoyue'
+keyPassword '93bf46e9b15c4953bc7352d01ae17fbe'
+storeFile file('key.jks')
+storePassword '93bf46e9b15c4953bc7352d01ae17fbe'
+}
+}
+
+密钥库类型: JKS
+密钥库提供方: SUN
+
+您的密钥库包含 1 个条目
+
+别名: duoyue
+创建日期: 2019-3-13
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=novel, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+发布者: CN=novel, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+序列号: 75b52e1e
+有效期开始日期: Wed Mar 13 09:41:58 CST 2019, 截止日期: Sun Mar 06 09:41:58 CST 2044
+证书指纹:
+	 MD5: 6A:AD:D5:09:69:22:34:90:84:D1:88:2C:84:ED:45:02
+	 SHA1: 2F:16:29:BD:0F:79:B9:BF:85:D5:63:BB:F2:E7:77:98:A4:C3:09:E4
+	 SHA256: B9:A1:34:DB:CD:A4:BD:B6:7D:A3:68:0E:0A:FD:A8:F5:37:78:14:02:AB:10:A5:3F:4F:AF:5E:CB:16:F1:BB:73
+	 签名算法名称: SHA256withRSA
+	 版本: 3
+
+扩展: 
+
+#1: ObjectId: 2.5.29.14 Criticality=false

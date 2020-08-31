@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.duoyue.app.ui.view.BookDetailNestedScrollView
+            android:layout_above="@+id/xll_bottom"
+            android:id="@+id/scroll_view"
+            android:background="@color/white"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:scrollbars="none">
+
+        <!--背景 书名 作者 评分 描述 分类 等-->
+        <com.duoyue.lib.base.widget.XLinearLayout
+                android:id="@+id/content_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            <com.duoyue.lib.base.widget.XRelativeLayout
+                    android:id="@+id/head_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                <ImageView
+                        android:id="@+id/book_detail_top_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        app:x_layout_size="#,498"
+                        android:fitsSystemWindows="true"/>
+
+                <View
+                        android:id="@+id/view_bg"
+                        android:alpha="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:background="@color/black"
+                        app:x_layout_size="#,498"
+                        android:fitsSystemWindows="true"
+                        />
+
+                <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/cv"
+                        app:cardUseCompatPadding="true"
+                        app:cardCornerRadius="3dp"
+                        app:cardMaxElevation="1dp"
+                        app:cardElevation="2dp"
+                        android:background="@null"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:layout_height="wrap_content"
+                        app:x_layout_margin="32,150,30,0"
+                        app:x_layout_size="232,316">
+
+                    <ImageView
+                            android:id="@+id/book_cover"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                        android:includeFontPadding="false"
+                        android:id="@+id/book_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/cv"
+                        android:layout_toRightOf="@id/cv"
+                        app:x_text_size="36"
+                        app:x_layout_margin="0,16,30,0"
+                        android:maxLines="2"
+                        android:textColor="@color/white"
+                        />
+
+
+                <TextView
+                        android:includeFontPadding="false"
+                        app:x_layout_margin="0,31,0,0"
+                        android:layout_alignLeft="@+id/book_name"
+                        android:layout_below="@+id/book_name"
+                        android:id="@+id/book_author"
+                        style="@style/base_text"
+                        android:textColor="@color/white"
+                        app:x_text_size="26"/>
+
+                <com.duoyue.lib.base.widget.XRelativeLayout
+                        app:x_layout_margin="0,29,0,0"
+                        android:id="@+id/book_author_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book_author"
+                        android:layout_toRightOf="@id/cv">
+
+                    <TextView
+                            android:includeFontPadding="false"
+                            android:drawablePadding="8dp"
+                            android:drawableRight="@drawable/bg_white_line"
+                            android:id="@+id/book_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/standard_red_main_color_c1"
+                            android:text="连载中"
+                            app:x_text_size="26"
+                            />
+
+                    <TextView
+                            android:includeFontPadding="false"
+                            android:layout_toRightOf="@+id/book_status"
+                            android:layout_alignTop="@+id/book_status"
+                            android:layout_alignBottom="@+id/book_status"
+                            android:id="@+id/book_detail_wordcount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:x_text_size="26"
+                            android:textColor="@color/white"
+                            />
+
+                </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+                <TextView
+                        android:includeFontPadding="false"
+                        android:gravity="center"
+                        app:x_layout_size="160,50"
+                        android:id="@+id/tv_cat_name"
+                        app:x_layout_margin="0,32,0,0"
+                        android:textColor="@color/white"
+                        app:x_text_size="26"
+                        android:background="@drawable/bg_3377fe"
+                        app:x_layout_padding="14,7,14,7"
+                        android:layout_alignLeft="@+id/book_author_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/book_author_layout"/>
+
+
+                <com.duoyue.lib.base.widget.XLinearLayout
+                        app:x_layout_padding="0,26,0,26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_below="@+id/view_bg">
+
+
+                    <com.duoyue.lib.base.widget.XRelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                        <com.duoyue.lib.base.widget.XRelativeLayout
+                                android:id="@+id/rl"
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:includeFontPadding="false"
+                                    android:id="@+id/book_detail_popularity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    app:x_text_size="40"
+                                    android:textColor="@color/color_1b1b1b"
+                                    />
+
+                            <TextView
+                                    android:id="@+id/tv_wan"
+                                    android:includeFontPadding="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:x_text_size="22"
+                                    android:textColor="#1B1B1B"
+                                    android:layout_toRightOf="@+id/book_detail_popularity"
+                                    android:layout_alignBaseline="@+id/book_detail_popularity"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_alignBottom="@+id/book_detail_popularity"/>
+
+                        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+                        <TextView
+                                android:layout_centerInParent="true"
+                                android:includeFontPadding="false"
+                                android:layout_below="@+id/rl"
+                                android:gravity="center"
+                                android:id="@+id/book_detail_popularity_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:x_text_size="24"
+                                android:text="人气"
+                                android:textColor="@color/text_b2b2b2"
+                                />
+
+
+                    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+                    <com.duoyue.lib.base.widget.XRelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+
+                        <View
+                                android:layout_centerVertical="true"
+                                app:x_layout_margin="0,7,0,7"
+                                android:layout_alignParentLeft="true"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#fff2f2f2"/>
+
+
+                        <com.duoyue.lib.base.widget.XLinearLayout
+                                android:id="@+id/xll"
+                                android:gravity="center_horizontal"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <TextView
+                                    android:includeFontPadding="false"
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:id="@+id/book_grade"
+                                    app:x_text_size="40"
+                                    android:textColor="@color/color_1b1b1b"
+                                    />
+
+                            <TextView
+                                    android:includeFontPadding="false"
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:x_text_size="24"
+                                    android:text="评分"
+                                    android:textColor="@color/text_b2b2b2"
+                                    />
+
+                        </com.duoyue.lib.base.widget.XLinearLayout>
+
+
+                        <View
+                                android:layout_centerVertical="true"
+                                app:x_layout_margin="0,7,0,7"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#fff2f2f2"/>
+                    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+                    <com.duoyue.lib.base.widget.XRelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <com.duoyue.lib.base.widget.XRelativeLayout
+                                android:id="@+id/rl2"
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:includeFontPadding="false"
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/book_detail_fan"
+                                    app:x_text_size="40"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/color_1b1b1b"/>
+
+                            <TextView
+                                    android:id="@+id/tv_wan_x"
+                                    android:includeFontPadding="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:x_text_size="22"
+                                    android:textColor="#1B1B1B"
+                                    android:layout_toRightOf="@+id/book_detail_fan"
+                                    android:layout_alignBaseline="@+id/book_detail_fan"/>
+                        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+                        <TextView
+                                android:layout_centerInParent="true"
+                                android:layout_below="@+id/rl2"
+                                android:includeFontPadding="false"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:x_text_size="24"
+                                android:text="粉丝"
+                                android:textColor="@color/text_b2b2b2"
+                                android:id="@+id/book_detail_fans_unit"
+                                />
+                    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+                </com.duoyue.lib.base.widget.XLinearLayout>
+            </com.duoyue.lib.base.widget.XRelativeLayout>
+
+            <!--目录以上   背景以下-->
+            <include
+                    layout="@layout/book_detail_head_layout"/>
+            <!--目录-->
+            <include layout="@layout/book_detail_catalogue_layout"/>
+
+            <include
+                    layout="@layout/divider_6px"
+                    android:id="@+id/divider_1px"/>
+
+            <!--广告-->
+            <com.duoyue.lib.base.widget.AdShadeViewGroup
+                    android:id="@+id/ad_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <include layout="@layout/divider_6px"/>
+            <!--第一章-->
+            <include
+                    layout="@layout/item_first_chapter"
+                    android:id="@+id/view_first_data"/>
+            <!--书评-->
+            <include
+                    android:id="@+id/book_detail_comment_root"
+                    layout="@layout/book_comment_layout"/>
+            <!--这本书的读者都在看-->
+            <include
+                    android:id="@+id/book_detail_other_root"
+                    layout="@layout/book_detail_other_read_layout"/>
+
+            <!--同类热门书-->
+            <include
+                    android:id="@+id/book_detail_recom_root"
+                    layout="@layout/book_detail_recommend_layout"/>
+            <!--更多信息-->
+            <com.duoyue.lib.base.widget.XLinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv_more_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:x_layout_margin="32,30,32,30"
+                        android:includeFontPadding="false"
+                        app:x_text_size="40"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_1b1b1b"
+                        android:text="更多信息"
+                        />
+
+                <com.duoyue.lib.base.widget.XLinearLayout
+                        android:id="@+id/book_detail_source_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:x_layout_margin="32,0,0,30"
+                            app:x_text_size="28"
+                            android:text="来源："
+                            android:textColor="@color/color_898989"
+                            />
+
+                    <TextView
+                            android:id="@+id/book_detail_source"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:x_layout_margin="0,0,39,30"
+                            app:x_text_size="28"
+                            android:textColor="@color/color_898989"
+                            />
+                </com.duoyue.lib.base.widget.XLinearLayout>
+
+                <com.duoyue.lib.base.widget.XLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:x_layout_margin="32,0,0,30"
+                            app:x_text_size="28"
+                            android:text="上架时间："
+                            android:textColor="@color/color_898989"
+                            />
+
+                    <TextView
+                            android:id="@+id/book_detail_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:x_layout_margin="0,0,39,30"
+                            app:x_text_size="28"
+                            android:textColor="@color/color_898989"
+                            />
+                </com.duoyue.lib.base.widget.XLinearLayout>
+            </com.duoyue.lib.base.widget.XLinearLayout>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+    </com.duoyue.app.ui.view.BookDetailNestedScrollView>
+    <!--标题-->
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/xll_title"
+            app:x_layout_size="#,140"
+            app:x_layout_padding="16,61,17,11"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_back"
+                app:x_layout_size="68,68"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_back_w"/>
+
+        <TextView
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_toLeftOf="@+id/iv_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title_name"
+                app:x_text_size="36"
+                android:includeFontPadding="false"
+                android:textStyle="bold"
+                android:maxLines="1"
+                app:x_layout_size="#,68"
+                android:ellipsize="end"
+                android:textColor="@color/title_btn_text"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_share"
+                app:x_layout_size="68,68"
+                android:visibility="visible"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_share_w"
+                android:layout_alignParentRight="true"/>
+
+
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+
+    <!--加入书架 免费阅读-->
+    <View
+            android:alpha="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_size="#,15"
+            android:layout_above="@+id/xll_bottom"
+            android:background="@drawable/book_detail_bottom_shadow"
+            />
+
+    <com.duoyue.lib.base.widget.XLinearLayout
+            android:id="@+id/xll_bottom"
+            android:weightSum="2"
+            app:x_layout_size="#,120"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.duoyue.app.ui.widget.DrawableTextView
+                android:gravity="center_vertical"
+                android:id="@+id/btn_add_shelf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/book_shelf"
+                android:drawablePadding="8dp"
+                android:background="@color/white"
+                android:text="@string/btn_add_shelf"
+                android:textColor="@color/standard_red_main_color_c1"
+                app:x_text_size="36"
+        />
+
+        <com.duoyue.app.ui.widget.DrawableTextView
+                android:gravity="center_vertical"
+                android:id="@+id/btn_read"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/book_read"
+                android:background="@color/standard_red_main_color_c1"
+                android:drawablePadding="8dp"
+                android:text="@string/free_read"
+                android:textColor="@color/white"
+                app:x_text_size="36"/>
+
+        <TextView
+                app:x_layout_padding="#,16,#,16"
+                android:gravity="center"
+                android:id="@+id/btn_download"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/bg_download"
+                android:drawablePadding="2dp"
+                android:background="@color/white"
+                android:text="@string/free_download"
+                android:visibility="gone"
+                android:textColor="@color/standard_red_main_color_c1"
+                app:x_text_size="30"/>
+
+        <com.duoyue.lib.base.widget.XRelativeLayout
+                android:id="@+id/rl_progress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_weight="0.6">
+
+            <ProgressBar
+                    android:id="@+id/pb_download"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="100"
+                    android:background="@color/white"
+                    android:progressDrawable="@drawable/down_load_progress"
+                    style="@style/ProgressBar.Horizontal"/>
+
+            <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/standard_red_main_color_c1"
+                    app:x_text_size="30"/>
+
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+
+
+    </com.duoyue.lib.base.widget.XLinearLayout>
+    <!--请求数据出错-->
+    <include
+            android:id="@+id/load_prompt_layout"
+            layout="@layout/load_prompt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_layout"/>
+
+
+</com.duoyue.lib.base.widget.XRelativeLayout>

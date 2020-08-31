@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,60" />
+    <!-- 分割线 -->
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" />
+    <!-- 内容区域 -->
+    <com.duoyue.lib.base.widget.XRelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/white" app:x_layout_padding="30,#,30,60">
+        <com.duoyue.lib.base.widget.XScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_margin="#,#,#,150">
+            <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <!-- 注销须知 -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_padding="#,50,#,50" android:text="注销须知"
+                        android:textColor="#000000" app:x_text_size="38" android:textStyle="bold"/>
+                <!-- 注销内容 -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" app:x_text_size="30" android:textColor="#333333" android:lineSpacingMultiplier="1.4"
+                        android:text="@string/text_cancel_account" />
+            </com.duoyue.lib.base.widget.XLinearLayout>
+        </com.duoyue.lib.base.widget.XScrollView>
+        <!-- 注销按钮区域 -->
+        <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/cancel_account_btn" android:layout_width="match_parent" android:layout_height="wrap_content" app:x_layout_size="#,130"
+            android:background="@mipmap/no_ad_back" android:gravity="center" android:layout_alignParentBottom="true" >
+            <TextView android:id="@+id/cancel_account_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:background="@null"
+                    app:x_text_size="38" app:x_layout_margin="#,#,#,25" android:textStyle="bold" android:text="@string/apply_cancel"/>
+        </com.duoyue.lib.base.widget.XRelativeLayout>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XLinearLayout>

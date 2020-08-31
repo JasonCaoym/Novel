@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <com.zydm.base.widgets.RoundImageView
+        android:id="@+id/top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="151.5dp"
+        android:src="@mipmap/pic_new_edition_line_02" />
+
+</RelativeLayout>

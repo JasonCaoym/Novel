@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.zydm.base">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <application>
+        
+        <activity android:name=".ui.activity.web.WebActivity"/>
+        
+        <!--<activity-alias-->
+        <!--android:name=".wxapi.WXEntryActivity"-->
+        <!--android:exported="true"-->
+        <!--android:targetActivity="com.share.platform._ShareActivity"-->
+        <!--/>-->
+        <!-- 声明自定义FileProvider -->
+        <provider android:name="com.duoyue.lib.base.provider.NovelProvider" android:authorities="${applicationId}.fileProvider"
+            android:grantUriPermissions="true" android:exported="false">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <receiver android:name="com.duoyue.lib.base.time.TimeChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

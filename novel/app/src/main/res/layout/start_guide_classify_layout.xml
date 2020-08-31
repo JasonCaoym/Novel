@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent" android:layout_height="match_parent"
+                                            android:background="@color/default_page_bg">
+        <!-- 类型 -->
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent"
+                                                  android:layout_height="match_parent" android:orientation="vertical"
+                                                  android:gravity="center_horizontal" app:x_layout_padding="#,150,#,#">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_text_size="52"
+                      android:textColor="@color/guide_choose_big" android:text="@string/choose_classify"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      app:x_layout_padding="#,25,#,#" app:x_text_size="28" android:textColor="@color/guide_choose_small"
+                      android:text="@string/open_customization"/>
+            <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:orientation="vertical" app:x_layout_padding="#,20,#,160">
+                <android.support.v7.widget.RecyclerView android:id="@+id/classify_recycler_view" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="match_parent" />
+            </com.duoyue.lib.base.widget.XLinearLayout>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+    <!-- 开启阅读之旅按钮 -->
+    <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent" android:gravity="center" app:x_layout_padding="#,#,#,60"
+                                              android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:id="@+id/open_reading_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:x_layout_size="650,100"
+                  app:x_text_size="36" android:gravity="center" app:x_shape_radius="80"
+                  android:textColor="@color/white" android:background="@drawable/z_btn_shape_bg"
+                  android:text="@string/guide_open_reading"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+    <!-- 返回按钮 -->
+    <com.duoyue.lib.base.widget.XLinearLayout android:id="@+id/back_layout" android:layout_width="match_parent"  android:layout_height="wrap_content" app:x_layout_margin="#,60,#,#"
+                                              app:x_layout_padding="44,35,35,35">
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:background="@mipmap/start_guide_back" app:x_layout_size="20,34"/>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+</com.duoyue.lib.base.widget.XRelativeLayout>

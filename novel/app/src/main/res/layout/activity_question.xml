@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.app.ui.widget.CustomLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+    <include
+            layout="@layout/toolbar_layout"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_f5f5f5"
+            app:x_layout_size="#,12"/>
+
+    <FrameLayout
+            android:id="@+id/question_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </FrameLayout>
+</com.duoyue.app.ui.widget.CustomLinearLayout>

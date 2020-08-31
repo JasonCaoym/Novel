@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            android:layout_width="match_parent"
+                                            android:descendantFocusability="blocksDescendants"
+                                            android:layout_height="wrap_content"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            app:x_layout_margin="#,40,#,40"
+                                            android:overScrollMode="never"
+                                            android:id="@+id/rc_icon_list"
+                                            android:layout_height="wrap_content"/>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:x_layout_size="#,2"
+            android:layout_below="@+id/rc_icon_list"
+            android:background="@color/standard_div_line_color"/>
+</com.duoyue.lib.base.widget.XRelativeLayout>

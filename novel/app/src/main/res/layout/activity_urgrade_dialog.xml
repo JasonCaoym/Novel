@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/present_card_layout_margin"
+        android:layout_marginRight="@dimen/present_card_layout_margin"
+        android:background="@drawable/round_rectangle_white_shape"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/reactive_layout_padding_l"
+        android:paddingRight="@dimen/reactive_layout_padding_l"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="@string/upgrade_award"
+            android:textColor="@color/standard_red_main_color_c1"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:textColor="@color/standard_text_color_black"
+            android:textSize="@dimen/standard_text_size_big"
+            tools:text="safasfafasafa" />
+
+        <TextView
+            android:id="@+id/resume_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:textColor="@color/standard_text_color_gray"
+            android:textSize="@dimen/standard_text_size_big"
+            tools:text="jianjie sa fasf as " />
+
+        <TextView
+            android:id="@+id/mbean_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:textColor="@color/standard_text_color_gold"
+            android:textSize="@dimen/standard_text_size_bigger"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/get_btn"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp" />
+
+    </LinearLayout>
+
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-8dp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card_layout"
+        android:layout_marginBottom="-60dp" />
+
+    <View
+        android:id="@+id/present_fake_empty_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card_layout"
+        android:background="@color/transparent"></View>
+
+    <View
+        android:id="@+id/present_fake_empty_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/card_layout"
+        android:background="@color/transparent"></View>
+
+    <com.duoyue.app.ui.widget.CustomImageView
+        android:id="@+id/close_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card_layout"
+        android:layout_alignRight="@id/card_layout"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

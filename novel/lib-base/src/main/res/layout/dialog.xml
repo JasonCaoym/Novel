@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            android:layout_width="match_parent"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:layout_height="wrap_content">
+
+    <com.duoyue.lib.base.widget.XRelativeLayout
+            android:id="@+id/dialog_parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:x_layout_padding="#,68,#,#"
+            android:background="@drawable/dialog_bg">
+
+        <RelativeLayout
+                android:id="@+id/dialog_title_layout"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="wrap_content">
+
+            <com.duoyue.app.ui.widget.CustomImageView
+                    android:id="@+id/img_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/pic_new_edition_line_02"/>
+
+            <TextView
+                    android:id="@+id/dialog_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/img_cover"
+                    android:includeFontPadding="true"
+                    android:maxLines="2"
+                    android:textColor="@color/text_black_333"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <FrameLayout
+                android:id="@+id/dialog_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="33dp"
+                android:layout_marginTop="33dp"
+                android:paddingLeft="@dimen/dialog_content_margin_left_right"
+                android:paddingRight="@dimen/dialog_content_margin_left_right"
+                android:layout_below="@id/dialog_title_layout">
+
+            <TextView
+                    android:id="@+id/dialog_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:lineSpacingMultiplier="1.265"
+                    android:maxHeight="@dimen/dialog_message_max_height"
+                    android:scrollbars="none"
+                    android:textColor="@color/text_black_333"
+                    android:textSize="14sp"
+                    android:visibility="visible"/>
+        </FrameLayout>
+
+        <LinearLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_content_layout"
+                android:orientation="vertical">
+
+            <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="@style/ProgressBar.Horizontal"
+                    android:layout_width="211dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"/>
+
+            <TextView
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/standard_black_second_level_color_c4"
+                    android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dialog_button_bar_height"
+                android:layout_below="@id/dialog_content_layout"
+                android:measureWithLargestChild="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dialog_content_margin_left_right"
+                android:paddingRight="@dimen/dialog_content_margin_left_right"
+                android:visibility="visible"
+                android:paddingBottom="17dp">
+
+            <TextView
+                    android:id="@+id/negative_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dialog_btn_bg_positive"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/standard_black_fourth_level_color_c6"
+                    android:textSize="@dimen/dialog_button_size"
+                    android:visibility="gone"/>
+
+            <TextView
+                    android:id="@+id/positive_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dialog_btn_bg_positive"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dialog_button_size"
+                    android:visibility="gone"/>
+        </LinearLayout>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+</com.duoyue.lib.base.widget.XRelativeLayout>

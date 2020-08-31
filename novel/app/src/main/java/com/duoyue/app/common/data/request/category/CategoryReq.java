@@ -1,0 +1,15 @@
+package com.duoyue.app.common.data.request.category;
+
+import com.duoyue.lib.base.app.http.AutoPost;
+import com.duoyue.lib.base.app.http.DomainType;
+import com.duoyue.lib.base.app.http.JsonRequest;
+import com.google.gson.annotations.SerializedName;
+
+/**
+ *
+ */
+@AutoPost(action = "/app/bookCategory/v1/list", domain = DomainType.BUSINESS)
+public class CategoryReq extends JsonRequest {
+    @SerializedName("parentId")
+    public int parentId;
+}

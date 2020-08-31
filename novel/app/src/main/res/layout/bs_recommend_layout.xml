@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duoyue.lib.base.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                                            android:background="@color/white">
+    <!-- 滚动推荐区域 -->
+    <com.duoyue.lib.base.widget.XRelativeLayout android:id="@+id/bs_recommend_single_layout"
+                                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                                app:x_layout_margin="35,#,17,#" app:x_layout_size="#,90"
+                                                android:gravity="center_vertical" android:orientation="horizontal">
+
+        <com.duoyue.lib.base.widget.XLinearLayout android:id="@+id/bs_open_recommend_layout"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="match_parent" android:gravity="center"
+                                                  app:x_layout_padding="25,#,25,#"
+                                                  android:layout_alignParentRight="true">
+            <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/bs_open_recommend_imageview"
+                                                      android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content" app:x_layout_size="28,16"
+                                                      android:background="@mipmap/open"/>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  app:x_layout_size="1,#"
+                  android:layout_toLeftOf="@id/bs_open_recommend_layout"
+                  app:x_layout_margin="#,15,10,15"
+                  android:background="@color/color_f5f5f5"/>
+
+        <com.duoyue.lib.base.widget.XLinearLayout android:layout_width="match_parent"
+                                                  android:layout_height="match_parent" android:gravity="center"
+                                                  android:layout_toLeftOf="@id/bs_open_recommend_layout">
+            <com.duoyue.app.ui.widget.CustomImageView android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content" app:x_layout_size="34,38"
+                                                      android:layout_gravity="center_vertical"
+                                                      android:background="@mipmap/icon_bookcase_top_radio_bao"/>
+            <com.duoyue.lib.base.widget.marqueeview.MarqueeView android:id="@+id/bs_marquee_view"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center_vertical"
+                                                                app:x_layout_margin="30,#,10,#" app:mvAnimDuration="1000"
+                                                                app:mvDirection="bottom_to_top" app:mvInterval="5000"
+                                                                app:mvSingleLine="true"
+                                                                app:mvTextColor="@color/standard_black_second_level_color_c4"
+                                                                app:mvTextSize="13sp"/>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+    </com.duoyue.lib.base.widget.XRelativeLayout>
+    <!-- 展开推荐区域 -->
+    <com.duoyue.lib.base.widget.XLinearLayout android:id="@+id/bs_recommend_list_layout" android:visibility="gone"
+                                              android:layout_width="match_parent" android:layout_height="wrap_content"
+                                              app:x_layout_margin="17,#,17,#" android:orientation="vertical"
+                                              android:gravity="center_horizontal">
+        <!-- 推荐内容ListView -->
+        <ListView android:id="@+id/bs_recommend_listview" android:layout_width="match_parent"
+                  android:layout_height="wrap_content" app:x_layout_size="#,260" android:divider="#00000000"
+                  android:cacheColorHint="#00000000"
+                  android:listSelector="@android:color/transparent" android:scrollbars="none"/>
+        <!-- 收起按钮 -->
+        <com.duoyue.lib.base.widget.XLinearLayout android:id="@+id/bs_close_recommend_layout"
+                                                  android:layout_width="match_parent"
+                                                  android:layout_height="wrap_content"
+                                                  app:x_layout_padding="20,20,20,20" android:orientation="horizontal"
+                                                  android:gravity="center">
+            <com.duoyue.app.ui.widget.CustomImageView android:id="@+id/bs_close_recommend_imageview"
+                                                      android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content" app:x_layout_size="28,16"
+                                                      android:background="@mipmap/close"/>
+        </com.duoyue.lib.base.widget.XLinearLayout>
+    </com.duoyue.lib.base.widget.XLinearLayout>
+</com.duoyue.lib.base.widget.XRelativeLayout>
